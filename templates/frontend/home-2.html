@@ -11,7 +11,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="keywords" content="intense web design multipurpose template">
     <meta name="date" content="Dec 26">
-    <link rel="icon" href="{% static 'images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
     <!-- Stylesheets-->
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans:400,300italic,300,400italic,600,700%7CMerriweather:400,300,300italic,400italic,700,700italic">
     <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
@@ -39,7 +39,7 @@
                   <div class="rd-navbar-mobile-scroll">
                     <div class="rd-navbar-mobile-header-wrap">
                       <!--Navbar Brand Mobile-->
-                      <div class="rd-navbar-mobile-brand"><a href="index.html"><img width='136' height='138' src='{% static 'images/logo-170x172.png' alt=''/></a></div>
+                      <div class="rd-navbar-mobile-brand"><a href="index.html"><img width='136' height='138' src="{% static 'images/logo-170x172.png'%}" alt=''/></a></div>
                     </div>
                     <!-- RD Navbar Nav-->
                     <ul class="rd-navbar-nav">
@@ -203,7 +203,7 @@
                 <!--Navbar Brand-->
                 <div class="rd-navbar-brand text-start"><a class="d-inline-block" href="index.html">
                     <div class="unit align-items-sm-center unit-md flex-lg-row unit-spacing-xxs">
-                      <div class="unit-left"><img src="{% static 'images/logo-170x172.png" width="136" height="138" alt=""></div>
+                      <div class="unit-left"><img src="{% static 'images/logo-170x172.png' %}" width="136" height="138" alt=""></div>
                       <div class="unit-body text-xxl-start">
                         <div>
                           <div class="h6 barnd-name fw-bold text-white">Jonathan Carroll</div>
@@ -267,7 +267,7 @@
       <section class="section section-xl bg-default">
         <div class="container">
           <div class="row row-50 text-md-start align-items-md-center justify-content-md-between">
-            <div class="col-md-5 col-lg-4 order-md-2"><a href="index.html"><img class="img-responsive d-inline-block" src="{% static 'images/logo-326x329.png" width="326" height="329" alt=""></a></div>
+            <div class="col-md-5 col-lg-4 order-md-2"><a href="index.html"><img class="img-responsive d-inline-block" src="{% static 'images/logo-326x329.png' %}" width="326" height="329" alt=""></a></div>
             <div class="col-md-7 col-lg-7 order-md-1">
               <h2 class="fw-bold">A Few Words <br class="d-none d-xl-inline-block"> About the University</h2>
               <hr class="divider bg-madison divider-md-0">
@@ -280,7 +280,7 @@
         </div>
       </section>
       <!--Our Featured Courses-->
-      <section class="section text-center parallax-container section-xl" data-parallax-img="{% static 'images/parallax-01.jpg' %"}>
+      <section class="section text-center parallax-container section-xl" data-parallax-img="{% static 'images/parallax-01.jpg' %}">
         <div class="parallax-content">
           <div class="container">
             <h2 class="fw-bold view-animate fadeInUpSmall delay-04">Featured Programs</h2>
@@ -700,7 +700,7 @@
                       <p>Enter your email address to get the latest University news, special events and student activities delivered right to your inbox.</p>
                     </div>
                     <div class="offset-top-10">
-                      <form class="rd-mailform form-subscribe" data-form-output="form-output-global" data-form-type="subscribe" method="post" action="bat/rd-mailform.php">
+                      <form class="rd-mailform form-subscribe" data-form-output="form-output-global" data-form-type="subscribe" method="post" >
                         <div class="form-wrap">
                           <div class="input-group input-group-sm">
                             <input class="form-input" placeholder="Your e-mail" type="email" name="email" data-constraints="@Required @Email"><span class="input-group-btn">
@@ -720,7 +720,7 @@
             <!--Please, add the data attribute data-key="YOUR_API_KEY" in order to insert your own API key for the Google map.-->
             <!--Please note that YOUR_API_KEY should replaced with your key.-->
             <!--Example: <div class="google-map-container" data-key="YOUR_API_KEY">-->
-            <div class="google-map-container" data-center="9870 St Vincent Place, Glasgow, DC 45 Fr 45." data-zoom="5" data-icon="{% static 'images/gmap_marker.png" data-icon-active="{% static 'images/gmap_marker_active.png" data-styles="[{&quot;featureType&quot;:&quot;landscape&quot;,&quot;stylers&quot;:[{&quot;saturation&quot;:-100},{&quot;lightness&quot;:60}]},{&quot;featureType&quot;:&quot;road.local&quot;,&quot;stylers&quot;:[{&quot;saturation&quot;:-100},{&quot;lightness&quot;:40},{&quot;visibility&quot;:&quot;on&quot;}]},{&quot;featureType&quot;:&quot;transit&quot;,&quot;stylers&quot;:[{&quot;saturation&quot;:-100},{&quot;visibility&quot;:&quot;simplified&quot;}]},{&quot;featureType&quot;:&quot;administrative.province&quot;,&quot;stylers&quot;:[{&quot;visibility&quot;:&quot;off&quot;}]},{&quot;featureType&quot;:&quot;water&quot;,&quot;stylers&quot;:[{&quot;visibility&quot;:&quot;on&quot;},{&quot;lightness&quot;:30}]},{&quot;featureType&quot;:&quot;road.highway&quot;,&quot;elementType&quot;:&quot;geometry.fill&quot;,&quot;stylers&quot;:[{&quot;color&quot;:&quot;#ef8c25&quot;},{&quot;lightness&quot;:40}]},{&quot;featureType&quot;:&quot;road.highway&quot;,&quot;elementType&quot;:&quot;geometry.stroke&quot;,&quot;stylers&quot;:[{&quot;visibility&quot;:&quot;off&quot;}]},{&quot;featureType&quot;:&quot;poi.park&quot;,&quot;elementType&quot;:&quot;geometry.fill&quot;,&quot;stylers&quot;:[{&quot;color&quot;:&quot;#b6c54c&quot;},{&quot;lightness&quot;:40},{&quot;saturation&quot;:-40}]},{}]">
+            <div class="google-map-container" data-center="9870 St Vincent Place, Glasgow, DC 45 Fr 45." data-zoom="5" data-icon="{% static 'images/gmap_marker.png' %}" data-icon-active="{% static 'images/gmap_marker_active.png' %}" data-styles="[{&quot;featureType&quot;:&quot;landscape&quot;,&quot;stylers&quot;:[{&quot;saturation&quot;:-100},{&quot;lightness&quot;:60}]},{&quot;featureType&quot;:&quot;road.local&quot;,&quot;stylers&quot;:[{&quot;saturation&quot;:-100},{&quot;lightness&quot;:40},{&quot;visibility&quot;:&quot;on&quot;}]},{&quot;featureType&quot;:&quot;transit&quot;,&quot;stylers&quot;:[{&quot;saturation&quot;:-100},{&quot;visibility&quot;:&quot;simplified&quot;}]},{&quot;featureType&quot;:&quot;administrative.province&quot;,&quot;stylers&quot;:[{&quot;visibility&quot;:&quot;off&quot;}]},{&quot;featureType&quot;:&quot;water&quot;,&quot;stylers&quot;:[{&quot;visibility&quot;:&quot;on&quot;},{&quot;lightness&quot;:30}]},{&quot;featureType&quot;:&quot;road.highway&quot;,&quot;elementType&quot;:&quot;geometry.fill&quot;,&quot;stylers&quot;:[{&quot;color&quot;:&quot;#ef8c25&quot;},{&quot;lightness&quot;:40}]},{&quot;featureType&quot;:&quot;road.highway&quot;,&quot;elementType&quot;:&quot;geometry.stroke&quot;,&quot;stylers&quot;:[{&quot;visibility&quot;:&quot;off&quot;}]},{&quot;featureType&quot;:&quot;poi.park&quot;,&quot;elementType&quot;:&quot;geometry.fill&quot;,&quot;stylers&quot;:[{&quot;color&quot;:&quot;#b6c54c&quot;},{&quot;lightness&quot;:40},{&quot;saturation&quot;:-40}]},{}]">
               <div class="google-map"></div>
               <ul class="google-map-markers">
                 <li data-location="9870 St Vincent Place, Glasgow, DC 45 Fr 45." data-description="9870 St Vincent Place, Glasgow"></li>
@@ -736,7 +736,7 @@
             <div class="col-sm-10 col-lg-6">
               <!--Footer brand--><a class="d-inline-block" href="index.html">
                 <div class="unit align-items-sm-center flex-column unit-md flex-lg-row unit-spacing-xxs">
-                  <div class="unit-left"><img class="img-responsive d-inline-block" src="{% static 'images/logo-170x172.png" width="70" height="70" alt=""></div>
+                  <div class="unit-left"><img class="img-responsive d-inline-block" src="{% static 'images/logo-170x172.png' %}" width="70" height="70" alt=""></div>
                   <div class="unit-body text-xxl-start">
                     <div>
                       <h6 class="barnd-name text-ubold">Jonathan Carroll</h6>
@@ -757,7 +757,8 @@
     <!-- Global Mailform Output-->
     <div class="snackbars" id="form-output-global"></div>
     <!-- Java script-->
-    <script src="js/core.min.js"></script>
-    <script src="js/script.js"></script>
+    <script src="{% static 'js/core.min.js' %}"></script>
+<script src="{% static 'js/script.js' %}"></script>
+
   </body>
 </html>
