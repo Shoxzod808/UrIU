@@ -1,0 +1,582 @@
+{% extends "frontend\base.html" %}
+{% load static %}
+
+{% block title %}Home{% endblock %}
+
+{% block body %}
+
+  <body>
+    {% include "frontend\header.html" %}
+    <div class="preloader"> 
+      <div class="preloader-body">
+        <div class="cssload-container">
+          <div class="cssload-speeding-wheel"></div>
+        </div>
+        <p>Loading...</p>
+      </div>
+    </div>
+    <div class="page text-center">
+      
+      <section class="section">
+        <!-- Swiper-->
+        <div class="swiper-container swiper-slider swiper-slider-2" data-loop="true" data-autoplay="4000" data-slide-effect="slide" data-height="42.1875%" data-min-height="480px">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide" data-slide-bg="{% static 'images/slide-01-1920x810.jpg'  %}" style="background-position: 80% center">
+              <div class="swiper-slide-caption">
+                <div class="container">
+                  <div class="row justify-content-sm-center justify-content-xl-start">
+                    <div class="col-lg-9 text-lg-start col-sm-10">
+                      <div data-caption-animate="fadeInUp" data-caption-delay="100">
+                        <h1 class="fw-bold"><a href="academics.html">Inspiration, Innovation and Discovery.</a></h1>
+                      </div>
+                      <div class="offset-top-20 offset-xs-top-40 offset-xl-top-60 inset-xl-right-100" data-caption-animate="fadeInUp" data-caption-delay="150">
+                        <h5>Any successful career starts with good education. Together with us you will have deeper knowledge of the subjects that will be especially useful for you when climbing the career ladder.</h5>
+                      </div>
+                      <div class="offset-top-20 offset-xl-top-40" data-caption-animate="fadeInUp" data-caption-delay="400"><a class="btn button-primary" href="login-register.html">Sign Up for Excursion</a>
+                        <div class="inset-sm-left-30 d-xl-inline-block"><a class="btn button-default d-none d-xl-inline-block" href="academics.html">Learn More</a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide" data-slide-bg="{% static 'images/slide-02-1920x810.jpg'  %}" style="background-position: 80% center">
+              <div class="swiper-slide-caption">
+                <div class="container">
+                  <div class="row justify-content-sm-center justify-content-xl-start">
+                    <div class="col-lg-9 text-lg-start col-sm-10">
+                      <div data-caption-animate="fadeInUp" data-caption-delay="100">
+                        <h1 class="fw-bold"><a href="academics.html">Investing in Knowledge.</a></h1>
+                      </div>
+                      <div class="offset-top-20 offset-xs-top-40 offset-xl-top-60 inset-xl-right-100" data-caption-animate="fadeInUp" data-caption-delay="150">
+                        <h5>At Jonathan Carroll University, you can succeed in lots of research areas and benefit from investing in your education and knowledge that will help you in becoming an experienced specialist.</h5>
+                      </div>
+                      <div class="offset-top-20 offset-xl-top-40" data-caption-animate="fadeInUp" data-caption-delay="400"><a class="btn button-primary" href="login-register.html">Sign Up for Excursion</a>
+                        <div class="inset-sm-left-30 d-xl-inline-block"><a class="btn button-default d-none d-xl-inline-block" href="academics.html">Learn More</a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide" data-slide-bg="{% static 'images/slide-03-1920x810.jpg'  %}" style="background-position: 80% center">
+              <div class="swiper-slide-caption">
+                <div class="container">
+                  <div class="row justify-content-sm-center justify-content-xl-start">
+                    <div class="col-lg-9 text-lg-start col-sm-10">
+                      <div data-caption-animate="fadeInUp" data-caption-delay="100">
+                        <h1 class="fw-bold"><a href="academics.html">Open Minds. <br class="d-none d-lg-inline-block"> Creating Future.</a></h1>
+                      </div>
+                      <div class="offset-top-20 offset-xs-top-40 offset-xl-top-60 inset-xl-right-100" data-caption-animate="fadeInUp" data-caption-delay="150">
+                        <h5>Build your future with us! The educational programs of our University will give you necessary skills, training, and knowledge to make everything you learned here work for you in the future.</h5>
+                      </div>
+                      <div class="offset-top-20 offset-xl-top-40" data-caption-animate="fadeInUp" data-caption-delay="400"><a class="btn button-primary" href="login-register.html">Sign Up for Excursion</a>
+                        <div class="inset-sm-left-30 d-xl-inline-block"><a class="btn button-default d-none d-xl-inline-block" href="academics.html">Learn More</a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Swiper Pagination-->
+          <div class="swiper-pagination"></div>
+        </div>
+      </section>
+      <!-- Setion About Us-->
+      <!-- A Few Words About the University-->
+      <section class="section section-xl bg-default">
+        <div class="container">
+          <div class="row row-50 text-md-start align-items-md-center justify-content-md-between">
+            <div class="col-md-5 col-lg-4 order-md-2"><a href="index.html"><img class="img-responsive d-inline-block" src="{% static 'images/logo-326x329.png' %}"width="326" height="329" alt=""></a></div>
+            <div class="col-md-7 col-lg-7 order-md-1">
+              <h2 class="fw-bold">A Few Words <br class="d-none d-xl-inline-block"> About the University</h2>
+              <hr class="divider bg-madison divider-md-0">
+              <div class="offset-top-35 offset-lg-top-60">
+                <p>One of the world's premier academic and research institutions, the Jonathan Carroll University has driven new ways of thinking since our 1876 founding. Today, JCU is an intellectual destination that draws inspired scholars to our Hyde Park and international campuses, keeping JCU at the nexus of ideas that challenge and change the world.</p>
+              </div>
+              <div class="offset-top-30"><a class="btn btn-icon btn-icon-right button-default" href="history.html"><span class="icon fa fa-arrow-right"></span><span>Learn More</span></a></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--Our Featured Courses-->
+      <section class="section bg-madison context-dark">
+        <div class="container">
+          <div class="row justify-content-sm-center justify-content-md-end offset-top-0">
+            <div class="col-sm-10 col-md-7 section-image-aside section-image-aside-left text-md-start">
+              <div class="section-image-aside-img d-none d-md-block" style="background-image: url(images/home-01-846x1002.jpg)"></div>
+              <div class="section-image-aside-body section-xl inset-md-left-70 inset-xl-left-110">
+                <h2 class="fw-bold">Our Featured Courses</h2>
+                <hr class="divider divider-md-0 bg-default">
+                <div class="offset-top-35 offset-lg-top-60 text-light">Our Featured Courses are selected through a rigorous process and uniquely created for each semester.</div>
+                <div class="text-start">
+                  <div class="offset-top-60">
+                    <article class="post-vacation"><a class="post-vacation-img-wrap bg-image" href="academics.html" style="background-image: url(images/course-01-150x120.jpg)"></a>
+                      <div class="post-vacation-body">
+                        <div>
+                          <h6 class="post-vacation-title"><a href="academics.html">Financial Analyst Course</a></h6>
+                        </div>
+                        <div class="offset-lg-top-10">
+                          <p>Charles Banks</p>
+                        </div>
+                        <div class="post-vacation-meta offset-top-10">
+                          <time class="text-dark" datetime="2022-01-01">June 3, 2022</time>
+                          <ul class="list-inline list-unstyled list-inline-primary">
+                            <li><span class="text-hover-custom icon icon-xxs mdi mdi-timer-sand" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Part time"></span></li>
+                            <li><span class="text-hover-custom icon icon-xxs mdi mdi-star" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Certified"></span></li>
+                            <li><span class="text-hover-custom icon icon-xxs mdi mdi-laptop-chromebook" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Online Course"></span></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </article>
+                  </div>
+                  <div class="offset-top-30">
+                    <article class="post-vacation"><a class="post-vacation-img-wrap bg-image" href="academics.html" style="background-image: url(images/course-02-150x120.jpg)"></a>
+                      <div class="post-vacation-body">
+                        <div>
+                          <h6 class="post-vacation-title"><a href="academics.html">Digital Marketing Course</a></h6>
+                        </div>
+                        <div class="offset-lg-top-10">
+                          <p>Maria Howard</p>
+                        </div>
+                        <div class="post-vacation-meta offset-top-10">
+                          <time class="text-dark" datetime="2022-01-01">June 3, 2022</time>
+                          <ul class="list-inline list-unstyled list-inline-primary">
+                            <li><span class="text-hover-custom icon icon-xxs mdi mdi-battery-50" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Facultative"></span></li>
+                            <li><span class="text-hover-custom icon icon-xxs mdi mdi-star" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Certified"></span></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </article>
+                  </div>
+                  <div class="offset-top-30">
+                    <article class="post-vacation"><a class="post-vacation-img-wrap bg-image" href="academics.html" style="background-image: url(images/course-03-150x120.jpg)"></a>
+                      <div class="post-vacation-body">
+                        <div>
+                          <h6 class="post-vacation-title"><a href="academics.html">Graphic Design Course</a></h6>
+                        </div>
+                        <div class="offset-lg-top-10">
+                          <p>Steven Carter</p>
+                        </div>
+                        <div class="post-vacation-meta offset-top-10">
+                          <time class="text-dark" datetime="2022-01-01">June 3, 2022</time>
+                          <ul class="list-inline list-unstyled list-inline-primary">
+                            <li><span class="text-hover-custom icon icon-xxs mdi mdi-battery-50" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Facultative"></span></li>
+                            <li><span class="text-hover-custom icon icon-xxs mdi mdi-star" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Certified"></span></li>
+                            <li><span class="text-hover-custom icon icon-xxs mdi mdi-laptop-chromebook" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Online Course"></span></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </article>
+                  </div>
+                </div>
+                <div class="offset-top-60"><a class="btn button-primary" href="academics.html">View All Courses</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Counters-->
+      <section class="section section-xl bg-default">
+        <div class="container">
+          <h2 class="fw-bold">Statistics</h2>
+          <hr class="divider bg-madison">
+          <div class="row justify-content-sm-center offset-top-60">
+            <div class="col-sm-10 col-md-8">
+              <p>Jonathan Carroll University was founded on the principle that by pursuing big ideas and sharing what we learn, we make the world a better place. For more than 135 years, we haven’t strayed from that vision.</p>
+            </div>
+          </div>
+          <div class="row row-50 row-lg-65 justify-content-sm-center justify-content-lg-start offset-top-65 counters">
+            <div class="col-md-6 col-lg-3">
+              <!-- Counter type 1-->
+              <div class="counter-type-1"><span class="icon icon-lg icon-outlined text-madison mdi mdi-school"></span>
+                <div class="h3 fw-bold text-primary offset-top-15"><span class="counter" data-duration="1300">97</span><span>%</span></div>
+                <hr class="divider bg-gray-light divider-sm"/>
+                <div class="offset-top-21">
+                  <h6 class="text-black font-accent">Graduates</h6>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <!-- Counter type 1-->
+              <div class="counter-type-1"><span class="icon icon-lg icon-outlined text-madison mdi mdi-wallet-travel"></span>
+                <div class="h3 fw-bold text-primary offset-top-15"><span class="counter" data-duration="1250">30</span><span>+</span></div>
+                <hr class="divider bg-gray-light divider-sm"/>
+                <div class="offset-top-21">
+                  <h6 class="text-black font-accent">Certified Teachers</h6>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <!-- Counter type 1-->
+              <div class="counter-type-1"><span class="icon icon-lg icon-outlined text-madison mdi mdi-domain"></span>
+                <div class="h3 fw-bold text-primary offset-top-15"><span class="counter" data-duration="1500">8</span></div>
+                <hr class="divider bg-gray-light divider-sm"/>
+                <div class="offset-top-21">
+                  <h6 class="text-black font-accent">Student Campuses</h6>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <!-- Counter type 1-->
+              <div class="counter-type-1"><span class="icon icon-lg icon-outlined text-madison mdi mdi-account-multiple-outline"></span>
+                <div class="h3 fw-bold text-primary offset-top-15"><span class="counter" data-duration="500">6510</span></div>
+                <hr class="divider bg-gray-light divider-sm"/>
+                <div class="offset-top-21">
+                  <h6 class="text-black font-accent">Students</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Trusted by Over 6000+ Students-->
+      <section class="section context-dark">
+        <div class="bg-vide" data-vide-bg="video/bg-video-1-lg" data-vide-options="posterType: jpg">
+          <div class="container section-100 section-lg-160">
+            <h2 class="fw-bold">Trusted by Over 6000+ Students</h2>
+            <div class="offset-top-30">
+              <p>Join our community of students around the world helping you succeed.</p>
+            </div>
+            <div class="offset-top-35 offset-xl-top-70"><a class="btn button-primary" href="login-register.html">Get Started</a></div>
+          </div>
+        </div>
+      </section>
+      <!-- Events-->
+      <section class="section bg-catskill section-xl">
+        <div class="container container-wide">
+          <h2 class="fw-bold">Events</h2>
+          <hr class="divider bg-madison">
+          <div class="row row-50 offset-top-60 justify-content-sm-center">
+            <div class="col-md-6 col-lg-5 col-xxl-3">
+              <article class="post-event">
+                <div class="post-event-img-overlay"><img class="img-responsive" src="{% static 'images/blog/events-01-420x420.jpg'  %}" width="420" height="420" alt="">
+                  <div class="post-event-overlay context-dark"><a class="btn button-primary" href="apply.html">Book Now</a>
+                    <div class="offset-top-20"><a class="btn button-default" href="event-page.html">Learn More</a></div>
+                  </div>
+                </div>
+                <div class="unit unit-lg flex-column flex-xl-row">
+                  <div class="unit-left">
+                    <div class="post-event-meta text-center">
+                      <div class="h3 fw-bold d-inline-block d-xl-block">31</div>
+                      <p class="d-inline-block d-xl-block">September</p><span class="fw-bold d-inline-block d-xl-block inset-left-10 inset-xl-left-0">5:00pm</span>
+                    </div>
+                  </div>
+                  <div class="unit-body">
+                    <div class="post-event-body text-xl-start">
+                      <h6><a href="event-page.html">Spacewalking Conference</a></h6>
+                      <ul class="list-inline list-inline-xs">
+                        <li><a href="team-member-profile.html"><span class="icon icon-xxs mdi mdi-account-outline align-middle"></span><span class="inset-left-10 text-dark align-middle">Walter Stanley</span></a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="col-md-6 col-lg-5 col-xxl-3">
+              <article class="post-event">
+                <div class="post-event-img-overlay"><img class="img-responsive" src="{% static 'images/blog/events-02-420x420.jpg'  %}" width="420" height="420" alt="">
+                  <div class="post-event-overlay context-dark"><a class="btn button-primary" href="apply.html">Book Now</a>
+                    <div class="offset-top-20"><a class="btn button-default" href="event-page.html">Learn More</a></div>
+                  </div>
+                </div>
+                <div class="unit unit-lg flex-column flex-xl-row">
+                  <div class="unit-left">
+                    <div class="post-event-meta text-center">
+                      <div class="h3 fw-bold d-inline-block d-xl-block">5</div>
+                      <p class="d-inline-block d-xl-block">July</p><span class="fw-bold d-inline-block d-xl-block inset-left-10 inset-xl-left-0">5:00pm</span>
+                    </div>
+                  </div>
+                  <div class="unit-body">
+                    <div class="post-event-body text-xl-start">
+                      <h6><a href="event-page.html">International Conference on Biomolecular Engineering</a></h6>
+                      <ul class="list-inline list-inline-xs">
+                        <li><a href="team-member-profile.html"><span class="icon icon-xxs mdi mdi-account-outline align-middle"></span><span class="inset-left-10 text-dark align-middle">Raymond Salazar</span></a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="col-md-6 col-lg-5 col-xxl-3">
+              <article class="post-event">
+                <div class="post-event-img-overlay"><img class="img-responsive" src="{% static 'images/blog/events-03-420x420.jpg'  %}" width="420" height="420" alt="">
+                  <div class="post-event-overlay context-dark"><a class="btn button-primary" href="apply.html">Book Now</a>
+                    <div class="offset-top-20"><a class="btn button-default" href="event-page.html">Learn More</a></div>
+                  </div>
+                </div>
+                <div class="unit unit-lg flex-column flex-xl-row">
+                  <div class="unit-left">
+                    <div class="post-event-meta text-center">
+                      <div class="h3 fw-bold d-inline-block d-xl-block">15</div>
+                      <p class="d-inline-block d-xl-block">May</p><span class="fw-bold d-inline-block d-xl-block inset-left-10 inset-xl-left-0">5:00pm</span>
+                    </div>
+                  </div>
+                  <div class="unit-body">
+                    <div class="post-event-body text-xl-start">
+                      <h6><a href="event-page.html">Graphic Design Workshop</a></h6>
+                      <ul class="list-inline list-inline-xs">
+                        <li><a href="team-member-profile.html"><span class="icon icon-xxs mdi mdi-account-outline align-middle"></span><span class="inset-left-10 text-dark align-middle">Bruce Hawkins</span></a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="col-md-6 col-lg-5 col-xxl-3">
+              <article class="post-event">
+                <div class="post-event-img-overlay"><img class="img-responsive" src="{% static 'images/blog/events-04-420x420.jpg'  %}" width="420" height="420" alt="">
+                  <div class="post-event-overlay context-dark"><a class="btn button-primary" href="apply.html">Book Now</a>
+                    <div class="offset-top-20"><a class="btn button-default" href="event-page.html">Learn More</a></div>
+                  </div>
+                </div>
+                <div class="unit unit-lg flex-column flex-xl-row">
+                  <div class="unit-left">
+                    <div class="post-event-meta text-center">
+                      <div class="h3 fw-bold d-inline-block d-xl-block">5</div>
+                      <p class="d-inline-block d-xl-block">May</p><span class="fw-bold d-inline-block d-xl-block inset-left-10 inset-xl-left-0">5:00pm</span>
+                    </div>
+                  </div>
+                  <div class="unit-body">
+                    <div class="post-event-body text-xl-start">
+                      <h6><a href="event-page.html">History of Art</a></h6>
+                      <ul class="list-inline list-inline-xs">
+                        <li><a href="team-member-profile.html"><span class="icon icon-xxs mdi mdi-account-outline align-middle"></span><span class="inset-left-10 text-dark align-middle">Danielle Garza</span></a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div class="offset-top-50 offset-lg-top-56"><a class="btn btn-icon btn-icon-right button-primary" href="calendar.html"><span class="icon fa fa-arrow-right"></span><span>View Event Calendar</span></a></div>
+        </div>
+      </section>
+      <!-- Testimonials-->
+      <section class="section bg-madison context-dark position-relative">
+        <div class="owl-carousel owl-carousel-default owl-carousel-nav-xl" data-items="1" data-nav="true" data-dots="true" data-autoplay="true" data-nav-class="[&quot;owl-prev fa fa-angle-left&quot;, &quot;owl-next fa fa-angle-right&quot;]">
+          <div>
+            <div class="container section-70 section-xl-100 section-xl-bottom-114">
+              <div class="row justify-content-sm-center align-items-sm-center">
+                <div class="col-md-3 text-md-end order-md-2"><img class="img-responsive d-inline-block rounded-circle" src="{% static 'images/users/user-debra-banks-230x230.jpg'  %}" width="230" height="230" alt=""></div>
+                <div class="col-md-9 order-md-1">
+                  <div class="quote-classic-boxed text-start">
+                    <div class="quote-body">
+                      <q>When you work full-time while studying, you need to sacrifice personal time, which meant that I took my studies seriously. My ambition was not only to complete my degree successfully but to make the best out of the time spent studying.</q>
+                      <div class="offset-top-30 text-end">
+                        <cite class="font-accent">Debra Banks</cite>
+                        <div class="offset-top-5">
+                          <p class="text-dark fst-italic">Diploma for Graduates in Management, USA</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="container section-70 section-xl-100 section-xl-bottom-114">
+              <div class="row justify-content-sm-center align-items-sm-center">
+                <div class="col-md-3 text-md-end order-md-2"><img class="img-responsive d-inline-block rounded-circle" src="{% static 'images/users/user-steven-alvarez-230x230.jpg'  %}" width="230" height="230" alt=""></div>
+                <div class="col-md-9 order-md-1">
+                  <div class="quote-classic-boxed text-start">
+                    <div class="quote-body">
+                      <q>When I researched the programmes available I realized that the University was offering exactly the type of programme in international development that interested me.</q>
+                      <div class="offset-top-30 text-end">
+                        <cite class="font-accent">Steven Alvarez</cite>
+                        <div class="offset-top-5">
+                          <p class="text-dark fst-italic">Diploma for Graduates in International Development, USA</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Latest news-->
+      <section class="section bg-catskill section-xl">
+        <div class="container">
+          <h2 class="fw-bold">Latest News</h2>
+          <hr class="divider bg-madison">
+          <div class="row row-30 offset-top-60 text-start justify-content-sm-center">
+            <div class="col-md-6 col-lg-4">
+              <article class="post-news"><a href="news-post-page.html"><img class="img-responsive" src="{% static 'images/blog/news-01-370x240.jpg'  %}" width="370" height="240" alt=""></a>
+                <div class="post-news-body">
+                  <h6><a href="news-post-page.html">Liberal Arts Colleges Rankings</a></h6>
+                  <div class="offset-top-20">
+                    <p>Liberal Arts Colleges emphasize undergraduate education and award at least half of their degrees in the liberal arts fields of study.</p>
+                  </div>
+                  <div class="post-news-meta offset-top-20"><span class="icon icon-xs mdi mdi-calendar-clock align-middle text-madison"></span><span class="align-middle inset-left-10 fst-italic text-black">2 days ago</span></div>
+                </div>
+              </article>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <article class="post-news"><a href="news-post-page.html"><img class="img-responsive" src="{% static 'images/blog/news-02-370x240.jpg'  %}" width="370" height="240" alt=""></a>
+                <div class="post-news-body">
+                  <h6><a href="news-post-page.html">10 Law Schools Where the Most Accepted Students Enroll</a></h6>
+                  <div class="offset-top-20">
+                    <p>At these schools, at least 42 percent of accepted students enrolled in fall 2015, U.S. News data show.</p>
+                  </div>
+                  <div class="post-news-meta offset-top-20"><span class="icon icon-xs mdi mdi-calendar-clock align-middle text-madison"></span><span class="align-middle inset-left-10 fst-italic text-black">2 days ago</span></div>
+                </div>
+              </article>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <article class="post-news"><a href="news-post-page.html"><img class="img-responsive" src="{% static 'images/blog/news-03-370x240.jpg'  %}" width="370" height="240" alt=""></a>
+                <div class="post-news-body">
+                  <h6><a href="news-post-page.html">5 Ways to Pay for Community College</a></h6>
+                  <div class="offset-top-20">
+                    <p>Many community colleges offer promise programs, which offer tuition-free awards to eligible students – mainly to students with Pell grant eligibility.</p>
+                  </div>
+                  <div class="post-news-meta offset-top-20"><span class="icon icon-xs mdi mdi-calendar-clock align-middle text-madison"></span><span class="align-middle inset-left-10 fst-italic text-black">2 days ago</span></div>
+                </div>
+              </article>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <article class="post-news"><a href="news-post-page.html"><img class="img-responsive" src="{% static 'images/blog/news-04-370x240.jpg'  %}" width="370" height="240" alt=""></a>
+                <div class="post-news-body">
+                  <h6><a href="news-post-page.html">
+                      Ways Parents and Counselors Can
+                      Help Students Earn Scholarships</a></h6>
+                  <div class="offset-top-20">
+                    <p>Securing scholarships can be stressful, but parents and counselors can serve as a resource.</p>
+                  </div>
+                  <div class="post-news-meta offset-top-20"><span class="icon icon-xs mdi mdi-calendar-clock align-middle text-madison"></span><span class="align-middle inset-left-10 fst-italic text-black">2 days ago</span></div>
+                </div>
+              </article>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <article class="post-news"><a href="news-post-page.html"><img class="img-responsive" src="{% static 'images/blog/news-05-370x240.jpg'  %}" width="370" height="240" alt=""></a>
+                <div class="post-news-body">
+                  <h6><a href="news-post-page.html">
+                      Consider MBA Programs That
+                      Offer Summer Prep</a></h6>
+                  <div class="offset-top-20">
+                    <p>Summer preparatory programs offered through schools allow students to get a head start on making connections and building skills.</p>
+                  </div>
+                  <div class="post-news-meta offset-top-20"><span class="icon icon-xs mdi mdi-calendar-clock align-middle text-madison"></span><span class="align-middle inset-left-10 fst-italic text-black">2 days ago</span></div>
+                </div>
+              </article>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <article class="post-news"><a href="news-post-page.html"><img class="img-responsive" src="{% static 'images/blog/news-06-370x240.jpg'  %}" width="370" height="240" alt=""></a>
+                <div class="post-news-body">
+                  <h6><a href="news-post-page.html">Studying in the United States</a></h6>
+                  <div class="offset-top-20">
+                    <p>International students increasingly want to come to the United States for college or graduate school.</p>
+                  </div>
+                  <div class="post-news-meta offset-top-20"><span class="icon icon-xs mdi mdi-calendar-clock align-middle text-madison"></span><span class="align-middle inset-left-10 fst-italic text-black">2 days ago</span></div>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div class="offset-top-50"><a class="btn button-primary" href="modern-news.html">View All News Posts</a></div>
+        </div>
+      </section>
+      <!-- Gallery Simple-->
+      <!-- Gallery-->
+      <section class="section">
+        <div class="owl-carousel flickr owl-carousel-fullheight" data-items="2" data-sm-items="2" data-autoplay="true" data-md-items="4" data-xxl-items="6" data-nav="false" data-dots="false" data-mouse-drag="true" data-lightgallery="group" data-stage-padding="0" data-xl-stage-padding="0"><a class="thumbnail-default" data-lightgallery="item" href ="{% static 'images /gallery-simple-1-677x677.jpg'  %}"><img width="320" height="320" data-title="alt" src="{% static 'images/gallery-simple-1-677x677.jpg'  %}" alt=""><span class="icon fa fa-search-plus"></span></a><a class="thumbnail-default" data-lightgallery="item" href ="{% static 'images /gallery-simple-2-677x677.jpg'  %}"><img width="320" height="320" src="{% static 'images/gallery-simple-2-677x677.jpg'  %}" alt=""><span class="icon fa fa-search-plus"></span></a><a class="thumbnail-default" data-lightgallery="item" href ="{% static 'images /gallery-simple-3-677x677.jpg'  %}"><img width="320" height="320" src="{% static 'images/gallery-simple-3-677x677.jpg'  %}" alt=""><span class="icon fa fa-search-plus"></span></a><a class="thumbnail-default" data-lightgallery="item" href ="{% static 'images /gallery-simple-4-677x677.jpg' %}"><img width="320" height="320" src="{% static 'images/gallery-simple-4-677x677.jpg'  %}" alt=""><span class="icon fa fa-search-plus"></span></a><a class="thumbnail-default" data-lightgallery="item" href ="{% static 'images /gallery-simple-5-677x677.jpg'  %}"><img width="320" height="320" src="{% static 'images/gallery-simple-5-677x677.jpg'  %}" alt=""><span class="icon fa fa-search-plus"></span></a><a class="thumbnail-default" data-lightgallery="item" href ="{% static 'images /gallery-simple-6-677x677.jpg'  %}"><img width="320" height="320" src="{% static 'images/gallery-simple-6-677x677.jpg'  %}" alt=""><span class="icon fa fa-search-plus"></span></a></div>
+      </section>
+      <!-- Google Map-->
+      <!--Google Map-->
+      <section class="section">
+        <!--Please, add the data attribute data-key="YOUR_API_KEY" in order to insert your own API key for the Google map.-->
+        <!--Please note that YOUR_API_KEY should replaced with your key.-->
+        <!--Example: <div class="google-map-container" data-key="YOUR_API_KEY">-->
+        <div class="google-map-container" data-center="9870 St Vincent Place, Glasgow, DC 45 Fr 45." data-zoom="5" data-icon="images/gmap_marker.png' %}"data-icon-active="images/gmap_marker_active.png' %}"data-styles="[{&quot;featureType&quot;:&quot;landscape&quot;,&quot;stylers&quot;:[{&quot;saturation&quot;:-100},{&quot;lightness&quot;:60}]},{&quot;featureType&quot;:&quot;road.local&quot;,&quot;stylers&quot;:[{&quot;saturation&quot;:-100},{&quot;lightness&quot;:40},{&quot;visibility&quot;:&quot;on&quot;}]},{&quot;featureType&quot;:&quot;transit&quot;,&quot;stylers&quot;:[{&quot;saturation&quot;:-100},{&quot;visibility&quot;:&quot;simplified&quot;}]},{&quot;featureType&quot;:&quot;administrative.province&quot;,&quot;stylers&quot;:[{&quot;visibility&quot;:&quot;off&quot;}]},{&quot;featureType&quot;:&quot;water&quot;,&quot;stylers&quot;:[{&quot;visibility&quot;:&quot;on&quot;},{&quot;lightness&quot;:30}]},{&quot;featureType&quot;:&quot;road.highway&quot;,&quot;elementType&quot;:&quot;geometry.fill&quot;,&quot;stylers&quot;:[{&quot;color&quot;:&quot;#ef8c25&quot;},{&quot;lightness&quot;:40}]},{&quot;featureType&quot;:&quot;road.highway&quot;,&quot;elementType&quot;:&quot;geometry.stroke&quot;,&quot;stylers&quot;:[{&quot;visibility&quot;:&quot;off&quot;}]},{&quot;featureType&quot;:&quot;poi.park&quot;,&quot;elementType&quot;:&quot;geometry.fill&quot;,&quot;stylers&quot;:[{&quot;color&quot;:&quot;#b6c54c&quot;},{&quot;lightness&quot;:40},{&quot;saturation&quot;:-40}]},{}]">
+          <div class="google-map"></div>
+          <ul class="google-map-markers">
+            <li data-location="9870 St Vincent Place, Glasgow, DC 45 Fr 45." data-description="9870 St Vincent Place, Glasgow"></li>
+          </ul>
+        </div>
+      </section>
+      <!-- Footer Corprorate-->
+      <!-- Corporate footer-->
+      <footer class="page-footer">
+        <div class="hr bg-gray-light"></div>
+        <div class="container section-xs block-after-divider">
+          <div class="row row-50 justify-content-xl-between justify-content-sm-center">
+            <div class="col-lg-3 col-xl-2">
+              <!--Footer brand--><a class="d-inline-block" href="index.html"><img width='170' height='172' src="{% static 'images/logo-170x172.png' %}" alt=''/>
+                <div>
+                  <h6 class="barnd-name fw-bold offset-top-25">Jonathan Carroll</h6>
+                </div>
+                <div>
+                  <p class="brand-slogan text-gray fst-italic font-accent">University</p>
+                </div></a>
+            </div>
+            <div class="col-sm-10 col-lg-5 col-xl-4 text-xl-start">
+              <h6 class="fw-bold">Contact us</h6>
+              <div class="text-subline"></div>
+              <div class="offset-top-30">
+                <ul class="list-unstyled contact-info list">
+                  <li>
+                    <div class="unit flex-row align-items-center unit-spacing-xs">
+                      <div class="unit-left"><span class="icon mdi mdi-phone align-middle icon-xs text-madison"></span></div>
+                      <div class="unit-body"><a class="text-dark" href="tel:#">1-800-1234-567,</a> <a class="d-block d-lg-inline-block text-dark" href="tel:#">1-800-6547-321</a>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="offset-top-15">
+                    <div class="unit flex-row align-items-center unit-spacing-xs">
+                      <div class="unit-left"><span class="icon mdi mdi-map-marker align-middle icon-xs text-madison"></span></div>
+                      <div class="unit-body text-start"><a class="text-dark" href="#">2130 Fulton Street San Diego, CA 94117-1080 USA</a></div>
+                    </div>
+                  </li>
+                  <li class="offset-top-15">
+                    <div class="unit flex-row align-items-center unit-spacing-xs">
+                      <div class="unit-left"><span class="icon mdi mdi-email-open align-middle icon-xs text-madison"></span></div>
+                      <div class="unit-body"><a href="mailto:#">info@demolink.org</a></div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="offset-top-15 text-start">
+                <ul class="list-inline list-inline-xs list-inline-madison">
+                  <li><a class="icon icon-xxs fa fa-facebook icon-circle icon-gray-light-filled" href="#"></a></li>
+                  <li><a class="icon icon-xxs fa fa-twitter icon-circle icon-gray-light-filled" href="#"></a></li>
+                  <li><a class="icon icon-xxs fa fa-google icon-circle icon-gray-light-filled" href="#"></a></li>
+                  <li><a class="icon icon-xxs fa fa-instagram icon-circle icon-gray-light-filled" href="#"></a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-sm-10 col-lg-8 col-xl-4 text-xl-start">
+              <h6 class="fw-bold">Newsletter</h6>
+              <div class="text-subline"></div>
+              <div class="offset-top-30 text-start">
+                <p>Enter your email address to get the latest University news, special events and student activities delivered right to your inbox.</p>
+              </div>
+              <div class="offset-top-10">
+                <form class="rd-mailform form-subscribe" data-form-output="form-output-global" data-form-type="subscribe" method="post" action="bat/rd-mailform.php">
+                  <div class="form-wrap">
+                    <div class="input-group input-group-sm">
+                      <input class="form-input" placeholder="Your e-mail" type="email" name="email" data-constraints="@Required @Email"><span class="input-group-btn">
+                        <button class="btn btn-sm button-primary" type="submit">Subscribe</button></span>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bg-madison context-dark">
+          <div class="container text-lg-start section-5">
+            <p class="rights"><span>&copy;&nbsp;</span><span class="copyright-year"></span><span>.&nbsp;</span><span>All Rights Reserved</span><span>.&nbsp;</span><a href="privacy-policy.html">Privacy Policy</a></p>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <!-- Global Mailform Output-->
+    <div class="snackbars" id="form-output-global"></div>
+    <!-- Java script-->
+    <script src="{% static 'js/core.min.js' %}"></script>
+    <script src="{% static 'js/script.js' %}"></script>
+  </body>
+</html>
+{% endblock %}

@@ -2952,12 +2952,6 @@ body {
 	width: 100%;
 }
 
-.bg-image {
-	background-position: center center;
-	background-size: cover;
-	background-repeat: no-repeat;
-}
-
 .img-mobile-half-width {
 	max-width: 50%;
 	margin-left: auto;
