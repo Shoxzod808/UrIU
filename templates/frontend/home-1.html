@@ -6,7 +6,7 @@
 {% block body %}
 
   <body>
-    {% include "frontend\header.html" %}
+    
     <div class="preloader"> 
       <div class="preloader-body">
         <div class="cssload-container">
@@ -16,7 +16,7 @@
       </div>
     </div>
     <div class="page text-center">
-      
+      {% include "frontend\header.html" %}
       <section class="section">
         <!-- Swiper-->
         <div class="swiper-container swiper-slider swiper-slider-2" data-loop="true" data-autoplay="4000" data-slide-effect="slide" data-height="42.1875%" data-min-height="480px">
@@ -101,83 +101,7 @@
         </div>
       </section>
       <!--Our Featured Courses-->
-      <section class="section bg-madison context-dark">
-        <div class="container">
-          <div class="row justify-content-sm-center justify-content-md-end offset-top-0">
-            <div class="col-sm-10 col-md-7 section-image-aside section-image-aside-left text-md-start">
-              <div class="section-image-aside-img d-none d-md-block" style="background-image: url('{% static 'images/course-01-150x120.jpg' %}')"
-              ></div> 
-              <div class="section-image-aside-body section-xl inset-md-left-70 inset-xl-left-110">
-                <h2 class="fw-bold">Our Featured Courses</h2>
-                <hr class="divider divider-md-0 bg-default">
-                <div class="offset-top-35 offset-lg-top-60 text-light">Our Featured Courses are selected through a rigorous process and uniquely created for each semester.</div>
-                <div class="text-start">
-                  <div class="offset-top-60">
-                    <article class="post-vacation"><a class="post-vacation-img-wrap bg-image bg-course" href="academics.html" style="background-image: url('{% static 'images/course-01-150x120.jpg' %}')"> </a>
-                      <div class="post-vacation-body">
-                        <div>
-                          <h6 class="post-vacation-title"><a href="academics.html">Financial Analyst Course</a></h6>
-                        </div>
-                        <div class="offset-lg-top-10">
-                          <p>Charles Banks</p>
-                        </div>
-                        <div class="post-vacation-meta offset-top-10">
-                          <time class="text-dark" datetime="2022-01-01">June 3, 2022</time>
-                          <ul class="list-inline list-unstyled list-inline-primary">
-                            <li><span class="text-hover-custom icon icon-xxs mdi mdi-timer-sand" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Part time"></span></li>
-                            <li><span class="text-hover-custom icon icon-xxs mdi mdi-star" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Certified"></span></li>
-                            <li><span class="text-hover-custom icon icon-xxs mdi mdi-laptop-chromebook" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Online Course"></span></li>
-                          </ul>
-                        </div>
-                      </div>
-                    </article>
-                  </div>
-                  <div class="offset-top-30">
-                    <article class="post-vacation"><a class="post-vacation-img-wrap bg-image" href="academics.html" style="background-image: url('{% static 'images/course-01-150x120.jpg' %}')"></a>
-                      <div class="post-vacation-body">
-                        <div>
-                          <h6 class="post-vacation-title"><a href="academics.html">Digital Marketing Course</a></h6>
-                        </div>
-                        <div class="offset-lg-top-10">
-                          <p>Maria Howard</p>
-                        </div>
-                        <div class="post-vacation-meta offset-top-10">
-                          <time class="text-dark" datetime="2022-01-01">June 3, 2022</time>
-                          <ul class="list-inline list-unstyled list-inline-primary">
-                            <li><span class="text-hover-custom icon icon-xxs mdi mdi-battery-50" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Facultative"></span></li>
-                            <li><span class="text-hover-custom icon icon-xxs mdi mdi-star" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Certified"></span></li>
-                          </ul>
-                        </div>
-                      </div>
-                    </article>
-                  </div>
-                  <div class="offset-top-30">
-                    <article class="post-vacation"><a class="post-vacation-img-wrap bg-image" href="academics.html" style="background-image: url('{% static 'images/course-01-150x120.jpg' %}')"></a>
-                      <div class="post-vacation-body">
-                        <div>
-                          <h6 class="post-vacation-title"><a href="academics.html">Graphic Design Course</a></h6>
-                        </div>
-                        <div class="offset-lg-top-10">
-                          <p>Steven Carter</p>
-                        </div>
-                        <div class="post-vacation-meta offset-top-10">
-                          <time class="text-dark" datetime="2022-01-01">June 3, 2022</time>
-                          <ul class="list-inline list-unstyled list-inline-primary">
-                            <li><span class="text-hover-custom icon icon-xxs mdi mdi-battery-50" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Facultative"></span></li>
-                            <li><span class="text-hover-custom icon icon-xxs mdi mdi-star" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Certified"></span></li>
-                            <li><span class="text-hover-custom icon icon-xxs mdi mdi-laptop-chromebook" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Online Course"></span></li>
-                          </ul>
-                        </div>
-                      </div>
-                    </article>
-                  </div>
-                </div>
-                <div class="offset-top-60"><a class="btn button-primary" href="academics.html">View All Courses</a></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      
       <!-- Counters-->
       <section class="section section-xl bg-default">
         <div class="container">
@@ -233,127 +157,7 @@
         </div>
       </section>
       <!-- Trusted by Over 6000+ Students-->
-      <section class="section context-dark">
-        <div class="bg-vide" data-vide-bg="video/bg-video-1-lg" data-vide-options="posterType: jpg">
-          <div class="container section-100 section-lg-160">
-            <h2 class="fw-bold">Trusted by Over 6000+ Students</h2>
-            <div class="offset-top-30">
-              <p>Join our community of students around the world helping you succeed.</p>
-            </div>
-            <div class="offset-top-35 offset-xl-top-70"><a class="btn button-primary" href="login-register.html">Get Started</a></div>
-          </div>
-        </div>
-      </section>
-      <!-- Events-->
-      <section class="section bg-catskill section-xl">
-        <div class="container container-wide">
-          <h2 class="fw-bold">Events</h2>
-          <hr class="divider bg-madison">
-          <div class="row row-50 offset-top-60 justify-content-sm-center">
-            <div class="col-md-6 col-lg-5 col-xxl-3">
-              <article class="post-event">
-                <div class="post-event-img-overlay"><img class="img-responsive" src="{% static 'images/blog/events-01-420x420.jpg'  %}" width="420" height="420" alt="">
-                  <div class="post-event-overlay context-dark"><a class="btn button-primary" href="apply.html">Book Now</a>
-                    <div class="offset-top-20"><a class="btn button-default" href="event-page.html">Learn More</a></div>
-                  </div>
-                </div>
-                <div class="unit unit-lg flex-column flex-xl-row">
-                  <div class="unit-left">
-                    <div class="post-event-meta text-center">
-                      <div class="h3 fw-bold d-inline-block d-xl-block">31</div>
-                      <p class="d-inline-block d-xl-block">September</p><span class="fw-bold d-inline-block d-xl-block inset-left-10 inset-xl-left-0">5:00pm</span>
-                    </div>
-                  </div>
-                  <div class="unit-body">
-                    <div class="post-event-body text-xl-start">
-                      <h6><a href="event-page.html">Spacewalking Conference</a></h6>
-                      <ul class="list-inline list-inline-xs">
-                        <li><a href="team-member-profile.html"><span class="icon icon-xxs mdi mdi-account-outline align-middle"></span><span class="inset-left-10 text-dark align-middle">Walter Stanley</span></a></li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </article>
-            </div>
-            <div class="col-md-6 col-lg-5 col-xxl-3">
-              <article class="post-event">
-                <div class="post-event-img-overlay"><img class="img-responsive" src="{% static 'images/blog/events-02-420x420.jpg'  %}" width="420" height="420" alt="">
-                  <div class="post-event-overlay context-dark"><a class="btn button-primary" href="apply.html">Book Now</a>
-                    <div class="offset-top-20"><a class="btn button-default" href="event-page.html">Learn More</a></div>
-                  </div>
-                </div>
-                <div class="unit unit-lg flex-column flex-xl-row">
-                  <div class="unit-left">
-                    <div class="post-event-meta text-center">
-                      <div class="h3 fw-bold d-inline-block d-xl-block">5</div>
-                      <p class="d-inline-block d-xl-block">July</p><span class="fw-bold d-inline-block d-xl-block inset-left-10 inset-xl-left-0">5:00pm</span>
-                    </div>
-                  </div>
-                  <div class="unit-body">
-                    <div class="post-event-body text-xl-start">
-                      <h6><a href="event-page.html">International Conference on Biomolecular Engineering</a></h6>
-                      <ul class="list-inline list-inline-xs">
-                        <li><a href="team-member-profile.html"><span class="icon icon-xxs mdi mdi-account-outline align-middle"></span><span class="inset-left-10 text-dark align-middle">Raymond Salazar</span></a></li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </article>
-            </div>
-            <div class="col-md-6 col-lg-5 col-xxl-3">
-              <article class="post-event">
-                <div class="post-event-img-overlay"><img class="img-responsive" src="{% static 'images/blog/events-03-420x420.jpg'  %}" width="420" height="420" alt="">
-                  <div class="post-event-overlay context-dark"><a class="btn button-primary" href="apply.html">Book Now</a>
-                    <div class="offset-top-20"><a class="btn button-default" href="event-page.html">Learn More</a></div>
-                  </div>
-                </div>
-                <div class="unit unit-lg flex-column flex-xl-row">
-                  <div class="unit-left">
-                    <div class="post-event-meta text-center">
-                      <div class="h3 fw-bold d-inline-block d-xl-block">15</div>
-                      <p class="d-inline-block d-xl-block">May</p><span class="fw-bold d-inline-block d-xl-block inset-left-10 inset-xl-left-0">5:00pm</span>
-                    </div>
-                  </div>
-                  <div class="unit-body">
-                    <div class="post-event-body text-xl-start">
-                      <h6><a href="event-page.html">Graphic Design Workshop</a></h6>
-                      <ul class="list-inline list-inline-xs">
-                        <li><a href="team-member-profile.html"><span class="icon icon-xxs mdi mdi-account-outline align-middle"></span><span class="inset-left-10 text-dark align-middle">Bruce Hawkins</span></a></li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </article>
-            </div>
-            <div class="col-md-6 col-lg-5 col-xxl-3">
-              <article class="post-event">
-                <div class="post-event-img-overlay"><img class="img-responsive" src="{% static 'images/blog/events-04-420x420.jpg'  %}" width="420" height="420" alt="">
-                  <div class="post-event-overlay context-dark"><a class="btn button-primary" href="apply.html">Book Now</a>
-                    <div class="offset-top-20"><a class="btn button-default" href="event-page.html">Learn More</a></div>
-                  </div>
-                </div>
-                <div class="unit unit-lg flex-column flex-xl-row">
-                  <div class="unit-left">
-                    <div class="post-event-meta text-center">
-                      <div class="h3 fw-bold d-inline-block d-xl-block">5</div>
-                      <p class="d-inline-block d-xl-block">May</p><span class="fw-bold d-inline-block d-xl-block inset-left-10 inset-xl-left-0">5:00pm</span>
-                    </div>
-                  </div>
-                  <div class="unit-body">
-                    <div class="post-event-body text-xl-start">
-                      <h6><a href="event-page.html">History of Art</a></h6>
-                      <ul class="list-inline list-inline-xs">
-                        <li><a href="team-member-profile.html"><span class="icon icon-xxs mdi mdi-account-outline align-middle"></span><span class="inset-left-10 text-dark align-middle">Danielle Garza</span></a></li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </article>
-            </div>
-          </div>
-          <div class="offset-top-50 offset-lg-top-56"><a class="btn btn-icon btn-icon-right button-primary" href="calendar.html"><span class="icon fa fa-arrow-right"></span><span>View Event Calendar</span></a></div>
-        </div>
-      </section>
+      
       <!-- Testimonials-->
       <section class="section bg-madison context-dark position-relative">
         <div class="owl-carousel owl-carousel-default owl-carousel-nav-xl" data-items="1" data-nav="true" data-dots="true" data-autoplay="true" data-nav-class="[&quot;owl-prev fa fa-angle-left&quot;, &quot;owl-next fa fa-angle-right&quot;]">
