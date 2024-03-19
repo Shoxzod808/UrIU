@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'backend'
+    'backend',
+    'modeltranslation'
 ]
 
 MIDDLEWARE = [
@@ -107,24 +108,23 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 
-LANGUAGES = [
-    ('en', _('English')),
-    ('uz', _('Uzbek')),
-    ('ru', _('Russian')),
-    # Добавьте другие языки здесь
-]
+LANGUAGE_CODE = 'ru'  # язык сайта по умолчанию
 
-LANGUAGE_CODE = 'uz'
+LANGUAGES = (
+    ('ru', 'Russian'),
+    ('en', 'English'),
+)
 
-USE_L10N = True
+USE_I18N = True  # активация системы перевода django
 
-LOCALE_PATHS = [
-    os.path.join(BASE_DIR, 'locale'),
-]
+# месторасположение файлов перевода
+LOCALE_PATHS = (
+    'locale',
+    # os.path.join(PROJECT_DIR, 'locale'),
+)
 
 TIME_ZONE = 'UTC'
 
-USE_I18N = True
 
 USE_TZ = True
 
