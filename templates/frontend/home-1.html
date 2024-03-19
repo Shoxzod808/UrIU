@@ -105,14 +105,15 @@
         <div class="container">
           <div class="row justify-content-sm-center justify-content-md-end offset-top-0">
             <div class="col-sm-10 col-md-7 section-image-aside section-image-aside-left text-md-start">
-              <div class="section-image-aside-img d-none d-md-block" style="background-image: url(images/home-01-846x1002.jpg)"></div>
+              <div class="section-image-aside-img d-none d-md-block" style="background-image: url('{% static 'images/course-01-150x120.jpg' %}')"
+              ></div> 
               <div class="section-image-aside-body section-xl inset-md-left-70 inset-xl-left-110">
                 <h2 class="fw-bold">Our Featured Courses</h2>
                 <hr class="divider divider-md-0 bg-default">
                 <div class="offset-top-35 offset-lg-top-60 text-light">Our Featured Courses are selected through a rigorous process and uniquely created for each semester.</div>
                 <div class="text-start">
                   <div class="offset-top-60">
-                    <article class="post-vacation"><a class="post-vacation-img-wrap bg-image" href="academics.html" style="background-image: url(images/course-01-150x120.jpg)"></a>
+                    <article class="post-vacation"><a class="post-vacation-img-wrap bg-image bg-course" href="academics.html" style="background-image: url('{% static 'images/course-01-150x120.jpg' %}')"> </a>
                       <div class="post-vacation-body">
                         <div>
                           <h6 class="post-vacation-title"><a href="academics.html">Financial Analyst Course</a></h6>
@@ -132,7 +133,7 @@
                     </article>
                   </div>
                   <div class="offset-top-30">
-                    <article class="post-vacation"><a class="post-vacation-img-wrap bg-image" href="academics.html" style="background-image: url(images/course-02-150x120.jpg)"></a>
+                    <article class="post-vacation"><a class="post-vacation-img-wrap bg-image" href="academics.html" style="background-image: url('{% static 'images/course-01-150x120.jpg' %}')"></a>
                       <div class="post-vacation-body">
                         <div>
                           <h6 class="post-vacation-title"><a href="academics.html">Digital Marketing Course</a></h6>
@@ -151,7 +152,7 @@
                     </article>
                   </div>
                   <div class="offset-top-30">
-                    <article class="post-vacation"><a class="post-vacation-img-wrap bg-image" href="academics.html" style="background-image: url(images/course-03-150x120.jpg)"></a>
+                    <article class="post-vacation"><a class="post-vacation-img-wrap bg-image" href="academics.html" style="background-image: url('{% static 'images/course-01-150x120.jpg' %}')"></a>
                       <div class="post-vacation-body">
                         <div>
                           <h6 class="post-vacation-title"><a href="academics.html">Graphic Design Course</a></h6>
@@ -497,80 +498,8 @@
         </div>
       </section>
       <!-- Footer Corprorate-->
+      {% include "frontend\footer.html" %}
       <!-- Corporate footer-->
-      <footer class="page-footer">
-        <div class="hr bg-gray-light"></div>
-        <div class="container section-xs block-after-divider">
-          <div class="row row-50 justify-content-xl-between justify-content-sm-center">
-            <div class="col-lg-3 col-xl-2">
-              <!--Footer brand--><a class="d-inline-block" href="index.html"><img width='170' height='172' src="{% static 'images/logo-170x172.png' %}" alt=''/>
-                <div>
-                  <h6 class="barnd-name fw-bold offset-top-25">Jonathan Carroll</h6>
-                </div>
-                <div>
-                  <p class="brand-slogan text-gray fst-italic font-accent">University</p>
-                </div></a>
-            </div>
-            <div class="col-sm-10 col-lg-5 col-xl-4 text-xl-start">
-              <h6 class="fw-bold">Contact us</h6>
-              <div class="text-subline"></div>
-              <div class="offset-top-30">
-                <ul class="list-unstyled contact-info list">
-                  <li>
-                    <div class="unit flex-row align-items-center unit-spacing-xs">
-                      <div class="unit-left"><span class="icon mdi mdi-phone align-middle icon-xs text-madison"></span></div>
-                      <div class="unit-body"><a class="text-dark" href="tel:#">1-800-1234-567,</a> <a class="d-block d-lg-inline-block text-dark" href="tel:#">1-800-6547-321</a>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="offset-top-15">
-                    <div class="unit flex-row align-items-center unit-spacing-xs">
-                      <div class="unit-left"><span class="icon mdi mdi-map-marker align-middle icon-xs text-madison"></span></div>
-                      <div class="unit-body text-start"><a class="text-dark" href="#">2130 Fulton Street San Diego, CA 94117-1080 USA</a></div>
-                    </div>
-                  </li>
-                  <li class="offset-top-15">
-                    <div class="unit flex-row align-items-center unit-spacing-xs">
-                      <div class="unit-left"><span class="icon mdi mdi-email-open align-middle icon-xs text-madison"></span></div>
-                      <div class="unit-body"><a href="mailto:#">info@demolink.org</a></div>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-              <div class="offset-top-15 text-start">
-                <ul class="list-inline list-inline-xs list-inline-madison">
-                  <li><a class="icon icon-xxs fa fa-facebook icon-circle icon-gray-light-filled" href="#"></a></li>
-                  <li><a class="icon icon-xxs fa fa-twitter icon-circle icon-gray-light-filled" href="#"></a></li>
-                  <li><a class="icon icon-xxs fa fa-google icon-circle icon-gray-light-filled" href="#"></a></li>
-                  <li><a class="icon icon-xxs fa fa-instagram icon-circle icon-gray-light-filled" href="#"></a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-sm-10 col-lg-8 col-xl-4 text-xl-start">
-              <h6 class="fw-bold">Newsletter</h6>
-              <div class="text-subline"></div>
-              <div class="offset-top-30 text-start">
-                <p>Enter your email address to get the latest University news, special events and student activities delivered right to your inbox.</p>
-              </div>
-              <div class="offset-top-10">
-                <form class="rd-mailform form-subscribe" data-form-output="form-output-global" data-form-type="subscribe" method="post" action="bat/rd-mailform.php">
-                  <div class="form-wrap">
-                    <div class="input-group input-group-sm">
-                      <input class="form-input" placeholder="Your e-mail" type="email" name="email" data-constraints="@Required @Email"><span class="input-group-btn">
-                        <button class="btn btn-sm button-primary" type="submit">Subscribe</button></span>
-                    </div>
-                  </div>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="bg-madison context-dark">
-          <div class="container text-lg-start section-5">
-            <p class="rights"><span>&copy;&nbsp;</span><span class="copyright-year"></span><span>.&nbsp;</span><span>All Rights Reserved</span><span>.&nbsp;</span><a href="privacy-policy.html">Privacy Policy</a></p>
-          </div>
-        </div>
-      </footer>
     </div>
     <!-- Global Mailform Output-->
     <div class="snackbars" id="form-output-global"></div>

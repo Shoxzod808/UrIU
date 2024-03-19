@@ -4159,7 +4159,9 @@ mark, .mark {
 	background-size: cover;
 	background-position: center center;
 }
-
+.bg-course{
+	background-image: url(images/course-01-150x120.jpg)
+}
 .bg-black {
 	background: #000;
 	fill: #000;
