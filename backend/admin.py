@@ -1,7 +1,7 @@
 # backend/admin.py
 
 from django.contrib import admin
-from .models import News, Template, Template2Button
+from .models import News, Template, Template2Button, Gallery
 
 @admin.register(Template)
 class TemplateAdmin(admin.ModelAdmin):
@@ -12,3 +12,9 @@ class TemplateAdmin(admin.ModelAdmin):
 class Template2ButtonAdmin(admin.ModelAdmin):
     list_display = ('title', 'body_en', 'body_ru', 'body_uz')
     search_fields = ('title', 'body_en', 'body_ru', 'body_uz')
+
+@admin.register(Gallery)
+class GalleryAdmin(admin.ModelAdmin):
+    list_display = ['id', 'photo', 'description_en', 'description_ru', 'description_uz', 'date', 'created']
+    search_fields = ['description_en', 'description_ru', 'description_uz']
+    list_filter = ['date', 'created']

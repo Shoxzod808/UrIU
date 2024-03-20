@@ -284,9 +284,28 @@
       </section>
       <!-- Gallery Simple-->
       <!-- Gallery-->
+      <!-- <section class="section">
+        <div class="owl-carousel flickr owl-carousel-fullheight" data-items="2" data-sm-items="2" data-autoplay="true" data-md-items="4" data-xxl-items="6" data-nav="false" data-dots="false" data-mouse-drag="true" data-lightgallery="group" data-stage-padding="0" data-xl-stage-padding="0">
+          <a class="thumbnail-default" data-lightgallery="item" href ="{% static 'images /gallery-simple-1-677x677.jpg'  %}">
+            <img width="320" height="320" data-title="alt" src="{% static 'images/gallery-simple-1-677x677.jpg'  %}" alt="">
+            <span class="icon fa fa-search-plus"></span></a>
+          <a class="thumbnail-default" data-lightgallery="item" href ="{% static 'images /gallery-simple-2-677x677.jpg'  %}">
+            <img width="320" height="320" src="{% static 'images/gallery-simple-2-677x677.jpg'  %}" alt="">
+            <span class="icon fa fa-search-plus">
+              
+            </span></a><a class="thumbnail-default" data-lightgallery="item" href ="{% static 'images /gallery-simple-3-677x677.jpg'  %}"><img width="320" height="320" src="{% static 'images/gallery-simple-3-677x677.jpg'  %}" alt=""><span class="icon fa fa-search-plus"></span></a><a class="thumbnail-default" data-lightgallery="item" href ="{% static 'images /gallery-simple-4-677x677.jpg' %}"><img width="320" height="320" src="{% static 'images/gallery-simple-4-677x677.jpg'  %}" alt=""><span class="icon fa fa-search-plus"></span></a><a class="thumbnail-default" data-lightgallery="item" href ="{% static 'images /gallery-simple-5-677x677.jpg'  %}"><img width="320" height="320" src="{% static 'images/gallery-simple-5-677x677.jpg'  %}" alt=""><span class="icon fa fa-search-plus"></span></a><a class="thumbnail-default" data-lightgallery="item" href ="{% static 'images /gallery-simple-6-677x677.jpg'  %}"><img width="320" height="320" src="{% static 'images/gallery-simple-6-677x677.jpg'  %}" alt=""><span class="icon fa fa-search-plus"></span></a></div>
+      </section> -->
       <section class="section">
-        <div class="owl-carousel flickr owl-carousel-fullheight" data-items="2" data-sm-items="2" data-autoplay="true" data-md-items="4" data-xxl-items="6" data-nav="false" data-dots="false" data-mouse-drag="true" data-lightgallery="group" data-stage-padding="0" data-xl-stage-padding="0"><a class="thumbnail-default" data-lightgallery="item" href ="{% static 'images /gallery-simple-1-677x677.jpg'  %}"><img width="320" height="320" data-title="alt" src="{% static 'images/gallery-simple-1-677x677.jpg'  %}" alt=""><span class="icon fa fa-search-plus"></span></a><a class="thumbnail-default" data-lightgallery="item" href ="{% static 'images /gallery-simple-2-677x677.jpg'  %}"><img width="320" height="320" src="{% static 'images/gallery-simple-2-677x677.jpg'  %}" alt=""><span class="icon fa fa-search-plus"></span></a><a class="thumbnail-default" data-lightgallery="item" href ="{% static 'images /gallery-simple-3-677x677.jpg'  %}"><img width="320" height="320" src="{% static 'images/gallery-simple-3-677x677.jpg'  %}" alt=""><span class="icon fa fa-search-plus"></span></a><a class="thumbnail-default" data-lightgallery="item" href ="{% static 'images /gallery-simple-4-677x677.jpg' %}"><img width="320" height="320" src="{% static 'images/gallery-simple-4-677x677.jpg'  %}" alt=""><span class="icon fa fa-search-plus"></span></a><a class="thumbnail-default" data-lightgallery="item" href ="{% static 'images /gallery-simple-5-677x677.jpg'  %}"><img width="320" height="320" src="{% static 'images/gallery-simple-5-677x677.jpg'  %}" alt=""><span class="icon fa fa-search-plus"></span></a><a class="thumbnail-default" data-lightgallery="item" href ="{% static 'images /gallery-simple-6-677x677.jpg'  %}"><img width="320" height="320" src="{% static 'images/gallery-simple-6-677x677.jpg'  %}" alt=""><span class="icon fa fa-search-plus"></span></a></div>
-      </section>
+        <div class="owl-carousel flickr owl-carousel-fullheight" data-items="2" data-sm-items="2" data-autoplay="true" data-md-items="4" data-xxl-items="6" data-nav="false" data-dots="false" data-mouse-drag="true" data-lightgallery="group" data-stage-padding="0" data-xl-stage-padding="0">
+            {% for photo in gallery_photos %}
+                <a class="thumbnail-default" data-lightgallery="item" href="{{ photo.photo.url }}">
+                    <img width="320" height="320" src="{{ photo.photo.url }}" alt="">
+                    <span class="icon fa fa-search-plus"></span>
+                </a>
+            {% endfor %}
+        </div>
+    </section>
+    
       <!-- Google Map-->
       <!--Google Map-->
       

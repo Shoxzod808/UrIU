@@ -34,3 +34,18 @@ class Template2Button(models.Model):
 
     def __str__(self):
         return self.title
+
+class Gallery(models.Model):
+    photo = models.ImageField(upload_to='gallery_photos/')
+    description_en = models.TextField(null=True, blank=True, verbose_name='English')
+    description_ru = models.TextField(null=True, blank=True, verbose_name='Русский')
+    description_uz = models.TextField(null=True, blank=True, verbose_name='Uzbekcha')
+    date = models.DateField()
+    created = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        verbose_name = 'Галерея'
+        verbose_name_plural = 'Галерея'
+
+    def __str__(self):
+        return f'Gallery #{self.id}'

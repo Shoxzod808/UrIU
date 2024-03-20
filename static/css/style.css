@@ -5639,6 +5639,18 @@ a.icon {
 	color: #fff;
 }
 
+.page a.icon.fa-youtube:hover {
+	background: red;
+	color: #fff;
+}
+
+.page a.icon.fa-telegram:hover {
+	background: white;
+	color: blue;
+	border: 1px solid blue;
+}
+
+
 .page a.icon.fa-twitter:hover {
 	background: #2ca7e0;
 	color: #fff;
