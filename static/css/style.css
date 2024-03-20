@@ -1786,6 +1786,13 @@ h2 + .divider {
 		text-overflow: ellipsis;
 		width: 100%;
 	}
+	
+
+.b-r-h{
+	
+	border-radius: 10px;
+	overflow: hidden;
+}
 	.section-grid-demonstration [class*="col-"] .bg-lightest {
 		padding: 5px;
 	}
@@ -18398,11 +18405,19 @@ html .rd-file-picker input[type="file"] {
 	.lt-ie-10 .rd-navbar-hamburger-menu.rd-navbar-fixed .rd-navbar-nav {
 		margin-top: 25px;
 	}
+	
+
+.b-r-h{
+	
+	border-radius: 10px;
+	overflow: hidden;
+}
 }
 
 
 
 .b-r-h{
-	border-radius: 30px;
+	
+	border-radius: 10px;
 	overflow: hidden;
 }
