@@ -5,8 +5,6 @@
 
 {% block body %}
 
-
-  <body>
     <div class="preloader"> 
       <div class="preloader-body">
         <div class="cssload-container">
@@ -18,8 +16,8 @@
     <!-- Page-->
     <div class="page text-center">
       <!-- Page Content-->
-      <section class="section page-content section-cover section-404 section-30 bg-default">
-        <div><a href="./"><img src="images/logo.png" width="110" height="110" alt=""></a></div>
+      <section class="section page-content section-cover section-30 bg-default">
+        <div><a href="./"><img src="{% static 'images/logo.png' %}" width="110" height="110" alt=""></a></div>
         <div class="section-xxs">
           <div class="container">
             <div>
@@ -31,23 +29,16 @@
             <div class="offset-top-15 offset-lg-top-30">
               <hr class="divider bg-madison">
             </div>
-            <div class="offset-top-30 offset-lg-top-60">
-              <p>You may have mistyped the address or the page may have moved.</p>
-            </div>
             <div class="offset-top-15 offset-lg-top-30">
-              <div class="group group-xl"><a class="btn button-primary btn-icon btn-icon btn-icon-left" href="./"><span class="icon fa fa-arrow-left"></span><span>Back to Home Page</span></a><a class="btn button-default btn-icon btn-icon btn-icon-left" href="contacts.html"><span class="icon fa fa-envelope"></span><span>Contact Us</span></a></div>
+              <div class="group group-xl"><a class="btn button-primary btn-icon btn-icon btn-icon-left" href="./"><span class="icon fa fa-arrow-left"></span><span>Back to Home Page</span></a></div>
             </div>
           </div>
-        </div>
-        <div>
-          <p>&copy; <span class="copyright-year"></span> All Rights Reserved Terms of Use and <a href="privacy-policy.html">Privacy Policy</a></p>
         </div>
       </section>
     </div>
     <!-- Global Mailform Output-->
     <div class="snackbars" id="form-output-global"></div>
     <!-- Java script-->
-    <script src="js/core.min.js"></script>
-    <script src="js/script.js"></script>
-  </body>
-</html>
+    <script src="{% static 'js/core.min.js' %}"></script>
+    <script src="{% static 'js/script.js' %}"></script>
+{% endblock %}
