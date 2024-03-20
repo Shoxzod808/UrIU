@@ -1,4 +1,5 @@
 {% load static %}
+{% load my_tags %}
 <footer class="page-footer">
   <div class="hr bg-gray-light"></div>
   <div class="container section-xs block-after-divider">
@@ -7,15 +8,15 @@
         <!--Footer brand--><a class="d-inline-block" href="index.html"><img width='170' height='170'
             src="{% static 'images/logo.png' %}" alt='' />
           <div>
-            <h6 class="barnd-name fw-bold offset-top-25">Jonathan Carroll</h6>
+            <h6 class="barnd-name fw-bold offset-top-25">{% call_get_text 'title-1' language True%}</h6>
           </div>
           <div>
-            <p class="brand-slogan text-gray fst-italic font-accent">University</p>
+            <p class="brand-slogan text-gray fst-italic font-accent">{% call_get_text 'title-2' language True%}</p>
           </div>
         </a>
       </div>
       <div class="col-sm-10 col-lg-5 col-xl-4 text-xl-start">
-        <h6 class="fw-bold">Contact us</h6>
+        <h6 class="fw-bold">{% call_get_text 'contact' language True%}</h6>
         <div class="text-subline"></div>
         <div class="offset-top-30">
           <ul class="list-unstyled contact-info list">

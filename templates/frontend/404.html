@@ -17,11 +17,11 @@
     <div class="page text-center">
       <!-- Page Content-->
       <section class="section page-content section-cover section-30 bg-default">
-        <div><a href="./"><img src="{% static 'images/logo.png' %}" width="110" height="110" alt=""></a></div>
+        <div><a href="/{{ language }}"><img src="{% static 'images/logo.png' %}" width="110" height="110" alt=""></a></div>
         <div class="section-xxs">
           <div class="container">
             <div>
-              <h1 class="font-default"><span class="big text-light fw-bold">404</span></h1>
+              <h1 class="font-default"><span class="big text-light fw-bold">404{{ language }}</span></h1>
             </div>
             <div class="offset-top-10">
               <h2 class="fw-bold">Sorry, the page was not found</h2>
@@ -30,7 +30,7 @@
               <hr class="divider bg-madison">
             </div>
             <div class="offset-top-15 offset-lg-top-30">
-              <div class="group group-xl"><a class="btn button-primary btn-icon btn-icon btn-icon-left" href="./"><span class="icon fa fa-arrow-left"></span><span>Back to Home Page</span></a></div>
+              <div class="group group-xl"><a class="btn button-primary btn-icon btn-icon btn-icon-left" href="/{{language}}"><span class="icon fa fa-arrow-left"></span><span>Back to Home Page</span></a></div>
             </div>
           </div>
         </div>

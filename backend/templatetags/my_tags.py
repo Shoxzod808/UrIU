@@ -5,5 +5,5 @@ from ..utils import get_text
 register = template.Library()
 
 @register.simple_tag
-def call_get_text(arg):
-    return get_text(arg)
+def call_get_text(title, lang, button=False):
+    return get_text(title, lang, button)
