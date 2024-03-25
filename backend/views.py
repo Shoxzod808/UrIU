@@ -124,3 +124,15 @@ def rekvizitlar(request, language='uz'):
     else:
         context['language'] = 'uz'
         return render(request, '404.html', context)
+
+def qabul(request, language='uz'):
+    categories = Category.objects.all()
+    context = {
+        'categories': categories,
+        'language': language,
+    }
+    if language in ['ru', 'en', 'uz']:
+        return render(request, 'frontend/qabul.html', context)
+    else:
+        context['language'] = 'uz'
+        return render(request, '404.html', context)

@@ -1,0 +1,73 @@
+{% extends "frontend\base.html" %}
+{% load static %}
+{% load my_tags %}
+
+{% block title %}{% call_get_text "Qabul" language True%}{% endblock %}
+
+{% block body %}
+
+    
+    <div class="preloader"> 
+      <div class="preloader-body">
+        <div class="cssload-container">
+          <div class="cssload-speeding-wheel"></div>
+        </div>
+        <p>Loading...</p>
+      </div>
+    </div>
+    <div class="page text-center">
+      {% include "frontend\header.html" %}
+      <br>
+      <br>
+      <br>
+      <h3>{% call_get_text "Qabul" language False%}</h3>
+      <br>
+      <br>
+      <div class="countdown">
+        <div class="countdown-item">
+          <span id="days">00</span>
+          <span class="label">{% call_get_text "kun" language True%}</span>
+        </div>
+        <div class="countdown-item">
+          <span id="hours">00</span>
+          <span class="label">{% call_get_text "soat" language True%}</span>
+        </div>
+        <div class="countdown-item">
+          <span id="minutes">00</span>
+          <span class="label">{% call_get_text "daqiqa" language True%}</span>
+        </div>
+        <div class="countdown-item">
+          <span id="seconds">00</span>
+          <span class="label">{% call_get_text "soniya" language True%}</span>
+        </div>
+      </div>
+    </div>
+    
+<!-- Global Mailform Output-->
+<div class="snackbars" id="form-output-global"></div>
+<!-- Java script-->
+<script>
+  const countdown = document.querySelector('.countdown');
+  const targetDate = new Date('2024-06-31T00:00:00');
+   
+  function updateCountdown() {
+    const now = new Date();
+    const remainingTime = targetDate - now;
+   
+    const days = Math.floor(remainingTime / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((remainingTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((remainingTime % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
+   
+    document.getElementById('days').innerText = days.toString().padStart(2, '0');
+    document.getElementById('hours').innerText = hours.toString().padStart(2, '0');
+    document.getElementById('minutes').innerText = minutes.toString().padStart(2, '0');
+    document.getElementById('seconds').innerText = seconds.toString().padStart(2, '0');
+  }
+   
+  // Обновляем счетчик каждую секунду
+  setInterval(updateCountdown, 1000);
+</script>
+<script src="{% static 'js/core.min.js' %}"></script>
+<script src="{% static 'js/script.js' %}"></script>
+{% endblock %}

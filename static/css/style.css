@@ -18433,3 +18433,25 @@ html .rd-file-picker input[type="file"] {
 	border-radius: 10px;
 	overflow: hidden;
 }
+
+.countdown {
+	display: flex;
+	justify-content: center;
+	font-family: 'Arial', sans-serif;
+  }
+   
+  .countdown-item {
+	margin: 0 20px;
+	text-align: center;
+  }
+   
+  .countdown-item span {
+	display: block;
+	font-size: 2em;
+  }
+   
+  .label {
+	font-size: 1.1em;
+	color: #999;
+  }
+  

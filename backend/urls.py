@@ -24,6 +24,7 @@ urlpatterns = [
     path("<str:language>/markazlar_va_bolimlar/", views.markazlar_va_bolimlar, name="markazlar_va_bolimlar"),
     path("<str:language>/rektorat/", views.rektorat, name="rektorat"),
     path("<str:language>/rekvizitlar/", views.rekvizitlar, name="rekvizitlar"),
+    path("<str:language>/qabul/", views.qabul, name="qabul"),
 ]
 
 
