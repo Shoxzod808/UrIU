@@ -1,0 +1,26 @@
+{% extends "frontend\base.html" %}
+{% load static %}
+{% load my_tags %}
+
+{% block title %}{% call_get_text "Kengashlar" language True%}{% endblock %}
+
+{% block body %}
+
+    
+    <div class="preloader"> 
+      <div class="preloader-body">
+        <div class="cssload-container">
+          <div class="cssload-speeding-wheel"></div>
+        </div>
+        <p>Loading...</p>
+      </div>
+    </div>
+    <div class="page text-center">
+      {% include "frontend\header.html" %}
+    </div>
+<!-- Global Mailform Output-->
+<div class="snackbars" id="form-output-global"></div>
+<!-- Java script-->
+<script src="{% static 'js/core.min.js' %}"></script>
+<script src="{% static 'js/script.js' %}"></script>
+{% endblock %}

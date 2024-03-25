@@ -1,7 +1,7 @@
 # backend/admin.py
 
 from django.contrib import admin
-from .models import News, Template, Template2Button, Gallery
+from .models import News, Template, Template2Button, Gallery, Category, Button
 
 @admin.register(Template)
 class TemplateAdmin(admin.ModelAdmin):
@@ -18,3 +18,14 @@ class GalleryAdmin(admin.ModelAdmin):
     list_display = ['id', 'photo', 'description_en', 'description_ru', 'description_uz', 'date', 'created']
     search_fields = ['description_en', 'description_ru', 'description_uz']
     list_filter = ['date', 'created']
+
+
+
+class ButtonInline(admin.TabularInline):
+    model = Button
+    extra = 1
+
+class CategoryAdmin(admin.ModelAdmin):
+    inlines = [ButtonInline]
+
+admin.site.register(Category, CategoryAdmin)

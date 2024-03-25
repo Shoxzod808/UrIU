@@ -1,4 +1,5 @@
 {% load static %}
+{% load my_tags %}
 <header class="page-head header-panel-absolute">
   <div class="rd-navbar-wrap">
     <nav class="rd-navbar rd-navbar-default" data-auto-height="false" data-lg-auto-height="true"
@@ -12,7 +13,7 @@
         <div class="rd-navbar-panel">
           <button class="rd-navbar-toggle"
             data-rd-navbar-toggle=".rd-navbar, .rd-navbar-nav-wrap"><span></span></button>
-          <h4 class="panel-title d-lg-none">Home</h4>
+          <h4 class="panel-title d-lg-none">{% call_get_text "Home" language True%}</h4>
           <!-- RD Navbar Right Side Toggle-->
           <button class="rd-navbar-top-panel-toggle d-lg-none"
             data-rd-navbar-toggle=".rd-navbar-top-panel"><span></span></button>
@@ -22,15 +23,15 @@
                 <li>
                   <div class="unit flex-row align-items-center unit-spacing-xs">
                     <div class="unit-left"><span class="icon mdi mdi-phone align-middle"></span></div>
-                    <div class="unit-body"><a href="tel:#">1-800-1234-567,</a> <a class="d-block d-lg-inline-block"
-                        href="tel:#">1-800-6547-321</a>
+                    <div class="unit-body"><a href="tel:+998904362022">90 436-20-22,</a> <a class="d-block d-lg-inline-block"
+                      href="tel:+998914362022">91 436-20-22</a>
                     </div>
                   </div>
                 </li>
                 <li>
                   <div class="unit flex-row align-items-center unit-spacing-xs">
                     <div class="unit-left"><span class="icon mdi mdi-map-marker align-middle"></span></div>
-                    <div class="unit-body"><a href="#">2130 Fulton Street San Diego, CA 94117-1080 USA</a></div>
+                    <div class="unit-body"><a href="https://www.google.com/maps?ll=41.570595,60.614984&z=14&t=m&hl=ru&gl=US&mapclient=embed&cid=4823893255036828626">{% call_get_text 'address' language True%}</a></div>
                   </div>
                 </li>
                 <li>
@@ -41,14 +42,7 @@
                 </li>
               </ul>
             </div>
-            <div class="rd-navbar-top-panel-right-part">
-              <div class="rd-navbar-top-panel-left-part">
-                <div class="unit flex-row align-items-center unit-spacing-xs">
-                  <div class="unit-left"><span class="icon mdi mdi-login align-middle"></span></div>
-                  <div class="unit-body"><a href="login-register.html">Login/Register</a></div>
-                </div>
-              </div>
-            </div>
+            
           </div>
         </div>
         <div class="rd-navbar-menu-wrap clearfix">
@@ -72,22 +66,19 @@
               </div>
               <!-- RD Navbar Nav-->
               <ul class="rd-navbar-nav">
-                <li class="active"><a href="/{{language}}">Home</a>
+                <li class="active"><a href="/{{language}}">{% call_get_text "Home" language True%}</a>
                 </li>
-                
-                <li><a href="#">Universitet</a>
-                  <ul class="rd-navbar-dropdown">
-                    <li><a href="grid-gallery.html">Rektor Tabrigi</a></li>
-                  </ul>
-                </li>
-                
-                <li><a href="#">Tuzilma</a>
-                  <ul class="rd-navbar-dropdown">
-                    <li><a href="product-catalog.html">Rektorat</a></li>
-                  </ul>
-                </li>
+                {% for category in categories %}
+                    <li><a href="#">{% call_get_text category.name language True%}</a>
+                      <ul class="rd-navbar-dropdown">
+                        {% for button in category.button_set.all %}
+                            <li><a href="/{{language}}/{{ button.link }}">{% call_get_text button.name language True%}</a></li>
+                          {% endfor %}
+                      </ul>
+                    </li>
+                {% endfor %}
                 <li><a href="#">News</a></li>
-                <li><a href="contacts.html">Contacts</a>
+                <li><a href="#">Contacts</a>
                 </li>
               </ul>
               

@@ -1,7 +1,8 @@
 {% extends "frontend\base.html" %}
 {% load static %}
+{% load my_tags %}
 
-{% block title %}Home{% endblock %}
+{% block title %}{% call_get_text "Home" language True%}{% endblock %}
 
 {% block body %}
 
