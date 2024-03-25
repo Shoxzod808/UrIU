@@ -13,7 +13,10 @@ def default_language_redirect(request):
 
 urlpatterns = [
     path('', default_language_redirect),
+    path("<str:language>/news", views.news, name="news"),
+    path("<str:language>/contact", views.news, name="news"),
     path("<str:language>/", views.index, name="index"),
+    path("<str:language>/news/<int:news_id>", views.news_detail, name="news_detail"),
     path("<str:language>/rektor_tabrigi/", views.rektor_tabrigi, name="rektor_tabrigi"),
     path("<str:language>/umumiy_malumot/", views.umumiy_malumot, name="umumiy_malumot"),
     path("<str:language>/universitet_tarixi/", views.universitet_tarixi, name="universitet_tarixi"),

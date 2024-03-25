@@ -1,15 +1,17 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from .models import Gallery, Category
+from .models import Gallery, Category, News, Tag
 
 
 def index(request, language='uz'):
     gallery_photos = Gallery.objects.all()
     categories = Category.objects.all()
+    news = News.objects.all()
     context = {
         'categories': categories,
         'language': language,
         'gallery_photos': gallery_photos,
+        'news': news,
     }
     if language in ['ru', 'en', 'uz']:
         return render(request, 'frontend/home-1.html', context)
@@ -133,6 +135,46 @@ def qabul(request, language='uz'):
     }
     if language in ['ru', 'en', 'uz']:
         return render(request, 'frontend/qabul.html', context)
+    else:
+        context['language'] = 'uz'
+        return render(request, '404.html', context)
+
+def news(request, language='uz'):
+    categories = Category.objects.all()
+    context = {
+        'categories': categories,
+        'language': language,
+    }
+    if language in ['ru', 'en', 'uz']:
+        return render(request, 'frontend/news.html', context)
+    else:
+        context['language'] = 'uz'
+        return render(request, '404.html', context)
+
+def contact(request, language='uz'):
+    categories = Category.objects.all()
+    context = {
+        'categories': categories,
+        'language': language,
+    }
+    if language in ['ru', 'en', 'uz']:
+        return render(request, 'frontend/contact.html', context)
+    else:
+        context['language'] = 'uz'
+        return render(request, '404.html', context)
+
+def news_detail(request, news_id, language='uz'):
+    categories = Category.objects.all()
+    tags = Tag.objects.all()
+    news_item = News.objects.get(id=news_id)
+    context = {
+        'news_item': news_item,
+        'tags': tags,
+        'categories': categories,
+        'language': language,
+    }
+    if language in ['ru', 'en', 'uz']:
+        return render(request, 'frontend/news_detail.html', context)
     else:
         context['language'] = 'uz'
         return render(request, '404.html', context)

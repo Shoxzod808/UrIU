@@ -1,7 +1,7 @@
 # backend/admin.py
 
 from django.contrib import admin
-from .models import News, Template, Template2Button, Gallery, Category, Button
+from .models import News, Template, Template2Button, Gallery, Category, Button, Tag, GalleryForNews
 
 @admin.register(Template)
 class TemplateAdmin(admin.ModelAdmin):
@@ -29,3 +29,14 @@ class CategoryAdmin(admin.ModelAdmin):
     inlines = [ButtonInline]
 
 admin.site.register(Category, CategoryAdmin)
+
+class GalleryForNewsInline(admin.TabularInline):
+    model = GalleryForNews
+    extra = 1
+
+class NewsAdmin(admin.ModelAdmin):
+    inlines = [GalleryForNewsInline]
+    filter_horizontal = ('tags',)
+
+admin.site.register(News, NewsAdmin)
+admin.site.register(Tag)
