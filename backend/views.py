@@ -13,4 +13,4 @@ def index(request, language='uz'):
         return render(request, 'frontend/home-1.html', context)
     else:
         context['language'] = 'uz'
-        return render(request, 'frontend/404.html', context)
+        return render(request, '404.html', context)
