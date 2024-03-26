@@ -1,3 +1,4 @@
+
 {% extends "frontend\base.html" %}
 {% load static %}
 {% load my_tags %}
@@ -17,11 +18,137 @@
     </div>
     <div class="page text-center">
       {% include "frontend\header.html" %}
-      <h1>{% call_get_text "contact" language True%}</h1>
+      <section class="section mt-3 mb-5 bg-default">
+        <div class="container">
+          <div class="row row-50 justify-content-sm-center">
+            <div class="col-sm-10 col-lg-8 text-lg-start">
+              <h2 class="fw-bold">Get in Touch</h2>
+              <hr class="divider bg-madison divider-lg-0">
+              <div class="offset-top-30 offset-md-top-60">
+                <p>You can contact us any way that is convenient for you. We are available 24/7 via fax or email. You can also use a quick contact form below or visit our office personally. We would be happy to answer your questions.</p>
+              </div>
+              <div class="offset-top-30">
+                <form class="rd-mailform text-start" data-form-output="form-output-global" data-form-type="contact" method="post" action="bat/rd-mailform.php">
+                  <div class="row row-12">
+                    <div class="col-xl-6">
+                      <div class="form-wrap">
+                        <label class="form-label form-label-outside" for="contact-me-name">First name</label>
+                        <input class="form-input" id="contact-me-name" type="text" name="name" data-constraints="@Required">
+                      </div>
+                    </div>
+                    <div class="col-xl-6">
+                      <div class="form-wrap">
+                        <label class="form-label form-label-outside" for="contact-me-last-name">Last name</label>
+                        <input class="form-input" id="contact-me-last-name" type="text" name="last-name" data-constraints="@Required">
+                      </div>
+                    </div>
+                    <div class="col-xl-6">
+                      <div class="form-wrap">
+                        <label class="form-label form-label-outside" for="contact-me-email">E-mail</label>
+                        <input class="form-input" id="contact-me-email" type="email" name="email" data-constraints="@Required @Email">
+                      </div>
+                    </div>
+                    <div class="col-xl-6">
+                      <div class="form-wrap">
+                        <label class="form-label form-label-outside" for="contact-me-phone">Phone</label>
+                        <input class="form-input" id="contact-me-phone" type="text" name="phone" data-constraints="@Required @IsNumeric">
+                      </div>
+                    </div>
+                    <div class="col-xl-12">
+                      <div class="form-wrap">
+                        <label class="form-label form-label-outside" for="contact-me-message">Message</label>
+                        <textarea class="form-input" id="contact-me-message" name="message" data-constraints="@Required" style="height: 220px"></textarea>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="text-center text-xl-start offset-top-20">
+                    <button class="btn button-primary" type="submit">Send Message</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="col-sm-10 col-lg-4 text-start">
+              <div class="inset-lg-left-30">
+                <h6 class="fw-bold">Socials</h6>
+                <div class="hr bg-gray-light offset-top-10"></div>
+                <div class="offset-top-15 text-start">
+                  <ul class="list-inline list-inline-xs list-inline-madison">
+                    <li><a class="icon icon-xxs fa fa-facebook icon-circle icon-gray-light-filled" href="https://www.facebook.com/profile.php?id=100091826560046"></a></li>
+                    <li><a class="icon icon-xxs fa fa-youtube icon-circle icon-gray-light-filled" href="https://www.youtube.com/@uriu/about"></a></li>
+                    <li><a class="icon icon-xxs fa fa-telegram icon-circle icon-gray-light-filled" href="https://t.me/urganch_iu"></a></li>
+                    <li><a class="icon icon-xxs fa fa-instagram icon-circle icon-gray-light-filled" href="http://instagram.com/urganch_innovatsion_university"></a></li>
+                  </ul>
+                </div>
+                <div class="offset-top-30 offset-md-top-60">
+                  <h6 class="fw-bold">Phones</h6>
+                  <div>
+                    <div class="hr bg-gray-light offset-top-10"></div>
+                  </div>
+                  <div class="offset-top-15">
+                    <ul class="list list-unstyled">
+                       
+                      <li><span class="icon icon-xs text-madison mdi mdi-phone align-middle"></span><a class="text-dark" href="tel:+998904362022">90 436-20-22</a></li>
+                      <li><span class="icon icon-xs text-madison mdi mdi-phone align-middle"></span><a class="d-block d-lg-inline-block text-dark" href="tel:+998914362022">91 436-20-22</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="offset-top-30 offset-md-top-60">
+                  <h6 class="fw-bold">E-mail</h6>
+                  <div>
+                    <div class="hr bg-gray-light offset-top-10"></div>
+                  </div>
+                  <div class="offset-top-15">
+                    <ul class="list list-unstyled">
+                      <li><span class="icon icon-xs text-madison mdi mdi-email-outline align-middle"></span><a class="align-middle inset-left-10" href="mailto:info@demolink.org">info@uriu.uz</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="offset-top-30 offset-md-top-60">
+                  <h6 class="fw-bold">Address</h6>
+                  <div>
+                    <div class="hr bg-gray-light offset-top-10"></div>
+                  </div>
+                  <div class="offset-top-15">
+                    <div class="unit flex-row unit-spacing-xs">
+                      <div class="unit-left"><span class="icon icon-xs mdi mdi-map-marker text-madison"></span></div>
+                      <div class="unit-body">
+                        <div class="unit-body text-start"><a class="text-dark" href="https://www.google.com/maps?ll=41.570595,60.614984&z=14&t=m&hl=ru&gl=US&mapclient=embed&cid=4823893255036828626">{% call_get_text 'address' language True%}</a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="offset-top-30 offset-md-top-65">
+                  <h6 class="fw-bold">Opening Hours</h6>
+                  <div>
+                    <div class="hr bg-gray-light offset-top-10"></div>
+                  </div>
+                  <div class="offset-top-15">
+                    <div class="unit flex-row unit-spacing-xs">
+                      <div class="unit-left"><span class="icon icon-xs mdi mdi-calendar-clock text-madison"></span></div>
+                      <div class="unit-body">
+                        <div>
+                          <p>Mon-: 9:00am-6:00pm</p>
+                        </div>
+                        <div>
+                          <p>Sun-Sat: Closed</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--Google Map-->
+    
+      <!-- Page Footer-->
+      {% include "frontend\footer.html" %}
+      <!-- Corporate footer-->
     </div>
-<!-- Global Mailform Output-->
-<div class="snackbars" id="form-output-global"></div>
-{% include "frontend\footer.html" %}
+
+
 <!-- Java script-->
 <script src="{% static 'js/core.min.js' %}"></script>
 <script src="{% static 'js/script.js' %}"></script>
