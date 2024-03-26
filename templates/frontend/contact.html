@@ -2,7 +2,7 @@
 {% load static %}
 {% load my_tags %}
 
-{% block title %}{% call_get_text "News" language True%}{% endblock %}
+{% block title %}{% call_get_text "contact" language True%}{% endblock %}
 
 {% block body %}
 
@@ -17,7 +17,7 @@
     </div>
     <div class="page text-center">
       {% include "frontend\header.html" %}
-      <h1>NEWS</h1>
+      <h1>{% call_get_text "contact" language True%}</h1>
     </div>
 <!-- Global Mailform Output-->
 <div class="snackbars" id="form-output-global"></div>

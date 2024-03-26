@@ -140,7 +140,7 @@
       <!-- Testimonials-->
       <section class="section bg-madison context-dark position-relative">
         <div class="owl-carousel owl-carousel-default owl-carousel-nav-xl" data-items="1" data-nav="true" data-dots="true" data-autoplay="true" data-nav-class="[&quot;owl-prev fa fa-angle-left&quot;, &quot;owl-next fa fa-angle-right&quot;]">
-          <div>
+          <!-- <div>
             <div class="container section-70 section-xl-100 section-xl-bottom-114">
               <div class="row justify-content-sm-center align-items-sm-center">
                 <div class="col-md-3 text-md-end order-md-2"><img class="img-responsive d-inline-block rounded-circle" src="{% static 'images/users/user-debra-banks-230x230.jpg'  %}" width="230" height="230" alt=""></div>
@@ -179,7 +179,57 @@
                 </div>
               </div>
             </div>
+          </div> -->
+          {% for quote in quotes %}
+            <div>
+              <div class="container section-70 section-xl-100 section-xl-bottom-114">
+                  
+                  <div class="row justify-content-sm-center align-items-sm-center">
+                      <div class="col-md-3 text-md-end order-md-2">
+                          <img class="img-responsive d-inline-block rounded-circle" src="{{ quote.photo.url }}" width="230" height="230" alt="">
+                      </div>
+                      <div class="col-md-9 order-md-1">
+                          <div class="quote-classic-boxed text-start">
+                              <div class="quote-body">
+                                  <q>
+                                    {% if language == 'en' %}
+                                      {{quote.text_en}}
+                                    {% elif language == 'ru' %}
+                                      {{quote.text_ru}}
+                                    {% else %}
+                                      {{quote.text_uz}}
+                                    {% endif %}
+                                  </q>
+                                  <div class="offset-top-30 text-end">
+                                      <cite class="font-accent">
+                                        {% if language == 'en' %}
+                                          {{quote.name_en}}
+                                        {% elif language == 'ru' %}
+                                          {{quote.name_ru}}
+                                        {% else %}
+                                          {{quote.name_uz}}
+                                        {% endif %}
+                                      </cite>
+                                      <div class="offset-top-5">
+                                          <p class="text-dark fst-italic">
+                                            {% if language == 'en' %}
+                                              {{quote.short_text_en}}
+                                            {% elif language == 'ru' %}
+                                              {{quote.short_text_ru}}
+                                            {% else %}
+                                              {{quote.short_text_uz}}
+                                            {% endif %}
+                                        </p>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  
+              </div>
           </div>
+        {% endfor %}
         </div>
       </section>
       <!-- Latest news-->

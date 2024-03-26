@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from .models import Gallery, Category, News, Tag
+from .models import Gallery, Category, News, Tag, Quote
 
 
 categories = Category.objects.all()
@@ -13,12 +13,14 @@ def index(request, language='uz'):
     global context
     gallery_photos = Gallery.objects.all()
     news = News.objects.all()
+    quotes = Quote.objects.all()
     path = request.get_full_path()
     if path.split('/')[1] in ['ru', 'uz', 'en']:
         path = path[3:]
     if path[-1] == '/':
         path = path[:-1]
     context['path'] = path
+    context['quotes'] = quotes
     context['language'] = language
     context['request'] = request
     context['gallery_photos']: gallery_photos

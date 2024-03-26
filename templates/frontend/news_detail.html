@@ -22,7 +22,7 @@
         <div class="container">
           <div class="row row-85 justify-content-sm-center">
             <div class="col-md-8 col-lg-8 text-lg-start">
-              <h2 class="fw-bold">
+              <h3 class="fw-bold">
                 {% if language == 'en' %}
                     {{ news_item.title_en }}
                 {% elif language == 'ru' %}
@@ -30,11 +30,11 @@
                 {% else %}
                     {{ news_item.title_uz }}
                 {% endif %}
-              </h2>
+              </h3>
               
               <div class="offset-top-30"><img class="img-responsive" src="{{ news_item.photo.url }}" width="770" height="500" alt="">
                 <div class="offset-top-30">
-                  <p>
+                  <p style="font-size:18px;">
                     {% if language == 'en' %}
                         {{ news_item.text_en }}
                     {% elif language == 'ru' %}
@@ -59,71 +59,7 @@
               
               <div class="offset-top-50">
                 
-                <div class="offset-top-60">
-                  <h6 class="fw-bold">Comments</h6>
-                  <div class="text-subline"></div>
-                  <div class="offset-top-30">
-                    <!-- Box Comment-->
-                    <div class="box-comment text-start box-comment-classic">
-                      <div class="unit flex-column flex-sm-row">
-                        <div class="unit-left"><img class="img-rounded box-comment-img" src="{% static 'images/users/user-theresa-lane-80x80.jpg' %}" alt="" width="80" height="80"/></div>
-                        <div class="unit-body">
-                          <div>
-                            <p class="box-comment-title"><span class="h6 text-primary fw-bold">Theresa Lane</span>
-                              <time class="post-meta inset-left-20 fst-italic" datetime="2022-01-01">2 days ago</time>
-                            </p>
-                          </div>
-                          <div class="box-comment-body offset-top-10">
-                            <p>Thanks to the author for such a useful article. Pell Grant has also helped my son with paying for his tuition.</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="offset-top-60">
-                      <h6 class="fw-bold">Send a Comment</h6>
-                      <div class="text-subline"></div>
-                      <div class="offset-top-20">
-                        <form class="rd-mailform text-start" data-form-output="form-output-global" data-form-type="contact" method="post" action="bat/rd-mailform.php">
-                          <div class="row">
-                            <div class="col-xl-6">
-                              <div class="form-wrap">
-                                <label class="form-label form-label-outside" for="comment-form-first-name">First name</label>
-                                <input class="form-input form-validation-inside" id="comment-form-first-name" type="text" name="first-name" data-constraints="@Required">
-                              </div>
-                            </div>
-                            <div class="col-xl-6 offset-top-12 offset-lg-top-0">
-                              <div class="form-wrap">
-                                <label class="form-label form-label-outside" for="comment-form-last-name">Last name</label>
-                                <input class="form-input form-validation-inside" id="comment-form-last-name" type="text" name="last-name" data-constraints="@Required">
-                              </div>
-                            </div>
-                            <div class="col-xl-6 offset-top-12">
-                              <div class="form-wrap">
-                                <label class="form-label form-label-outside" for="comment-form-email">E-mail</label>
-                                <input class="form-input form-validation-inside" id="comment-form-email" type="email" name="email" data-constraints="@Required @Email">
-                              </div>
-                            </div>
-                            <div class="col-xl-6 offset-top-12">
-                              <div class="form-wrap">
-                                <label class="form-label form-label-outside" for="comment-form-phone">Phone</label>
-                                <input class="form-input form-validation-inside" id="comment-form-phone" type="text" name="phone" data-constraints="@IsNumeric">
-                              </div>
-                            </div>
-                            <div class="col-xl-12 offset-top-12">
-                              <div class="form-wrap">
-                                <label class="form-label form-label-outside" for="comment-form-message">Message</label>
-                                <textarea class="form-input form-validation-inside" id="comment-form-message" name="message" data-constraints="@Required"></textarea>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="offset-top-20 text-center text-md-start">
-                            <button class="btn button-primary" type="submit">Submit</button>
-                          </div>
-                        </form>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                
               </div>
             </div>
             <div class="col-lg-4 text-start col-sm-8">

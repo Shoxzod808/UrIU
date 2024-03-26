@@ -24,8 +24,6 @@ class Button(models.Model):
     def __str__(self):
         return self.name
 
-
-
 class Tag(models.Model):
     name = models.CharField(max_length=100)
 
@@ -60,7 +58,6 @@ class News(models.Model):
 
     def __str__(self):
         return self.title_uz
-
 
 class Template(models.Model):
     title = models.CharField(max_length=255, unique=True, verbose_name='Ключь')
@@ -102,3 +99,27 @@ class Gallery(models.Model):
 
     def __str__(self):
         return f'Gallery #{self.id}'
+
+class Quote(models.Model):
+    photo = models.ImageField(upload_to='gallery_photos/')
+
+    name_uz = models.CharField(max_length=255)
+    name_ru = models.CharField(max_length=255)
+    name_en = models.CharField(max_length=255)
+
+    short_text_uz = models.CharField(max_length=255)
+    short_text_ru = models.CharField(max_length=255)
+    short_text_en = models.CharField(max_length=255)
+
+    text_uz = models.TextField()
+    text_ru = models.TextField()
+    text_en = models.TextField()
+
+    created = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        verbose_name = 'цитата'
+        verbose_name_plural = 'цитаты'
+    
+    def __str__(self):
+        return self.name_uz
