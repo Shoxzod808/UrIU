@@ -3,16 +3,20 @@ from django.http import HttpResponse
 from .models import Gallery, Category, News, Tag
 
 
-def index(request, language='uz'):
-    gallery_photos = Gallery.objects.all()
-    categories = Category.objects.all()
-    news = News.objects.all()
-    context = {
+categories = Category.objects.all()
+context = {
         'categories': categories,
-        'language': language,
-        'gallery_photos': gallery_photos,
-        'news': news,
+        'language': 'uz',
     }
+
+def index(request, language='uz'):
+    global context
+    gallery_photos = Gallery.objects.all()
+    news = News.objects.all()
+    context['language'] = language
+    context['request'] = request
+    context['gallery_photos']: gallery_photos
+    context['news'] = news
     if language in ['ru', 'en', 'uz']:
         return render(request, 'frontend/home-1.html', context)
     else:
@@ -20,11 +24,11 @@ def index(request, language='uz'):
         return render(request, '404.html', context)
 
 def umumiy_malumot(request, language='uz'):
-    categories = Category.objects.all()
-    context = {
-        'categories': categories,
-        'language': language,
-    }
+    global context
+
+    context['language'] = language
+    context['request'] = request
+
     if language in ['ru', 'en', 'uz']:
         return render(request, 'frontend/umumiy_malumot.html', context)
     else:
@@ -32,11 +36,11 @@ def umumiy_malumot(request, language='uz'):
         return render(request, '404.html', context)
 
 def universitet_tarixi(request, language='uz'):
-    categories = Category.objects.all()
-    context = {
-        'categories': categories,
-        'language': language,
-    }
+    global context
+
+    context['request'] = request
+    context['language'] = language
+
     if language in ['ru', 'en', 'uz']:
         return render(request, 'frontend/universitet_tarixi.html', context)
     else:
@@ -44,11 +48,11 @@ def universitet_tarixi(request, language='uz'):
         return render(request, '404.html', context)
 
 def rektor_tabrigi(request, language='uz'):
-    categories = Category.objects.all()
-    context = {
-        'categories': categories,
-        'language': language,
-    }
+    global context
+
+    context['request'] = request
+    context['language'] = language
+
     if language in ['ru', 'en', 'uz']:
         return render(request, 'frontend/rektor_tabrigi.html', context)
     else:
@@ -56,11 +60,11 @@ def rektor_tabrigi(request, language='uz'):
         return render(request, '404.html', context)
 
 def kengashlar(request, language='uz'):
-    categories = Category.objects.all()
-    context = {
-        'categories': categories,
-        'language': language,
-    }
+    global context
+
+    context['request'] = request
+    context['language'] = language
+
     if language in ['ru', 'en', 'uz']:
         return render(request, 'frontend/kengashlar.html', context)
     else:
@@ -68,11 +72,11 @@ def kengashlar(request, language='uz'):
         return render(request, '404.html', context)
 
 def kafedralar(request, language='uz'):
-    categories = Category.objects.all()
-    context = {
-        'categories': categories,
-        'language': language,
-    }
+    global context
+    
+    context['request'] = request
+    context['language'] = language
+
     if language in ['ru', 'en', 'uz']:
         return render(request, 'frontend/kafedralar.html', context)
     else:
@@ -80,11 +84,11 @@ def kafedralar(request, language='uz'):
         return render(request, '404.html', context)
 
 def fakultetlar(request, language='uz'):
-    categories = Category.objects.all()
-    context = {
-        'categories': categories,
-        'language': language,
-    }
+    global context
+    
+    context['request'] = request
+    context['language'] = language
+
     if language in ['ru', 'en', 'uz']:
         return render(request, 'frontend/fakultetlar.html', context)
     else:
@@ -92,11 +96,11 @@ def fakultetlar(request, language='uz'):
         return render(request, '404.html', context)
 
 def markazlar_va_bolimlar(request, language='uz'):
-    categories = Category.objects.all()
-    context = {
-        'categories': categories,
-        'language': language,
-    }
+    global context
+    
+    context['request'] = request
+    context['language'] = language
+
     if language in ['ru', 'en', 'uz']:
         return render(request, 'frontend/markazlar_va_bolimlar.html', context)
     else:
@@ -104,11 +108,11 @@ def markazlar_va_bolimlar(request, language='uz'):
         return render(request, '404.html', context)
 
 def rektorat(request, language='uz'):
-    categories = Category.objects.all()
-    context = {
-        'categories': categories,
-        'language': language,
-    }
+    global context
+    
+    context['request'] = request
+    context['language'] = language
+
     if language in ['ru', 'en', 'uz']:
         return render(request, 'frontend/rektorat.html', context)
     else:
@@ -116,11 +120,11 @@ def rektorat(request, language='uz'):
         return render(request, '404.html', context)
 
 def rekvizitlar(request, language='uz'):
-    categories = Category.objects.all()
-    context = {
-        'categories': categories,
-        'language': language,
-    }
+    global context
+    
+    context['request'] = request
+    context['language'] = language
+
     if language in ['ru', 'en', 'uz']:
         return render(request, 'frontend/rekvizitlar.html', context)
     else:
@@ -128,11 +132,11 @@ def rekvizitlar(request, language='uz'):
         return render(request, '404.html', context)
 
 def qabul(request, language='uz'):
-    categories = Category.objects.all()
-    context = {
-        'categories': categories,
-        'language': language,
-    }
+    global context
+    
+    context['request'] = request
+    context['language'] = language
+
     if language in ['ru', 'en', 'uz']:
         return render(request, 'frontend/qabul.html', context)
     else:
@@ -140,11 +144,11 @@ def qabul(request, language='uz'):
         return render(request, '404.html', context)
 
 def news(request, language='uz'):
-    categories = Category.objects.all()
-    context = {
-        'categories': categories,
-        'language': language,
-    }
+    global context
+    
+    context['request'] = request
+    context['language'] = language
+
     if language in ['ru', 'en', 'uz']:
         return render(request, 'frontend/news.html', context)
     else:
@@ -152,11 +156,10 @@ def news(request, language='uz'):
         return render(request, '404.html', context)
 
 def contact(request, language='uz'):
-    categories = Category.objects.all()
-    context = {
-        'categories': categories,
-        'language': language,
-    }
+    global context
+    
+    context['language'] = language
+
     if language in ['ru', 'en', 'uz']:
         return render(request, 'frontend/contact.html', context)
     else:
@@ -164,15 +167,16 @@ def contact(request, language='uz'):
         return render(request, '404.html', context)
 
 def news_detail(request, news_id, language='uz'):
-    categories = Category.objects.all()
+    global context
+    
+
     tags = Tag.objects.all()
     news_item = News.objects.get(id=news_id)
-    context = {
-        'news_item': news_item,
-        'tags': tags,
-        'categories': categories,
-        'language': language,
-    }
+    context['request'] = request
+    context['language'] = language
+    context['news_item'] = news_item
+    context['tags'] = tags
+
     if language in ['ru', 'en', 'uz']:
         return render(request, 'frontend/news_detail.html', context)
     else:
