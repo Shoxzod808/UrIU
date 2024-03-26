@@ -18455,3 +18455,19 @@ html .rd-file-picker input[type="file"] {
 	color: #999;
   }
   
+.rd-navbar-default.rd-navbar-static .rd-navbar-dropdown1, .rd-navbar-transparent.rd-navbar-static .rd-navbar-dropdown1, .rd-navbar-center.rd-navbar-static .rd-navbar-dropdown1, .rd-navbar-minimal.rd-navbar-static .rd-navbar-dropdown1, .rd-navbar-default.rd-navbar-static .rd-navbar-megamenu, .rd-navbar-transparent.rd-navbar-static .rd-navbar-megamenu, .rd-navbar-center.rd-navbar-static .rd-navbar-megamenu, .rd-navbar-minimal.rd-navbar-static .rd-navbar-megamenu {
+	position: absolute;
+	top: 100%;
+	left: -30px;
+	z-index: 1000000;
+	width: 80px !important;
+	width: 100%;
+	padding: 20px;
+	visibility: hidden;
+	transition: .3s all ease;
+	text-align: left;
+	opacity: 0;
+	box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.15);
+	background: #0e4032;
+	padding-bottom: 0 !important;
+}
