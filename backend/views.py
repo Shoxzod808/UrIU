@@ -13,6 +13,12 @@ def index(request, language='uz'):
     global context
     gallery_photos = Gallery.objects.all()
     news = News.objects.all()
+    path = request.get_full_path()
+    if path.split('/')[1] in ['ru', 'uz', 'en']:
+        path = path[3:]
+    if path[-1] == '/':
+        path = path[:-1]
+    context['path'] = path
     context['language'] = language
     context['request'] = request
     context['gallery_photos']: gallery_photos
@@ -28,7 +34,12 @@ def umumiy_malumot(request, language='uz'):
 
     context['language'] = language
     context['request'] = request
-
+    path = request.get_full_path()
+    if path.split('/')[1] in ['ru', 'uz', 'en']:
+        path = path[3:]
+    if path[-1] == '/':
+        path = path[:-1]
+    context['path'] = path
     if language in ['ru', 'en', 'uz']:
         return render(request, 'frontend/umumiy_malumot.html', context)
     else:
@@ -40,7 +51,12 @@ def universitet_tarixi(request, language='uz'):
 
     context['request'] = request
     context['language'] = language
-
+    path = request.get_full_path()
+    if path.split('/')[1] in ['ru', 'uz', 'en']:
+        path = path[3:]
+    if path[-1] == '/':
+        path = path[:-1]
+    context['path'] = path
     if language in ['ru', 'en', 'uz']:
         return render(request, 'frontend/universitet_tarixi.html', context)
     else:
@@ -52,7 +68,12 @@ def rektor_tabrigi(request, language='uz'):
 
     context['request'] = request
     context['language'] = language
-
+    path = request.get_full_path()
+    if path.split('/')[1] in ['ru', 'uz', 'en']:
+        path = path[3:]
+    if path[-1] == '/':
+        path = path[:-1]
+    context['path'] = path
     if language in ['ru', 'en', 'uz']:
         return render(request, 'frontend/rektor_tabrigi.html', context)
     else:
@@ -64,7 +85,12 @@ def kengashlar(request, language='uz'):
 
     context['request'] = request
     context['language'] = language
-
+    path = request.get_full_path()
+    if path.split('/')[1] in ['ru', 'uz', 'en']:
+        path = path[3:]
+    if path[-1] == '/':
+        path = path[:-1]
+    context['path'] = path
     if language in ['ru', 'en', 'uz']:
         return render(request, 'frontend/kengashlar.html', context)
     else:
@@ -76,7 +102,12 @@ def kafedralar(request, language='uz'):
     
     context['request'] = request
     context['language'] = language
-
+    path = request.get_full_path()
+    if path.split('/')[1] in ['ru', 'uz', 'en']:
+        path = path[3:]
+    if path[-1] == '/':
+        path = path[:-1]
+    context['path'] = path
     if language in ['ru', 'en', 'uz']:
         return render(request, 'frontend/kafedralar.html', context)
     else:
@@ -88,7 +119,12 @@ def fakultetlar(request, language='uz'):
     
     context['request'] = request
     context['language'] = language
-
+    path = request.get_full_path()
+    if path.split('/')[1] in ['ru', 'uz', 'en']:
+        path = path[3:]
+    if path[-1] == '/':
+        path = path[:-1]
+    context['path'] = path
     if language in ['ru', 'en', 'uz']:
         return render(request, 'frontend/fakultetlar.html', context)
     else:
@@ -100,7 +136,12 @@ def markazlar_va_bolimlar(request, language='uz'):
     
     context['request'] = request
     context['language'] = language
-
+    path = request.get_full_path()
+    if path.split('/')[1] in ['ru', 'uz', 'en']:
+        path = path[3:]
+    if path[-1] == '/':
+        path = path[:-1]
+    context['path'] = path
     if language in ['ru', 'en', 'uz']:
         return render(request, 'frontend/markazlar_va_bolimlar.html', context)
     else:
@@ -112,7 +153,12 @@ def rektorat(request, language='uz'):
     
     context['request'] = request
     context['language'] = language
-
+    path = request.get_full_path()
+    if path.split('/')[1] in ['ru', 'uz', 'en']:
+        path = path[3:]
+    if path[-1] == '/':
+        path = path[:-1]
+    context['path'] = path
     if language in ['ru', 'en', 'uz']:
         return render(request, 'frontend/rektorat.html', context)
     else:
@@ -124,7 +170,12 @@ def rekvizitlar(request, language='uz'):
     
     context['request'] = request
     context['language'] = language
-
+    path = request.get_full_path()
+    if path.split('/')[1] in ['ru', 'uz', 'en']:
+        path = path[3:]
+    if path[-1] == '/':
+        path = path[:-1]
+    context['path'] = path
     if language in ['ru', 'en', 'uz']:
         return render(request, 'frontend/rekvizitlar.html', context)
     else:
@@ -136,7 +187,12 @@ def qabul(request, language='uz'):
     
     context['request'] = request
     context['language'] = language
-
+    path = request.get_full_path()
+    if path.split('/')[1] in ['ru', 'uz', 'en']:
+        path = path[3:]
+    if path[-1] == '/':
+        path = path[:-1]
+    context['path'] = path
     if language in ['ru', 'en', 'uz']:
         return render(request, 'frontend/qabul.html', context)
     else:
@@ -148,7 +204,12 @@ def news(request, language='uz'):
     
     context['request'] = request
     context['language'] = language
-
+    path = request.get_full_path()
+    if path.split('/')[1] in ['ru', 'uz', 'en']:
+        path = path[3:]
+    if path[-1] == '/':
+        path = path[:-1]
+    context['path'] = path
     if language in ['ru', 'en', 'uz']:
         return render(request, 'frontend/news.html', context)
     else:
@@ -159,7 +220,12 @@ def contact(request, language='uz'):
     global context
     
     context['language'] = language
-
+    path = request.get_full_path()
+    if path.split('/')[1] in ['ru', 'uz', 'en']:
+        path = path[3:]
+    if path[-1] == '/':
+        path = path[:-1]
+    context['path'] = path
     if language in ['ru', 'en', 'uz']:
         return render(request, 'frontend/contact.html', context)
     else:
@@ -169,7 +235,12 @@ def contact(request, language='uz'):
 def news_detail(request, news_id, language='uz'):
     global context
     
-
+    path = request.get_full_path()
+    if path.split('/')[1] in ['ru', 'uz', 'en']:
+        path = path[3:]
+    if path[-1] == '/':
+        path = path[:-1]
+    context['path'] = path
     tags = Tag.objects.all()
     news_item = News.objects.get(id=news_id)
     context['request'] = request

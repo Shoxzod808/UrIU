@@ -1,5 +1,6 @@
 {% load static %}
 {% load my_tags %}
+
 <header class="page-head header-panel-absolute">
   <div class="rd-navbar-wrap">
     <nav class="rd-navbar rd-navbar-default" data-auto-height="false" data-lg-auto-height="true"
@@ -81,13 +82,21 @@
                 <li><a href="/{{language}}/news">{% call_get_text "News" language True%}</a></li>
                 <li><a href="/{{language}}/contact">{% call_get_text "contact" language True%}</a>
                 </li>
-                <li><a href="#">UZ</a>
+                <li><a href="#">
+                  {% if language == 'en' %}
+                      UZ
+                  {% elif language == 'ru' %}
+                      RU
+                  {% else %}
+                      EN
+                  {% endif %}
+                </a>
                   <ul class="rd-navbar-dropdown1 rd-navbar-dropdown">
-                    <li><a href="grid.html">UZ</a>
+                    <li><a href="/uz{{ path }}">UZ</a></li>
                     </li>
-                    <li><a href="icons.html">RU</a>
+                    <li><a href="/ru{{ path }}">RU</a></li>
                     </li>
-                    <li><a href="tables.html">EN</a>
+                    <li><a href="/en{{ path }}">EN</a></li>
                     </li>
                   </ul>
                 </li>
