@@ -217,6 +217,22 @@ def news(request, language='uz'):
     else:
         context['language'] = 'uz'
         return render(request, '404.html', context)
+def coming_soon(request, language='uz'):
+    global context
+    
+    context['request'] = request
+    context['language'] = language
+    path = request.get_full_path()
+    if path.split('/')[1] in ['ru', 'uz', 'en']:
+        path = path[3:]
+    if path[-1] == '/':
+        path = path[:-1]
+    context['path'] = path
+    if language in ['ru', 'en', 'uz']:
+        return render(request, 'frontend/coming_soon.html', context)
+    else:
+        context['language'] = 'uz'
+        return render(request, '404.html', context)
 
 def contact(request, language='uz'):
     global context

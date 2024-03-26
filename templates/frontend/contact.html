@@ -6,17 +6,6 @@
 {% block title %}{% call_get_text "contact" language True%}{% endblock %}
 
 {% block body %}
-
-    
-    <div class="preloader"> 
-      <div class="preloader-body">
-        <div class="cssload-container">
-          <div class="cssload-speeding-wheel"></div>
-        </div>
-        <p>Loading...</p>
-      </div>
-    </div>
-    <div class="page text-center">
       {% include "frontend\header.html" %}
       <section class="section mt-3 mb-5 bg-default">
         <div class="container">
@@ -141,13 +130,9 @@
           </div>
         </div>
       </section>
-      <!--Google Map-->
-    
-      <!-- Page Footer-->
+      
       {% include "frontend\footer.html" %}
-      <!-- Corporate footer-->
-    </div>
-
+     
 
 <!-- Java script-->
 <script src="{% static 'js/core.min.js' %}"></script>

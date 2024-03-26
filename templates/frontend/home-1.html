@@ -5,301 +5,287 @@
 {% block title %}{% call_get_text "title-1" language True%} {% call_get_text "title-2" language True%}{% endblock %}
 
 {% block body %}
-
-    
-    <div class="preloader"> 
-      <div class="preloader-body">
-        <div class="cssload-container">
-          <div class="cssload-speeding-wheel"></div>
+  {% include "frontend\header.html" %}
+  <section class="section">
+    <!-- Swiper-->
+    <div class="swiper-container swiper-slider swiper-slider-2" data-loop="true" data-autoplay="4000" data-slide-effect="slide" data-height="42.1875%" data-min-height="480px">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide" data-slide-bg="{% static 'images/slide-01-1920x810.jpg'  %}" style="background-position: 80% center">
+          <div class="swiper-slide-caption">
+            <div class="container">
+              <div class="row justify-content-sm-center justify-content-xl-start">
+                <div class="col-lg-9 text-lg-start col-sm-10">
+                  <div data-caption-animate="fadeInUp" data-caption-delay="100">
+                    <h1 class="fw-bold"><a href="academics.html">{% call_get_text "main-photo-1-1" language False%}</a></h1>
+                  </div>
+                  <div class="offset-top-20 offset-xs-top-40 offset-xl-top-60 inset-xl-right-100" data-caption-animate="fadeInUp" data-caption-delay="150">
+                    <h5>{% call_get_text "main-photo-1-2" language False%}</h5>
+                  </div>
+                  <div class="offset-top-20 offset-xl-top-40" data-caption-animate="fadeInUp" data-caption-delay="400"><a class="btn button-primary" href="/{{language}}/qabul">{% call_get_text "Qabul" language True%}</a>
+                    <div class="inset-sm-left-30 d-xl-inline-block"><a class="btn button-default d-none d-xl-inline-block" href="/{{language}}/umumiy_malumot">{% call_get_text "Batafsil" language True%}</a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <p>Loading...</p>
+        <div class="swiper-slide" data-slide-bg="{% static 'images/slide-02-1920x810.jpg'  %}" style="background-position: 80% center">
+          <div class="swiper-slide-caption">
+            <div class="container">
+              <div class="row justify-content-sm-center justify-content-xl-start">
+                <div class="col-lg-9 text-lg-start col-sm-10">
+                  <div data-caption-animate="fadeInUp" data-caption-delay="100">
+                    <h1 class="fw-bold"><a href="academics.html">{% call_get_text "main-photo-2-1" language False%}</a></h1>
+                  </div>
+                  <div class="offset-top-20 offset-xs-top-40 offset-xl-top-60 inset-xl-right-100" data-caption-animate="fadeInUp" data-caption-delay="150">
+                    <h5>{% call_get_text "main-photo-2-2" language False%}</h5>
+                  </div>
+                  <div class="offset-top-20 offset-xl-top-40" data-caption-animate="fadeInUp" data-caption-delay="400"><a class="btn button-primary" href="/{{language}}/qabul">{% call_get_text "Qabul" language True%}</a>
+                    <div class="inset-sm-left-30 d-xl-inline-block"><a class="btn button-default d-none d-xl-inline-block" href="/{{language}}/umumiy_malumot">{% call_get_text "Batafsil" language True%}</a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+      <!-- Swiper Pagination-->
+      <div class="swiper-pagination"></div>
+    </div>
+  </section>
+  <!-- Setion About Us-->
+  <!-- A Few Words About the University-->
+  <section class="section section-xl bg-default">
+    <div class="container">
+      <div class="row row-50 text-md-start align-items-md-center justify-content-md-between">
+        <div class="col-md-5 col-lg-4 order-md-2"><a href="index.html"><img class="img-responsive d-inline-block" src="{% static 'images/logo.png' %}"width="326" height="329" alt=""></a></div>
+        <div class="col-md-7 col-lg-7 order-md-1">
+          <h2 class="fw-bold">{% call_get_text "few-word" language False %}</h2>
+          <div class="offset-top-35 offset-lg-top-60">
+            <p>{% call_get_text "few-word-text" language False %}</p>
+          </div>
+          <div class="offset-top-30"><a class="btn btn-icon btn-icon-right button-default" href="/{{language}}/universitet_tarixi"><span class="icon fa fa-arrow-right"></span><span>{% call_get_text "Batafsil" language True%}</span></a></div>
+        </div>
       </div>
     </div>
-    <div class="page text-center">
-      {% include "frontend\header.html" %}
-      <section class="section">
-        <!-- Swiper-->
-        <div class="swiper-container swiper-slider swiper-slider-2" data-loop="true" data-autoplay="4000" data-slide-effect="slide" data-height="42.1875%" data-min-height="480px">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide" data-slide-bg="{% static 'images/slide-01-1920x810.jpg'  %}" style="background-position: 80% center">
-              <div class="swiper-slide-caption">
-                <div class="container">
-                  <div class="row justify-content-sm-center justify-content-xl-start">
-                    <div class="col-lg-9 text-lg-start col-sm-10">
-                      <div data-caption-animate="fadeInUp" data-caption-delay="100">
-                        <h1 class="fw-bold"><a href="academics.html">{% call_get_text "main-photo-1-1" language False%}</a></h1>
-                      </div>
-                      <div class="offset-top-20 offset-xs-top-40 offset-xl-top-60 inset-xl-right-100" data-caption-animate="fadeInUp" data-caption-delay="150">
-                        <h5>{% call_get_text "main-photo-1-2" language False%}</h5>
-                      </div>
-                      <div class="offset-top-20 offset-xl-top-40" data-caption-animate="fadeInUp" data-caption-delay="400"><a class="btn button-primary" href="/{{language}}/qabul">{% call_get_text "Qabul" language True%}</a>
-                        <div class="inset-sm-left-30 d-xl-inline-block"><a class="btn button-default d-none d-xl-inline-block" href="/{{language}}/umumiy_malumot">{% call_get_text "Batafsil" language True%}</a></div>
-                      </div>
+  </section>
+  <!--Our Featured Courses-->
+  
+  <!-- Counters-->
+  <section class="section section-xl bg-default">
+    <div class="container">
+      <h2 class="fw-bold">{% call_get_text "statistics" language True %}</h2>
+      <hr class="divider bg-madison">
+      <div class="row justify-content-sm-center offset-top-60">
+        <div class="col-sm-10 col-md-8">
+          <p>Jonathan Carroll University was founded on the principle that by pursuing big ideas and sharing what we learn, we make the world a better place. For more than 135 years, we haven’t strayed from that vision.</p>
+        </div>
+      </div>
+      <div class="row row-50 row-lg-65 justify-content-sm-center justify-content-lg-start offset-top-65 counters">
+        <div class="col-md-6 col-lg-3">
+          <!-- Counter type 1-->
+          <div class="counter-type-1"><span class="icon icon-lg icon-outlined text-madison mdi mdi-laptop"></span>
+            <div class="h3 fw-bold text-primary offset-top-15"><span class="counter" data-duration="1300">150</span><span>+</span></div>
+            <hr class="divider bg-gray-light divider-sm"/>
+            <div class="offset-top-21">
+              <h6 class="text-black font-accent">Компьютеры</h6>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <!-- Counter type 1-->
+          <div class="counter-type-1"><span class="icon icon-lg icon-outlined text-madison mdi mdi-wallet-travel"></span>
+            <div class="h3 fw-bold text-primary offset-top-15"><span class="counter" data-duration="1250">70</span><span>+</span></div>
+            <hr class="divider bg-gray-light divider-sm"/>
+            <div class="offset-top-21">
+              <h6 class="text-black font-accent">Учителя</h6>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <!-- Counter type 1-->
+          <div class="counter-type-1"><span class="icon icon-lg icon-outlined text-madison mdi mdi-school"></span>
+            <div class="h3 fw-bold text-primary offset-top-15"><span class="counter" data-duration="1500">4</span></div>
+            <hr class="divider bg-gray-light divider-sm"/>
+            <div class="offset-top-21">
+              <h6 class="text-black font-accent">Направлении</h6>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <!-- Counter type 1-->
+          <div class="counter-type-1"><span class="icon icon-lg icon-outlined text-madison mdi mdi-account-multiple-outline"></span>
+            <div class="h3 fw-bold text-primary offset-top-15"><span class="counter" data-duration="500">2800</span>+</div>
+            <hr class="divider bg-gray-light divider-sm"/>
+            <div class="offset-top-21">
+              <h6 class="text-black font-accent">Студенты</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Testimonials-->
+  <section class="section bg-madison context-dark position-relative">
+    <div class="owl-carousel owl-carousel-default owl-carousel-nav-xl" data-items="1" data-nav="true" data-dots="true" data-autoplay="true" data-nav-class="[&quot;owl-prev fa fa-angle-left&quot;, &quot;owl-next fa fa-angle-right&quot;]">
+      <!-- <div>
+        <div class="container section-70 section-xl-100 section-xl-bottom-114">
+          <div class="row justify-content-sm-center align-items-sm-center">
+            <div class="col-md-3 text-md-end order-md-2"><img class="img-responsive d-inline-block rounded-circle" src="{% static 'images/users/user-debra-banks-230x230.jpg'  %}" width="230" height="230" alt=""></div>
+            <div class="col-md-9 order-md-1">
+              <div class="quote-classic-boxed text-start">
+                <div class="quote-body">
+                  <q>When you work full-time while studying, you need to sacrifice personal time, which meant that I took my studies seriously. My ambition was not only to complete my degree successfully but to make the best out of the time spent studying.</q>
+                  <div class="offset-top-30 text-end">
+                    <cite class="font-accent">Debra Banks</cite>
+                    <div class="offset-top-5">
+                      <p class="text-dark fst-italic">Diploma for Graduates in Management, USA</p>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="swiper-slide" data-slide-bg="{% static 'images/slide-02-1920x810.jpg'  %}" style="background-position: 80% center">
-              <div class="swiper-slide-caption">
-                <div class="container">
-                  <div class="row justify-content-sm-center justify-content-xl-start">
-                    <div class="col-lg-9 text-lg-start col-sm-10">
-                      <div data-caption-animate="fadeInUp" data-caption-delay="100">
-                        <h1 class="fw-bold"><a href="academics.html">{% call_get_text "main-photo-2-1" language False%}</a></h1>
-                      </div>
-                      <div class="offset-top-20 offset-xs-top-40 offset-xl-top-60 inset-xl-right-100" data-caption-animate="fadeInUp" data-caption-delay="150">
-                        <h5>{% call_get_text "main-photo-2-2" language False%}</h5>
-                      </div>
-                      <div class="offset-top-20 offset-xl-top-40" data-caption-animate="fadeInUp" data-caption-delay="400"><a class="btn button-primary" href="/{{language}}/qabul">{% call_get_text "Qabul" language True%}</a>
-                        <div class="inset-sm-left-30 d-xl-inline-block"><a class="btn button-default d-none d-xl-inline-block" href="/{{language}}/umumiy_malumot">{% call_get_text "Batafsil" language True%}</a></div>
-                      </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="container section-70 section-xl-100 section-xl-bottom-114">
+          <div class="row justify-content-sm-center align-items-sm-center">
+            <div class="col-md-3 text-md-end order-md-2"><img class="img-responsive d-inline-block rounded-circle" src="{% static 'images/users/user-steven-alvarez-230x230.jpg'  %}" width="230" height="230" alt=""></div>
+            <div class="col-md-9 order-md-1">
+              <div class="quote-classic-boxed text-start">
+                <div class="quote-body">
+                  <q>When I researched the programmes available I realized that the University was offering exactly the type of programme in international development that interested me.</q>
+                  <div class="offset-top-30 text-end">
+                    <cite class="font-accent">Steven Alvarez</cite>
+                    <div class="offset-top-5">
+                      <p class="text-dark fst-italic">Diploma for Graduates in International Development, USA</p>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            
-          </div>
-          <!-- Swiper Pagination-->
-          <div class="swiper-pagination"></div>
-        </div>
-      </section>
-      <!-- Setion About Us-->
-      <!-- A Few Words About the University-->
-      <section class="section section-xl bg-default">
-        <div class="container">
-          <div class="row row-50 text-md-start align-items-md-center justify-content-md-between">
-            <div class="col-md-5 col-lg-4 order-md-2"><a href="index.html"><img class="img-responsive d-inline-block" src="{% static 'images/logo.png' %}"width="326" height="329" alt=""></a></div>
-            <div class="col-md-7 col-lg-7 order-md-1">
-              <h2 class="fw-bold">{% call_get_text "few-word" language False %}</h2>
-              <div class="offset-top-35 offset-lg-top-60">
-                <p>{% call_get_text "few-word-text" language False %}</p>
-              </div>
-              <div class="offset-top-30"><a class="btn btn-icon btn-icon-right button-default" href="/{{language}}/universitet_tarixi"><span class="icon fa fa-arrow-right"></span><span>{% call_get_text "Batafsil" language True%}</span></a></div>
-            </div>
           </div>
         </div>
-      </section>
-      <!--Our Featured Courses-->
-      
-      <!-- Counters-->
-      <section class="section section-xl bg-default">
-        <div class="container">
-          <h2 class="fw-bold">{% call_get_text "statistics" language True %}</h2>
-          <hr class="divider bg-madison">
-          <div class="row justify-content-sm-center offset-top-60">
-            <div class="col-sm-10 col-md-8">
-              <p>Jonathan Carroll University was founded on the principle that by pursuing big ideas and sharing what we learn, we make the world a better place. For more than 135 years, we haven’t strayed from that vision.</p>
-            </div>
-          </div>
-          <div class="row row-50 row-lg-65 justify-content-sm-center justify-content-lg-start offset-top-65 counters">
-            <div class="col-md-6 col-lg-3">
-              <!-- Counter type 1-->
-              <div class="counter-type-1"><span class="icon icon-lg icon-outlined text-madison mdi mdi-laptop"></span>
-                <div class="h3 fw-bold text-primary offset-top-15"><span class="counter" data-duration="1300">150</span><span>+</span></div>
-                <hr class="divider bg-gray-light divider-sm"/>
-                <div class="offset-top-21">
-                  <h6 class="text-black font-accent">Компьютеры</h6>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-3">
-              <!-- Counter type 1-->
-              <div class="counter-type-1"><span class="icon icon-lg icon-outlined text-madison mdi mdi-wallet-travel"></span>
-                <div class="h3 fw-bold text-primary offset-top-15"><span class="counter" data-duration="1250">70</span><span>+</span></div>
-                <hr class="divider bg-gray-light divider-sm"/>
-                <div class="offset-top-21">
-                  <h6 class="text-black font-accent">Учителя</h6>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-3">
-              <!-- Counter type 1-->
-              <div class="counter-type-1"><span class="icon icon-lg icon-outlined text-madison mdi mdi-school"></span>
-                <div class="h3 fw-bold text-primary offset-top-15"><span class="counter" data-duration="1500">4</span></div>
-                <hr class="divider bg-gray-light divider-sm"/>
-                <div class="offset-top-21">
-                  <h6 class="text-black font-accent">Направлении</h6>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-3">
-              <!-- Counter type 1-->
-              <div class="counter-type-1"><span class="icon icon-lg icon-outlined text-madison mdi mdi-account-multiple-outline"></span>
-                <div class="h3 fw-bold text-primary offset-top-15"><span class="counter" data-duration="500">2800</span>+</div>
-                <hr class="divider bg-gray-light divider-sm"/>
-                <div class="offset-top-21">
-                  <h6 class="text-black font-accent">Студенты</h6>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- Testimonials-->
-      <section class="section bg-madison context-dark position-relative">
-        <div class="owl-carousel owl-carousel-default owl-carousel-nav-xl" data-items="1" data-nav="true" data-dots="true" data-autoplay="true" data-nav-class="[&quot;owl-prev fa fa-angle-left&quot;, &quot;owl-next fa fa-angle-right&quot;]">
-          <!-- <div>
-            <div class="container section-70 section-xl-100 section-xl-bottom-114">
+      </div> -->
+      {% for quote in quotes %}
+        <div>
+          <div class="container section-70 section-xl-100 section-xl-bottom-114">
+              
               <div class="row justify-content-sm-center align-items-sm-center">
-                <div class="col-md-3 text-md-end order-md-2"><img class="img-responsive d-inline-block rounded-circle" src="{% static 'images/users/user-debra-banks-230x230.jpg'  %}" width="230" height="230" alt=""></div>
-                <div class="col-md-9 order-md-1">
-                  <div class="quote-classic-boxed text-start">
-                    <div class="quote-body">
-                      <q>When you work full-time while studying, you need to sacrifice personal time, which meant that I took my studies seriously. My ambition was not only to complete my degree successfully but to make the best out of the time spent studying.</q>
-                      <div class="offset-top-30 text-end">
-                        <cite class="font-accent">Debra Banks</cite>
-                        <div class="offset-top-5">
-                          <p class="text-dark fst-italic">Diploma for Graduates in Management, USA</p>
-                        </div>
-                      </div>
-                    </div>
+                  <div class="col-md-3 text-md-end order-md-2">
+                      <img class="img-responsive d-inline-block rounded-circle" src="{{ quote.photo.url }}" width="230" height="230" alt="">
                   </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div>
-            <div class="container section-70 section-xl-100 section-xl-bottom-114">
-              <div class="row justify-content-sm-center align-items-sm-center">
-                <div class="col-md-3 text-md-end order-md-2"><img class="img-responsive d-inline-block rounded-circle" src="{% static 'images/users/user-steven-alvarez-230x230.jpg'  %}" width="230" height="230" alt=""></div>
-                <div class="col-md-9 order-md-1">
-                  <div class="quote-classic-boxed text-start">
-                    <div class="quote-body">
-                      <q>When I researched the programmes available I realized that the University was offering exactly the type of programme in international development that interested me.</q>
-                      <div class="offset-top-30 text-end">
-                        <cite class="font-accent">Steven Alvarez</cite>
-                        <div class="offset-top-5">
-                          <p class="text-dark fst-italic">Diploma for Graduates in International Development, USA</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div> -->
-          {% for quote in quotes %}
-            <div>
-              <div class="container section-70 section-xl-100 section-xl-bottom-114">
-                  
-                  <div class="row justify-content-sm-center align-items-sm-center">
-                      <div class="col-md-3 text-md-end order-md-2">
-                          <img class="img-responsive d-inline-block rounded-circle" src="{{ quote.photo.url }}" width="230" height="230" alt="">
-                      </div>
-                      <div class="col-md-9 order-md-1">
-                          <div class="quote-classic-boxed text-start">
-                              <div class="quote-body">
-                                  <q>
+                  <div class="col-md-9 order-md-1">
+                      <div class="quote-classic-boxed text-start">
+                          <div class="quote-body">
+                              <q>
+                                {% if language == 'en' %}
+                                  {{quote.text_en}}
+                                {% elif language == 'ru' %}
+                                  {{quote.text_ru}}
+                                {% else %}
+                                  {{quote.text_uz}}
+                                {% endif %}
+                              </q>
+                              <div class="offset-top-30 text-end">
+                                  <cite class="font-accent">
                                     {% if language == 'en' %}
-                                      {{quote.text_en}}
+                                      {{quote.name_en}}
                                     {% elif language == 'ru' %}
-                                      {{quote.text_ru}}
+                                      {{quote.name_ru}}
                                     {% else %}
-                                      {{quote.text_uz}}
+                                      {{quote.name_uz}}
                                     {% endif %}
-                                  </q>
-                                  <div class="offset-top-30 text-end">
-                                      <cite class="font-accent">
+                                  </cite>
+                                  <div class="offset-top-5">
+                                      <p class="text-dark fst-italic">
                                         {% if language == 'en' %}
-                                          {{quote.name_en}}
+                                          {{quote.short_text_en}}
                                         {% elif language == 'ru' %}
-                                          {{quote.name_ru}}
+                                          {{quote.short_text_ru}}
                                         {% else %}
-                                          {{quote.name_uz}}
+                                          {{quote.short_text_uz}}
                                         {% endif %}
-                                      </cite>
-                                      <div class="offset-top-5">
-                                          <p class="text-dark fst-italic">
-                                            {% if language == 'en' %}
-                                              {{quote.short_text_en}}
-                                            {% elif language == 'ru' %}
-                                              {{quote.short_text_ru}}
-                                            {% else %}
-                                              {{quote.short_text_uz}}
-                                            {% endif %}
-                                        </p>
-                                      </div>
+                                    </p>
                                   </div>
                               </div>
                           </div>
                       </div>
                   </div>
-                  
               </div>
-          </div>
-        {% endfor %}
-        </div>
-      </section>
-      <!-- Latest news-->
-      <section class="section bg-catskill section-xl">
-        <div class="container">
-          <h2 class="fw-bold">{% call_get_text "latest news" language True%}</h2>
-          <hr class="divider bg-madison">
-          <div class="row row-30 offset-top-60 text-start justify-content-sm-center">
-              {% for news_item in news %}
-              <div class="col-md-6 col-lg-4">
-                  <article class="post-news">
-                      <a href="/{{language}}/news/{{news_item.id}}"><img class="img-responsive" src="{{ news_item.photo.url }}" width="370" height="240" alt=""></a>
-                      <div class="post-news-body">
-                        {% if language == 'en' %}
-                            <h6><a href="/{{language}}/news/{{news_item.id}}">{{ news_item.title_en }}</a></h6>
-                        {% elif language == 'ru' %}
-                            <h6><a href="/{{language}}/news/{{news_item.id}}">{{ news_item.title_ru }}</a></h6>
-                        {% else %}
-                            <h6><a href="/{{language}}/news/{{news_item.id}}">{{ news_item.title_uz }}</a></h6>
-                        {% endif %}
-                          <div class="offset-top-20">
-                              <p>{{ news_item.text }}</p>
-                          </div>
-                          <div class="post-news-meta offset-top-20">
-                              <span class="icon icon-xs mdi mdi-calendar-clock align-middle text-madison"></span>
-                              <span class="align-middle inset-left-10 fst-italic text-black">{{ news_item.date|date:"H:i d/m/Y" }}</span>
-                          </div>
-                      </div>
-                  </article>
-              </div>
-              {% endfor %}
               
           </div>
-          <div class="offset-top-50"><a class="btn button-primary" href="modern-news.html">{% call_get_text "View All News Posts" language True %}</a></div>
-        </div>
-      </section>
-      <!-- Gallery Simple-->
-      <!-- Gallery-->
-      <!-- <section class="section">
-        <div class="owl-carousel flickr owl-carousel-fullheight" data-items="2" data-sm-items="2" data-autoplay="true" data-md-items="4" data-xxl-items="6" data-nav="false" data-dots="false" data-mouse-drag="true" data-lightgallery="group" data-stage-padding="0" data-xl-stage-padding="0">
-          <a class="thumbnail-default" data-lightgallery="item" href ="{% static 'images /gallery-simple-1-677x677.jpg'  %}">
-            <img width="320" height="320" data-title="alt" src="{% static 'images/gallery-simple-1-677x677.jpg'  %}" alt="">
-            <span class="icon fa fa-search-plus"></span></a>
-          <a class="thumbnail-default" data-lightgallery="item" href ="{% static 'images /gallery-simple-2-677x677.jpg'  %}">
-            <img width="320" height="320" src="{% static 'images/gallery-simple-2-677x677.jpg'  %}" alt="">
-            <span class="icon fa fa-search-plus">
-              
-            </span></a><a class="thumbnail-default" data-lightgallery="item" href ="{% static 'images /gallery-simple-3-677x677.jpg'  %}"><img width="320" height="320" src="{% static 'images/gallery-simple-3-677x677.jpg'  %}" alt=""><span class="icon fa fa-search-plus"></span></a><a class="thumbnail-default" data-lightgallery="item" href ="{% static 'images /gallery-simple-4-677x677.jpg' %}"><img width="320" height="320" src="{% static 'images/gallery-simple-4-677x677.jpg'  %}" alt=""><span class="icon fa fa-search-plus"></span></a><a class="thumbnail-default" data-lightgallery="item" href ="{% static 'images /gallery-simple-5-677x677.jpg'  %}"><img width="320" height="320" src="{% static 'images/gallery-simple-5-677x677.jpg'  %}" alt=""><span class="icon fa fa-search-plus"></span></a><a class="thumbnail-default" data-lightgallery="item" href ="{% static 'images /gallery-simple-6-677x677.jpg'  %}"><img width="320" height="320" src="{% static 'images/gallery-simple-6-677x677.jpg'  %}" alt=""><span class="icon fa fa-search-plus"></span></a></div>
-      </section> -->
-      <section class="section">
-        <div class="owl-carousel flickr owl-carousel-fullheight" data-items="2" data-sm-items="2" data-autoplay="true" data-md-items="4" data-xxl-items="6" data-nav="false" data-dots="false" data-mouse-drag="true" data-lightgallery="group" data-stage-padding="0" data-xl-stage-padding="0">
-            {% for photo in gallery_photos %}
-                <a class="thumbnail-default" data-lightgallery="item" href="{{ photo.photo.url }}">
-                    <img width="320" height="320" src="{{ photo.photo.url }}" alt="">
-                    <span class="icon fa fa-search-plus"></span>
-                </a>
-            {% endfor %}
-        </div>
-    </section>
-    
-      <!-- Google Map-->
-      <!--Google Map-->
-      
-      <!-- Footer Corprorate-->
-      {% include "frontend\footer.html" %}
-      <!-- Corporate footer-->
+      </div>
+    {% endfor %}
     </div>
-    <!-- Global Mailform Output-->
-    <div class="snackbars" id="form-output-global"></div>
-    <!-- Java script-->
-    <script src="{% static 'js/core.min.js' %}"></script>
-    <script src="{% static 'js/script.js' %}"></script>
+  </section>
+  <!-- Latest news-->
+  <section class="section bg-catskill section-xl">
+    <div class="container">
+      <h2 class="fw-bold">{% call_get_text "latest news" language True%}</h2>
+      <hr class="divider bg-madison">
+      <div class="row row-30 offset-top-60 text-start justify-content-sm-center">
+          {% for news_item in news %}
+          <div class="col-md-6 col-lg-4">
+              <article class="post-news">
+                  <a href="/{{language}}/news/{{news_item.id}}"><img class="img-responsive" src="{{ news_item.photo.url }}" width="370" height="240" alt=""></a>
+                  <div class="post-news-body">
+                    {% if language == 'en' %}
+                        <h6><a href="/{{language}}/news/{{news_item.id}}">{{ news_item.title_en }}</a></h6>
+                    {% elif language == 'ru' %}
+                        <h6><a href="/{{language}}/news/{{news_item.id}}">{{ news_item.title_ru }}</a></h6>
+                    {% else %}
+                        <h6><a href="/{{language}}/news/{{news_item.id}}">{{ news_item.title_uz }}</a></h6>
+                    {% endif %}
+                      <div class="offset-top-20">
+                          <p>{{ news_item.text }}</p>
+                      </div>
+                      <div class="post-news-meta offset-top-20">
+                          <span class="icon icon-xs mdi mdi-calendar-clock align-middle text-madison"></span>
+                          <span class="align-middle inset-left-10 fst-italic text-black">{{ news_item.date|date:"H:i d/m/Y" }}</span>
+                      </div>
+                  </div>
+              </article>
+          </div>
+          {% endfor %}
+          
+      </div>
+      <div class="offset-top-50"><a class="btn button-primary" href="news">{% call_get_text "View All News Posts" language True %}</a></div>
+    </div>
+  </section>
+  <!-- Gallery Simple-->
+  <!-- Gallery-->
+  <!-- <section class="section">
+    <div class="owl-carousel flickr owl-carousel-fullheight" data-items="2" data-sm-items="2" data-autoplay="true" data-md-items="4" data-xxl-items="6" data-nav="false" data-dots="false" data-mouse-drag="true" data-lightgallery="group" data-stage-padding="0" data-xl-stage-padding="0">
+      <a class="thumbnail-default" data-lightgallery="item" href ="{% static 'images /gallery-simple-1-677x677.jpg'  %}">
+        <img width="320" height="320" data-title="alt" src="{% static 'images/gallery-simple-1-677x677.jpg'  %}" alt="">
+        <span class="icon fa fa-search-plus"></span></a>
+      <a class="thumbnail-default" data-lightgallery="item" href ="{% static 'images /gallery-simple-2-677x677.jpg'  %}">
+        <img width="320" height="320" src="{% static 'images/gallery-simple-2-677x677.jpg'  %}" alt="">
+        <span class="icon fa fa-search-plus">
+          
+        </span></a><a class="thumbnail-default" data-lightgallery="item" href ="{% static 'images /gallery-simple-3-677x677.jpg'  %}"><img width="320" height="320" src="{% static 'images/gallery-simple-3-677x677.jpg'  %}" alt=""><span class="icon fa fa-search-plus"></span></a><a class="thumbnail-default" data-lightgallery="item" href ="{% static 'images /gallery-simple-4-677x677.jpg' %}"><img width="320" height="320" src="{% static 'images/gallery-simple-4-677x677.jpg'  %}" alt=""><span class="icon fa fa-search-plus"></span></a><a class="thumbnail-default" data-lightgallery="item" href ="{% static 'images /gallery-simple-5-677x677.jpg'  %}"><img width="320" height="320" src="{% static 'images/gallery-simple-5-677x677.jpg'  %}" alt=""><span class="icon fa fa-search-plus"></span></a><a class="thumbnail-default" data-lightgallery="item" href ="{% static 'images /gallery-simple-6-677x677.jpg'  %}"><img width="320" height="320" src="{% static 'images/gallery-simple-6-677x677.jpg'  %}" alt=""><span class="icon fa fa-search-plus"></span></a></div>
+  </section> -->
+  <section class="section">
+    <div class="owl-carousel flickr owl-carousel-fullheight" data-items="2" data-sm-items="2" data-autoplay="true" data-md-items="4" data-xxl-items="6" data-nav="false" data-dots="false" data-mouse-drag="true" data-lightgallery="group" data-stage-padding="0" data-xl-stage-padding="0">
+        {% for photo in gallery_photos %}
+            <a class="thumbnail-default" data-lightgallery="item" href="{{ photo.photo.url }}">
+                <img width="320" height="320" src="{{ photo.photo.url }}" alt="">
+                <span class="icon fa fa-search-plus"></span>
+            </a>
+        {% endfor %}
+    </div>
+</section>
+
+  <!-- Google Map-->
+  <!--Google Map-->
+  
+  <!-- Footer Corprorate-->
+  {% include "frontend\footer.html" %}
+  <!-- Corporate footer-->
+
+<script src="{% static 'js/core.min.js' %}"></script>
+<script src="{% static 'js/script.js' %}"></script>
 {% endblock %}
