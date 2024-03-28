@@ -1,4 +1,4 @@
-{% extends "frontend\base.html" %}
+{% extends "./base.html" %}
 {% load static %}
 {% load my_tags %}
 
@@ -6,7 +6,7 @@
 
 {% block body %}
 
-      {% include "frontend\header.html" %}
+      {% include "./header.html" %}
 
       <section class="section section-xl">
         <div class="container">
@@ -93,7 +93,7 @@
         </div>
       </section>
 
-{% include "frontend\footer.html" %}
+{% include "./footer.html" %}
 
 <!-- Java script-->
 <script src="{% static 'js/core.min.js' %}"></script>

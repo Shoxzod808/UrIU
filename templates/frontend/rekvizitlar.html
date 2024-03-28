@@ -1,4 +1,4 @@
-{% extends "frontend\base.html" %}
+{% extends "./base.html" %}
 {% load static %}
 {% load my_tags %}
 
@@ -6,9 +6,9 @@
 
 {% block body %}
 
-{% include "frontend\header.html" %}
-{% include "frontend\coming_soon.html" %}
-{% include "frontend\footer.html" %}
+{% include "./header.html" %}
+{% include "./coming_soon.html" %}
+{% include "./footer.html" %}
 
 <!-- Java script-->
 <script src="{% static 'js/core.min.js' %}"></script>

@@ -1,11 +1,11 @@
-{% extends "frontend\base.html" %}
+{% extends "./base.html" %}
 {% load static %}
 {% load my_tags %}
 
 {% block title %}{% call_get_text "title-1" language True%} {% call_get_text "title-2" language True%}{% endblock %}
 
 {% block body %}
-  {% include "frontend\header.html" %}
+  {% include "./header.html" %}
   <section class="section">
     <!-- Swiper-->
     <div class="swiper-container swiper-slider swiper-slider-2" data-loop="true" data-autoplay="4000" data-slide-effect="slide" data-height="42.1875%" data-min-height="480px">
@@ -283,7 +283,7 @@
   <!--Google Map-->
   
   <!-- Footer Corprorate-->
-  {% include "frontend\footer.html" %}
+  {% include "./footer.html" %}
   <!-- Corporate footer-->
 
 <script src="{% static 'js/core.min.js' %}"></script>

@@ -1,12 +1,12 @@
 
-{% extends "frontend\base.html" %}
+{% extends "./base.html" %}
 {% load static %}
 {% load my_tags %}
 
 {% block title %}{% call_get_text "contact" language True%}{% endblock %}
 
 {% block body %}
-      {% include "frontend\header.html" %}
+      {% include "./header.html" %}
       <section class="section mt-3 mb-5 bg-default">
         <div class="container">
           <div class="row row-50 justify-content-sm-center">
@@ -131,7 +131,7 @@
         </div>
       </section>
       
-      {% include "frontend\footer.html" %}
+      {% include "./footer.html" %}
      
 
 <!-- Java script-->
