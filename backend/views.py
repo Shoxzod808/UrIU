@@ -1,7 +1,8 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from .models import Gallery, Category, News, Tag, Quote
-
+from django.http import JsonResponse
+from django.core.paginator import Paginator
 
 categories = Category.objects.all()
 context = {
@@ -223,6 +224,7 @@ def news(request, language='uz', page=1):
     else:
         context['language'] = 'uz'
         return render(request, '404.html', context)
+
 def coming_soon(request, language='uz'):
     global context
     
@@ -277,3 +279,4 @@ def news_detail(request, news_id, language='uz'):
     else:
         context['language'] = 'uz'
         return render(request, '404.html', context)
+

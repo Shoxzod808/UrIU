@@ -122,18 +122,28 @@
         <!--Bootstrap Pagination-->
         <nav aria-label="Page navigation " class="nav-pagination">
           <ul class="pagination pagination-custom " >
-            <li class="page-item page-item-control disabled"><a class="page-link" aria-label="Previous"><span class="icon fa fa-chevron-left" aria-hidden="true"></span></a></li>
-            <li class="page-item active"><span class="page-link">1</span></li>
-            <li class="page-item"><a class="page-link" href="#">2</a></li>
-            <li class="page-item"><a class="page-link" href="#">3</a></li>
-            <li class="page-item"><a class="page-link" href="#">4</a></li>
-            <li class="page-item"><a class="page-link" href="#">5</a></li>
-            <li class="page-item"><a class="page-link" href="#">6</a></li>
-            <li class="page-item"><a class="page-link" href="#">7</a></li>
-            <li class="page-item"><a class="page-link" href="#">8</a></li>
-            <li class="page-item"><a class="page-link" href="#">9</a></li>
-            <li class="page-item"><a class="page-link" href="#">10</a></li>
-            <li class="page-item page-item-control"><a class="page-link" aria-label="Next"><span class="icon fa fa-chevron-right" aria-hidden="true"></span></a></li>
+            {% if prew1 != None%}
+            <li class="page-item"><a class="page-link" href="/{{language}}/news-{{prew1}}"><</a></li>
+            {% endif %}
+            {% if prew2 != None%}
+              <li class="page-item"><a class="page-link" href="/{{language}}/news-{{prew2}}">{{prew2}}</a></li>
+            {% endif %}
+            {% if prew1 != None%}
+            <li class="page-item"><a class="page-link" href="/{{language}}/news-{{prew1}}">{{prew1}}</a></li>
+            {% endif %}
+            {% if current != None%}
+            <li class="page-item active"><span class="page-link">{{current}}</span></li>
+            {% endif %}
+            {% if next1 != None%}
+            <li class="page-item"><a class="page-link" href="/{{language}}/news-{{next1}}">{{next1}}</a></li>
+            {% endif %}
+            {% if next2 != None%}
+            <li class="page-item"><a class="page-link" href="/{{language}}/news-{{next2}}">{{next2}}</a></li>
+            {% endif %}
+            {% if next1 != None%}
+            <li class="page-item"><a class="page-link" href="/{{language}}/news-{{next1}}">></a></li>
+            {% endif %}
+          
           </ul>
         </nav>
       </div>
