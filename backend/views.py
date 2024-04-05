@@ -201,11 +201,17 @@ def qabul(request, language='uz'):
         context['language'] = 'uz'
         return render(request, '404.html', context)
 
-def news(request, language='uz'):
+def news(request, language='uz', page=1):
     global context
     
     context['request'] = request
     context['language'] = language
+    context['prew2'] = None if page < 3 else page -2
+    context['prew1'] = None if page == 1 else page-1
+    context['current'] = page
+    context['next1'] = page + 1
+    context['next2'] = page + 2
+    context['last'] = page + 10
     path = request.get_full_path()
     if path.split('/')[1] in ['ru', 'uz', 'en']:
         path = path[3:]
@@ -236,7 +242,7 @@ def coming_soon(request, language='uz'):
 
 def contact(request, language='uz'):
     global context
-    
+    context['language'] = language
     context['language'] = language
     path = request.get_full_path()
     if path.split('/')[1] in ['ru', 'uz', 'en']:

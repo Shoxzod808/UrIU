@@ -6511,6 +6511,7 @@ html .pagination > .active > span:active:focus {
 .pagination-custom {
 	display: flex;
 	justify-content: center;
+	align-items: center;
 }
 
 @media (min-width: 992px) {
