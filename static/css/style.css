@@ -6533,7 +6533,6 @@ html .pagination > .active > span:active:focus {
 
 @media (min-width: 992px) {
 	.pagination-custom {
-		justify-content: flex-start;
 	}
 }
 
@@ -18471,3 +18470,6 @@ html .rd-file-picker input[type="file"] {
 	background: #0e4032;
 	padding-bottom: 0 !important;
 }	
+.buttons-z{
+	text-align: center !important;
+}

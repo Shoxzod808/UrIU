@@ -11,114 +11,37 @@
   <!-- Latest news-->
   <section class="section section-xl bg-catskill">
     <div class="container">
-      <div class="row row-30 text-md-start justify-content-sm-center">
-        <div class="col-md-6 col-lg-4">
-          <article class="post-news post-news-wide"><a href="news-post-page.html"><img class="img-responsive" src="images/blog/news-01-370x240.jpg" width="700" height="455" alt=""></a>
-            <div class="post-news-body">
-              <h6><a href="news-post-page.html">Liberal Arts Colleges Rankings</a></h6>
-              <div class="offset-top-20">
-                <p>Liberal Arts Colleges emphasize undergraduate education and award at least half of their degrees in the liberal arts fields of study.</p>
-              </div>
-              <div class="post-news-meta offset-top-20"><span class="icon icon-xs mdi mdi-calendar-clock align-middle text-madison"></span><span class="align-middle inset-left-10 fst-italic text-black">2 days ago</span></div>
-            </div>
-          </article>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <article class="post-news post-news-wide"><a href="news-post-page.html"><img class="img-responsive" src="images/blog/news-02-370x240.jpg" width="700" height="455" alt=""></a>
-            <div class="post-news-body">
-              <h6><a href="news-post-page.html">10 Law Schools Where the Most Accepted Students Enroll</a></h6>
-              <div class="offset-top-20">
-                <p>At these schools, at least 42 percent of accepted students enrolled in fall 2015, U.S. News data show.</p>
-              </div>
-              <div class="post-news-meta offset-top-20"><span class="icon icon-xs mdi mdi-calendar-clock align-middle text-madison"></span><span class="align-middle inset-left-10 fst-italic text-black">2 days ago</span></div>
-            </div>
-          </article>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <article class="post-news post-news-wide"><a href="news-post-page.html"><img class="img-responsive" src="images/blog/news-04-370x240.jpg" width="700" height="455" alt=""></a>
-            <div class="post-news-body">
-              <h6><a href="news-post-page.html">
-                  Ways Parents and Counselors Can
-                  Help Students Earn Scholarships</a></h6>
-              <div class="offset-top-20">
-                <p>Securing scholarships can be stressful, but parents and counselors can serve as a resource.</p>
-              </div>
-              <div class="post-news-meta offset-top-20"><span class="icon icon-xs mdi mdi-calendar-clock align-middle text-madison"></span><span class="align-middle inset-left-10 fst-italic text-black">2 days ago</span></div>
-            </div>
-          </article>
-        </div>
-        <div class="col-md-6 col-lg-4">
-            <article class="post-news post-news-wide"><a href="news-post-page.html"><img class="img-responsive" src="images/blog/news-01-370x240.jpg" width="700" height="455" alt=""></a>
-              <div class="post-news-body">
-                <h6><a href="news-post-page.html">Liberal Arts Colleges Rankings</a></h6>
-                <div class="offset-top-20">
-                  <p>Liberal Arts Colleges emphasize undergraduate education and award at least half of their degrees in the liberal arts fields of study.</p>
-                </div>
-                <div class="post-news-meta offset-top-20"><span class="icon icon-xs mdi mdi-calendar-clock align-middle text-madison"></span><span class="align-middle inset-left-10 fst-italic text-black">2 days ago</span></div>
-              </div>
-            </article>
-          </div>
+      <h2 class="fw-bold">{% call_get_text "News" language True%}</h2>
+      <hr class="divider bg-madison">
+      <div class="row row-30 offset-top-60 text-start justify-content-sm-center">
+          {% for news_item in news %}
           <div class="col-md-6 col-lg-4">
-            <article class="post-news post-news-wide"><a href="news-post-page.html"><img class="img-responsive" src="images/blog/news-02-370x240.jpg" width="700" height="455" alt=""></a>
-              <div class="post-news-body">
-                <h6><a href="news-post-page.html">10 Law Schools Where the Most Accepted Students Enroll</a></h6>
-                <div class="offset-top-20">
-                  <p>At these schools, at least 42 percent of accepted students enrolled in fall 2015, U.S. News data show.</p>
-                </div>
-                <div class="post-news-meta offset-top-20"><span class="icon icon-xs mdi mdi-calendar-clock align-middle text-madison"></span><span class="align-middle inset-left-10 fst-italic text-black">2 days ago</span></div>
-              </div>
-            </article>
+              <article class="post-news">
+                  <a href="/{{language}}/news/{{news_item.id}}"><img class="img-responsive" src="{{ news_item.photo.url }}" width="370" height="240" alt=""></a>
+                  <div class="post-news-body">
+                    {% if language == 'en' %}
+                        <h6><a href="/{{language}}/news/{{news_item.id}}">{{ news_item.title_en }}</a></h6>
+                    {% elif language == 'ru' %}
+                        <h6><a href="/{{language}}/news/{{news_item.id}}">{{ news_item.title_ru }}</a></h6>
+                    {% else %}
+                        <h6><a href="/{{language}}/news/{{news_item.id}}">{{ news_item.title_uz }}</a></h6>
+                    {% endif %}
+                      <div class="offset-top-20">
+                          <p>{{ news_item.text }}</p>
+                      </div>
+                      <div class="post-news-meta offset-top-20">
+                          <span class="icon icon-xs mdi mdi-calendar-clock align-middle text-madison"></span>
+                          <span class="align-middle inset-left-10 fst-italic text-black">{{ news_item.date|date:"H:i d/m/Y" }}</span>
+                      </div>
+                  </div>
+              </article>
           </div>
-          <div class="col-md-6 col-lg-4">
-            <article class="post-news post-news-wide"><a href="news-post-page.html"><img class="img-responsive" src="images/blog/news-04-370x240.jpg" width="700" height="455" alt=""></a>
-              <div class="post-news-body">
-                <h6><a href="news-post-page.html">
-                    Ways Parents and Counselors Can
-                    Help Students Earn Scholarships</a></h6>
-                <div class="offset-top-20">
-                  <p>Securing scholarships can be stressful, but parents and counselors can serve as a resource.</p>
-                </div>
-                <div class="post-news-meta offset-top-20"><span class="icon icon-xs mdi mdi-calendar-clock align-middle text-madison"></span><span class="align-middle inset-left-10 fst-italic text-black">2 days ago</span></div>
-              </div>
-            </article>
-          </div>
-        <div class="col-md-6 col-lg-4">
-          <article class="post-news post-news-wide"><a href="news-post-page.html"><img class="img-responsive" src="images/blog/news-03-370x240.jpg" width="700" height="455" alt=""></a>
-            <div class="post-news-body">
-              <h6><a href="news-post-page.html">5 Ways to Pay for Community College</a></h6>
-              <div class="offset-top-20">
-                <p>Many community colleges offer promise programs, which offer tuition-free awards to eligible students � mainly to students with Pell grant eligibility.</p>
-              </div>
-              <div class="post-news-meta offset-top-20"><span class="icon icon-xs mdi mdi-calendar-clock align-middle text-madison"></span><span class="align-middle inset-left-10 fst-italic text-black">2 days ago</span></div>
-            </div>
-          </article>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <article class="post-news post-news-wide"><a href="news-post-page.html"><img class="img-responsive" src="images/blog/news-05-370x240.jpg" width="700" height="455" alt=""></a>
-            <div class="post-news-body">
-              <h6><a href="news-post-page.html">
-                  Consider MBA Programs That
-                  Offer Summer Prep</a></h6>
-              <div class="offset-top-20">
-                <p>Summer preparatory programs offered through schools allow students to get a head start on making connections and building skills.</p>
-              </div>
-              <div class="post-news-meta offset-top-20"><span class="icon icon-xs mdi mdi-calendar-clock align-middle text-madison"></span><span class="align-middle inset-left-10 fst-italic text-black">2 days ago</span></div>
-            </div>
-          </article>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <article class="post-news post-news-wide"><a href="news-post-page.html"><img class="img-responsive" src="images/blog/news-06-370x240.jpg" width="700" height="455" alt=""></a>
-            <div class="post-news-body">
-              <h6><a href="news-post-page.html">Studying in the United States</a></h6>
-              <div class="offset-top-20">
-                <p>International students increasingly want to come to the United States for college or graduate school.</p>
-              </div>
-              <div class="post-news-meta offset-top-20"><span class="icon icon-xs mdi mdi-calendar-clock align-middle text-madison"></span><span class="align-middle inset-left-10 fst-italic text-black">2 days ago</span></div>
-            </div>
-          </article>
-        </div>
+          {% endfor %}
+          
       </div>
-      <div class="offset-top-60 text-lg-start">
+      <!-- <div class="offset-top-50"><a class="btn button-primary" href="news">{% call_get_text "View All News Posts" language True %}</a></div> -->
+    </div>
+      <div class="offset-top-60 text-lg-start ">
         <!--Bootstrap Pagination-->
         <nav aria-label="Page navigation " class="nav-pagination">
           <ul class="pagination pagination-custom " >
@@ -147,8 +70,9 @@
           </ul>
         </nav>
       </div>
-    </div>
+    
   </section>
+
 {% include "./footer.html" %}
 
 <!-- Java script-->
