@@ -13,9 +13,9 @@ class SertificateForEmployee(models.Model):
 class Employee(models.Model):
     photo = models.ImageField(upload_to='*employee_photos/')
 
-    full_name_uz = models.CharField(max_length=255, verbose_name='*Имя(uz)')
-    full_name_en = models.CharField(max_length=255, verbose_name='*Имя(en)')
-    full_name_ru = models.CharField(max_length=255, verbose_name='*Имя(ru)')
+    full_name_uz = models.CharField(max_length=255, verbose_name='*ФИО(uz)')
+    full_name_en = models.CharField(max_length=255, verbose_name='*ФИО(en)')
+    full_name_ru = models.CharField(max_length=255, verbose_name='*ФИО(ru)')
 
     proffesion_uz = models.CharField(max_length=255, verbose_name='*Профессия(uz)')
     proffesion_en = models.CharField(max_length=255, verbose_name='*Профессия(en)')
