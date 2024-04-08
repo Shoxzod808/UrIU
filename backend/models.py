@@ -4,7 +4,7 @@ from django.db import models
 from django.utils import timezone
 
 class SertificateForEmployee(models.Model):
-    news = models.ForeignKey('Employee', related_name='SertificateForEmployee', on_delete=models.CASCADE)
+    employee = models.ForeignKey('Employee', related_name='SertificateForEmployee', on_delete=models.CASCADE)
     image = models.ImageField(upload_to='sertificates/')
 
     def __str__(self):
@@ -22,15 +22,15 @@ class Employee(models.Model):
     proffesion_ru = models.CharField(max_length=255, verbose_name='*Профессия(ru)')
 
     about_uz = models.TextField(max_length=255, verbose_name='*Инфо(uz)')
-    about_uz = models.TextField(max_length=255, verbose_name='*Инфо(en)')
-    about_uz = models.TextField(max_length=255, verbose_name='*Инфо(ru)')
+    about_en = models.TextField(max_length=255, verbose_name='*Инфо(en)')
+    about_ru = models.TextField(max_length=255, verbose_name='*Инфо(ru)')
 
     phone = models.CharField(max_length=20, null=True, blank=True, verbose_name='Телефон')
     email = models.CharField(max_length=255, null=True, blank=True, verbose_name='Почта')
 
     telegram = models.URLField(max_length=200, blank=True, null=True, verbose_name='Телеграм')
-    facebook = models.URLField(max_length=200, blank=True, null=True, verbose_name='Телеграм')
-    instagram = models.URLField(max_length=200, blank=True, null=True, verbose_name='Телеграм')
+    facebook = models.URLField(max_length=200, blank=True, null=True, verbose_name='Facebook')
+    instagram = models.URLField(max_length=200, blank=True, null=True, verbose_name='Инстаграм')
 
 
     class Meta:

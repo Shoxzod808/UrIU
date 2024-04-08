@@ -1,5 +1,6 @@
-{% extends "./base.html" %}
+{% extends "./frontend/base.html" %}
 {% load static %}
+{% load my_tags %}
 
 {% block title %}404{% endblock %}
 
@@ -24,13 +25,13 @@
               <h1 class="font-default"><span class="big text-light fw-bold">404</span></h1>
             </div>
             <div class="offset-top-10">
-              <h2 class="fw-bold">Sorry, the page was not found</h2>
+              <h2 class="fw-bold">{% call_get_text "404" language True%}</h2>
             </div>
             <div class="offset-top-15 offset-lg-top-30">
               <hr class="divider bg-madison">
             </div>
             <div class="offset-top-15 offset-lg-top-30">
-              <div class="group group-xl"><a class="btn button-primary btn-icon btn-icon btn-icon-left" href="/{{language}}"><span class="icon fa fa-arrow-left"></span><span>Back to Home Page</span></a></div>
+              <div class="group group-xl"><a class="btn button-primary btn-icon btn-icon btn-icon-left" href="/{{language}}"><span class="icon fa fa-arrow-left"></span><span>{% call_get_text "back" language True%}</span></a></div>
             </div>
           </div>
         </div>

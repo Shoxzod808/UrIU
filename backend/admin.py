@@ -51,7 +51,7 @@ class SertificateForEmployeeInline(admin.TabularInline):
     extra = 1  # Количество форм для добавления новых сертификатов
 
 class PeopleAdmin(admin.ModelAdmin):
-    list_display = ('full_name_uz', 'proffesion_uz', 'phone', 'email')  # Поля, которые будут отображаться в списке
+    list_display = ('id', 'full_name_uz', 'proffesion_uz', 'phone', 'email')  # Поля, которые будут отображаться в списке
     search_fields = ('full_name_uz', 'proffesion_uz')  # Поля, по которым будет работать поиск
     inlines = [SertificateForEmployeeInline, ]
 

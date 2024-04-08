@@ -1,0 +1,101 @@
+{% extends "./base.html" %}
+{% load static %}
+{% load my_tags %}
+
+{% block title %}
+{% if language == 'en' %}
+    {{ employee.full_name_en }}
+{% elif language == 'ru' %}
+  {{ employee.full_name_ru }}
+{% else %}
+  {{ employee.full_name_uz }}
+{% endif %}
+{% endblock %}
+
+{% block body %}
+
+{% include "./header.html" %}
+<section class="section section-xl bg-default">
+    <div class="container">
+      <div class="row row-30 justify-content-sm-center">
+        <div class="col-md-5 col-lg-4 text-md-start">
+          <div class="inset-md-right-30"><img class="img-responsive d-inline-block " src="{{ employee.photo.url }}" width="340" height="340" alt="">
+            <div class="offset-top-15 offset-sm-top-30">
+              <ul class="list list-unstyled">
+                <li><span class="icon icon-xs mdi mdi-phone align-middle text-madison"></span><a class="d-inline-block text-dark inset-left-10" href="tel:{{employee.phone}}">{{employee.phone}}</a></li>
+                <li><span class="icon icon-xs mdi mdi-email-open align-middle text-madison"></span><a class="d-inline-block inset-left-10" href="mailto:{{employee.email}}">{{employee.email}}</a></li>
+              </ul>
+            </div>
+            <div class="offset-top-15 offset-sm-top-30">
+              <ul class="list-inline list-inline-xs list-inline-madison">
+                
+                <li><a class="icon icon-xxs fa fa-telegram icon-circle icon-gray-light-filled" href="{% if employee.telegram %}{{ employee.telegram }}{% else %}#{% endif %}"></a></li>
+                <li><a class="icon icon-xxs fa fa-facebook icon-circle icon-gray-light-filled" href="{% if employee.facebook %}{{ employee.facebook }}{% else %}#{% endif %}"></a></li>
+                <li><a class="icon icon-xxs fa fa-instagram icon-circle icon-gray-light-filled" href="{% if employee.instagram %}{{ employee.instagram }}{% else %}#{% endif %}"></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-7 col-lg-8 text-start">
+          <div>
+            <h2 class="fw-bold">
+              {% if language == 'en' %}
+                  {{ employee.full_name_en }}
+              {% elif language == 'ru' %}
+                {{ employee.full_name_ru }}
+              {% else %}
+                {{ employee.full_name_uz }}
+              {% endif %}
+            </h2>
+          </div>
+          <p class="offset-top-10">
+            {% if language == 'en' %}
+                {{ employee.proffesion_en }}
+            {% elif language == 'ru' %}
+              {{ employee.proffesion_ru }}
+            {% else %}
+              {{ employee.proffesion_uz }}
+            {% endif %}
+            
+          </p>
+          
+          <div class="offset-top-30 offset-md-top-30">
+
+            <div class="text-subline"></div>
+          </div>
+          <div class="offset-top-20">
+            <p>
+              {% if language == 'en' %}
+                {{ employee.about_en }}
+            {% elif language == 'ru' %}
+              {{ employee.about_ru }}
+            {% else %}
+              {{ employee.about_uz }}
+            {% endif %}
+            </p>
+          </div>
+          <div class="offset-top-30 offset-md-top-60">
+            <h6 class="fw-bold">{% call_get_text "Certificates and Awards" language True%}</h6>
+            <div class="text-subline"></div>
+          </div>
+          <div class="offset-top-15 offset-sm-top-30">
+            <div class="group group-lg" data-lightgallery="group">
+              {% for certificate in sert %}
+                  <a class="d-inline-block" data-lightgallery="item" href="{{ certificate.image.url }}">
+                      <img class="img-responsive d-inline-block" src="{{ certificate.image.url }}" width="144" height="90" alt="">
+                  </a>
+              {% endfor %}
+
+                
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+{% include "./footer.html" %}
+
+<!-- Java script-->
+<script src="{% static 'js/core.min.js' %}"></script>
+<script src="{% static 'js/script.js' %}"></script>
+{% endblock %}

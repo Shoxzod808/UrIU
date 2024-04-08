@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from .models import Gallery, Category, News, Tag, Quote
+from .models import Gallery, Category, News, Tag, Quote, Employee, SertificateForEmployee
 from django.http import JsonResponse
 from django.core.paginator import Paginator
 
@@ -177,7 +177,8 @@ def rektorat(request, language='uz'):
             'categories': categories,
             'language': 'uz',
         }
-    
+    employees = [Employee.objects.get(id=4)]
+    context['employees'] = employees
     context['request'] = request
     context['language'] = language
     path = request.get_full_path()
@@ -322,3 +323,32 @@ def news_detail(request, news_id, language='uz'):
         context['language'] = 'uz'
         return render(request, '404.html', context)
 
+def employee_page(request, id, language='uz'):
+
+    context = {
+            'language': 'uz',
+        }
+    
+    employee = Employee.objects.filter(id=id)
+    if not employee.exists():
+        context['language'] = language
+        return render(request, '404.html', context)
+    categories = Category.objects.all()
+    employee = employee[0]
+    sert = SertificateForEmployee.objects.filter(employee=employee)
+
+    context['sert'] = sert
+    context['employee'] = employee
+    context['categories'] = categories
+    context['request'] = request
+    context['language'] = language
+    path = request.get_full_path()
+    if path.split('/')[1] in ['ru', 'uz', 'en']:
+        path = path[3:]
+    path = path.rstrip('/')
+    context['path'] = path
+    if language in ['ru', 'en', 'uz']:
+        return render(request, 'frontend/employee.html', context)
+    else:
+        context['language'] = language
+        return render(request, '404.html', context)
