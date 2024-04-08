@@ -38,7 +38,7 @@
                 <li>
                   <div class="unit flex-row align-items-center unit-spacing-xs">
                     <div class="unit-left"><span class="icon mdi mdi-email-open align-middle"></span></div>
-                    <div class="unit-body"><a href="mailto:#">info@demolink.org</a></div>
+                    <div class="unit-body"><a href="mailto:#"></a></div>
                   </div>
                 </li>
               </ul>
@@ -53,8 +53,8 @@
                 <div class="unit-left"><img width='171' height='171' src="{% static 'images/logo.png' %}" alt='' />
                 </div>
                 <div class="unit-body">
-                  <div class="rd-navbar-brand-title">Urganch Innovatsion</div>
-                  <div class="rd-navbar-brand-slogan">University</div>
+                  <div class="rd-navbar-brand-title">{% call_get_text "title-1" language True%}</div>
+                  <div class="rd-navbar-brand-slogan">{% call_get_text "title-2" language True%}</div>
                 </div>
               </div>
             </a></div>

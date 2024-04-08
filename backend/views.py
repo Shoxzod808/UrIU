@@ -4,22 +4,21 @@ from .models import Gallery, Category, News, Tag, Quote
 from django.http import JsonResponse
 from django.core.paginator import Paginator
 
-categories = Category.objects.all()
-context = {
-        'categories': categories,
-        'language': 'uz',
-    }
+
 
 def index(request, language='uz'):
-    global context
+    categories = Category.objects.all()
+    context = {
+            'categories': categories,
+            'language': 'uz',
+        }
     gallery_photos = Gallery.objects.all()
     news = News.objects.all()
     quotes = Quote.objects.all()
     path = request.get_full_path()
     if path.split('/')[1] in ['ru', 'uz', 'en']:
         path = path[3:]
-    if path[-1] == '/':
-        path = path[:-1]
+    path = path.rstrip('/')
     context['path'] = path
     context['quotes'] = quotes
     context['language'] = language
@@ -33,15 +32,18 @@ def index(request, language='uz'):
         return render(request, '404.html', context)
 
 def umumiy_malumot(request, language='uz'):
-    global context
+    categories = Category.objects.all()
+    context = {
+            'categories': categories,
+            'language': 'uz',
+        }
 
     context['language'] = language
     context['request'] = request
     path = request.get_full_path()
     if path.split('/')[1] in ['ru', 'uz', 'en']:
         path = path[3:]
-    if path[-1] == '/':
-        path = path[:-1]
+    path = path.rstrip('/')
     context['path'] = path
     if language in ['ru', 'en', 'uz']:
         return render(request, 'frontend/umumiy_malumot.html', context)
@@ -50,15 +52,18 @@ def umumiy_malumot(request, language='uz'):
         return render(request, '404.html', context)
 
 def universitet_tarixi(request, language='uz'):
-    global context
+    categories = Category.objects.all()
+    context = {
+            'categories': categories,
+            'language': 'uz',
+        }
 
     context['request'] = request
     context['language'] = language
     path = request.get_full_path()
     if path.split('/')[1] in ['ru', 'uz', 'en']:
         path = path[3:]
-    if path[-1] == '/':
-        path = path[:-1]
+    path = path.rstrip('/')
     context['path'] = path
     if language in ['ru', 'en', 'uz']:
         return render(request, 'frontend/universitet_tarixi.html', context)
@@ -67,15 +72,18 @@ def universitet_tarixi(request, language='uz'):
         return render(request, '404.html', context)
 
 def rektor_tabrigi(request, language='uz'):
-    global context
+    categories = Category.objects.all()
+    context = {
+            'categories': categories,
+            'language': 'uz',
+        }
 
     context['request'] = request
     context['language'] = language
     path = request.get_full_path()
     if path.split('/')[1] in ['ru', 'uz', 'en']:
         path = path[3:]
-    if path[-1] == '/':
-        path = path[:-1]
+    path = path.rstrip('/')
     context['path'] = path
     if language in ['ru', 'en', 'uz']:
         return render(request, 'frontend/rektor_tabrigi.html', context)
@@ -84,15 +92,18 @@ def rektor_tabrigi(request, language='uz'):
         return render(request, '404.html', context)
 
 def kengashlar(request, language='uz'):
-    global context
+    categories = Category.objects.all()
+    context = {
+            'categories': categories,
+            'language': 'uz',
+        }
 
     context['request'] = request
     context['language'] = language
     path = request.get_full_path()
     if path.split('/')[1] in ['ru', 'uz', 'en']:
         path = path[3:]
-    if path[-1] == '/':
-        path = path[:-1]
+    path = path.rstrip('/')
     context['path'] = path
     if language in ['ru', 'en', 'uz']:
         return render(request, 'frontend/kengashlar.html', context)
@@ -101,15 +112,18 @@ def kengashlar(request, language='uz'):
         return render(request, '404.html', context)
 
 def kafedralar(request, language='uz'):
-    global context
+    categories = Category.objects.all()
+    context = {
+            'categories': categories,
+            'language': 'uz',
+        }
     
     context['request'] = request
     context['language'] = language
     path = request.get_full_path()
     if path.split('/')[1] in ['ru', 'uz', 'en']:
         path = path[3:]
-    if path[-1] == '/':
-        path = path[:-1]
+    path = path.rstrip('/')
     context['path'] = path
     if language in ['ru', 'en', 'uz']:
         return render(request, 'frontend/kafedralar.html', context)
@@ -118,15 +132,18 @@ def kafedralar(request, language='uz'):
         return render(request, '404.html', context)
 
 def fakultetlar(request, language='uz'):
-    global context
+    categories = Category.objects.all()
+    context = {
+            'categories': categories,
+            'language': 'uz',
+        }
     
     context['request'] = request
     context['language'] = language
     path = request.get_full_path()
     if path.split('/')[1] in ['ru', 'uz', 'en']:
         path = path[3:]
-    if path[-1] == '/':
-        path = path[:-1]
+    path = path.rstrip('/')
     context['path'] = path
     if language in ['ru', 'en', 'uz']:
         return render(request, 'frontend/fakultetlar.html', context)
@@ -135,15 +152,18 @@ def fakultetlar(request, language='uz'):
         return render(request, '404.html', context)
 
 def markazlar_va_bolimlar(request, language='uz'):
-    global context
+    categories = Category.objects.all()
+    context = {
+            'categories': categories,
+            'language': 'uz',
+        }
     
     context['request'] = request
     context['language'] = language
     path = request.get_full_path()
     if path.split('/')[1] in ['ru', 'uz', 'en']:
         path = path[3:]
-    if path[-1] == '/':
-        path = path[:-1]
+    path = path.rstrip('/')
     context['path'] = path
     if language in ['ru', 'en', 'uz']:
         return render(request, 'frontend/markazlar_va_bolimlar.html', context)
@@ -152,15 +172,18 @@ def markazlar_va_bolimlar(request, language='uz'):
         return render(request, '404.html', context)
 
 def rektorat(request, language='uz'):
-    global context
+    categories = Category.objects.all()
+    context = {
+            'categories': categories,
+            'language': 'uz',
+        }
     
     context['request'] = request
     context['language'] = language
     path = request.get_full_path()
     if path.split('/')[1] in ['ru', 'uz', 'en']:
         path = path[3:]
-    if path[-1] == '/':
-        path = path[:-1]
+    path = path.rstrip('/')
     context['path'] = path
     if language in ['ru', 'en', 'uz']:
         return render(request, 'frontend/rektorat.html', context)
@@ -169,15 +192,18 @@ def rektorat(request, language='uz'):
         return render(request, '404.html', context)
 
 def rekvizitlar(request, language='uz'):
-    global context
+    categories = Category.objects.all()
+    context = {
+            'categories': categories,
+            'language': 'uz',
+        }
     
     context['request'] = request
     context['language'] = language
     path = request.get_full_path()
     if path.split('/')[1] in ['ru', 'uz', 'en']:
         path = path[3:]
-    if path[-1] == '/':
-        path = path[:-1]
+    path = path.rstrip('/')
     context['path'] = path
     if language in ['ru', 'en', 'uz']:
         return render(request, 'frontend/rekvizitlar.html', context)
@@ -186,15 +212,18 @@ def rekvizitlar(request, language='uz'):
         return render(request, '404.html', context)
 
 def qabul(request, language='uz'):
-    global context
+    categories = Category.objects.all()
+    context = {
+            'categories': categories,
+            'language': 'uz',
+        }
     
     context['request'] = request
     context['language'] = language
     path = request.get_full_path()
     if path.split('/')[1] in ['ru', 'uz', 'en']:
         path = path[3:]
-    if path[-1] == '/':
-        path = path[:-1]
+    path = path.rstrip('/')
     context['path'] = path
     if language in ['ru', 'en', 'uz']:
         return render(request, 'frontend/qabul.html', context)
@@ -203,8 +232,13 @@ def qabul(request, language='uz'):
         return render(request, '404.html', context)
 
 def news(request, language='uz', page=1):
-    global context
-    
+    categories = Category.objects.all()
+    news = News.objects.all()
+    context = {
+            'categories': categories,
+            'language': 'uz',
+        }
+    context['news'] = news
     context['request'] = request
     context['language'] = language
     context['prew2'] = None if page < 3 else page -2
@@ -216,8 +250,7 @@ def news(request, language='uz', page=1):
     path = request.get_full_path()
     if path.split('/')[1] in ['ru', 'uz', 'en']:
         path = path[3:]
-    if path[-1] == '/':
-        path = path[:-1]
+    path = path.rstrip('/')
     context['path'] = path
     if language in ['ru', 'en', 'uz']:
         return render(request, 'frontend/news.html', context)
@@ -226,15 +259,18 @@ def news(request, language='uz', page=1):
         return render(request, '404.html', context)
 
 def coming_soon(request, language='uz'):
-    global context
+    categories = Category.objects.all()
+    context = {
+            'categories': categories,
+            'language': 'uz',
+        }
     
     context['request'] = request
     context['language'] = language
     path = request.get_full_path()
     if path.split('/')[1] in ['ru', 'uz', 'en']:
         path = path[3:]
-    if path[-1] == '/':
-        path = path[:-1]
+    path = path.rstrip('/')
     context['path'] = path
     if language in ['ru', 'en', 'uz']:
         return render(request, 'frontend/coming_soon.html', context)
@@ -243,14 +279,17 @@ def coming_soon(request, language='uz'):
         return render(request, '404.html', context)
 
 def contact(request, language='uz'):
-    global context
+    categories = Category.objects.all()
+    context = {
+            'categories': categories,
+            'language': 'uz',
+        }
     context['language'] = language
     context['language'] = language
     path = request.get_full_path()
     if path.split('/')[1] in ['ru', 'uz', 'en']:
         path = path[3:]
-    if path[-1] == '/':
-        path = path[:-1]
+    path.rstrip('/')
     context['path'] = path
     if language in ['ru', 'en', 'uz']:
         return render(request, 'frontend/contact.html', context)
@@ -259,13 +298,16 @@ def contact(request, language='uz'):
         return render(request, '404.html', context)
 
 def news_detail(request, news_id, language='uz'):
-    global context
+    categories = Category.objects.all()
+    context = {
+            'categories': categories,
+            'language': 'uz',
+        }
     
     path = request.get_full_path()
     if path.split('/')[1] in ['ru', 'uz', 'en']:
         path = path[3:]
-    if path[-1] == '/':
-        path = path[:-1]
+    path = path.rstrip('/')
     context['path'] = path
     tags = Tag.objects.all()
     news_item = News.objects.get(id=news_id)
