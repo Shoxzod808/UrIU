@@ -2,7 +2,7 @@
 
 from django.contrib import admin
 from .models import News, Template, Template2Button, Gallery, Category, Button, Tag, GalleryForNews
-from .models import Quote
+from .models import Quote, People, SertificateForPeople
 
 @admin.register(Quote)
 class QuoteAdmin(admin.ModelAdmin):
@@ -45,3 +45,17 @@ class NewsAdmin(admin.ModelAdmin):
 
 admin.site.register(News, NewsAdmin)
 admin.site.register(Tag)
+
+class SertificateForPeopleInline(admin.TabularInline):
+    model = SertificateForPeople
+    extra = 1  # Количество форм для добавления новых сертификатов
+
+class PeopleAdmin(admin.ModelAdmin):
+    list_display = ('full_name_uz', 'proffesion_uz', 'phone', 'email')  # Поля, которые будут отображаться в списке
+    search_fields = ('full_name_uz', 'proffesion_uz')  # Поля, по которым будет работать поиск
+    inlines = [SertificateForPeopleInline, ]
+
+    # Если вы хотите добавить фильтрацию по полям, используйте list_filter
+    # list_filter = ('proffesion_uz',)
+
+admin.site.register(People, PeopleAdmin)

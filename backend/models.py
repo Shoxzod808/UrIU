@@ -2,6 +2,46 @@
 
 from django.db import models
 from django.utils import timezone
+
+class SertificateForPeople(models.Model):
+    news = models.ForeignKey('People', related_name='SertificateForPeople', on_delete=models.CASCADE)
+    image = models.ImageField(upload_to='sertificates/')
+
+    def __str__(self):
+        return f"Image {self.pk}"
+
+class People(models.Model):
+    photo = models.ImageField(upload_to='*people_photos/')
+
+    full_name_uz = models.CharField(max_length=255, verbose_name='*Имя(uz)')
+    full_name_en = models.CharField(max_length=255, verbose_name='*Имя(en)')
+    full_name_ru = models.CharField(max_length=255, verbose_name='*Имя(ru)')
+
+    proffesion_uz = models.CharField(max_length=255, verbose_name='*Профессия(uz)')
+    proffesion_en = models.CharField(max_length=255, verbose_name='*Профессия(en)')
+    proffesion_ru = models.CharField(max_length=255, verbose_name='*Профессия(ru)')
+
+    about_uz = models.TextField(max_length=255, verbose_name='*Инфо(uz)')
+    about_uz = models.TextField(max_length=255, verbose_name='*Инфо(en)')
+    about_uz = models.TextField(max_length=255, verbose_name='*Инфо(ru)')
+
+    phone = models.CharField(max_length=20, null=True, blank=True, verbose_name='Телефон')
+    email = models.CharField(max_length=255, null=True, blank=True, verbose_name='Почта')
+
+    telegram = models.URLField(max_length=200, blank=True, null=True, verbose_name='Телеграм')
+    facebook = models.URLField(max_length=200, blank=True, null=True, verbose_name='Телеграм')
+    instagram = models.URLField(max_length=200, blank=True, null=True, verbose_name='Телеграм')
+
+
+    class Meta:
+        verbose_name = 'Сотрудник'
+        verbose_name_plural = 'Сотрудники'
+    
+    def __str__(self):
+        return self.full_name_uz
+
+
+
 class Category(models.Model):
     name = models.CharField(max_length=100)
 
