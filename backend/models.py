@@ -3,15 +3,15 @@
 from django.db import models
 from django.utils import timezone
 
-class SertificateForPeople(models.Model):
-    news = models.ForeignKey('People', related_name='SertificateForPeople', on_delete=models.CASCADE)
+class SertificateForEmployee(models.Model):
+    news = models.ForeignKey('Employee', related_name='SertificateForEmployee', on_delete=models.CASCADE)
     image = models.ImageField(upload_to='sertificates/')
 
     def __str__(self):
         return f"Image {self.pk}"
 
-class People(models.Model):
-    photo = models.ImageField(upload_to='*people_photos/')
+class Employee(models.Model):
+    photo = models.ImageField(upload_to='*employee_photos/')
 
     full_name_uz = models.CharField(max_length=255, verbose_name='*Имя(uz)')
     full_name_en = models.CharField(max_length=255, verbose_name='*Имя(en)')
