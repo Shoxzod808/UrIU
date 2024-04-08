@@ -58,7 +58,7 @@
             </div>
             <div class="col-sm-10 col-lg-4 text-start">
               <div class="inset-lg-left-30">
-                <h6 class="fw-bold">Socials</h6>
+                <h6 class="fw-bold">{% call_get_text "Socials" language True%}</h6>
                 <div class="hr bg-gray-light offset-top-10"></div>
                 <div class="offset-top-15 text-start">
                   <ul class="list-inline list-inline-xs list-inline-madison">
@@ -69,7 +69,7 @@
                   </ul>
                 </div>
                 <div class="offset-top-30 offset-md-top-60">
-                  <h6 class="fw-bold">Phones</h6>
+                  <h6 class="fw-bold">{% call_get_text "Phones" language True%}</h6>
                   <div>
                     <div class="hr bg-gray-light offset-top-10"></div>
                   </div>
@@ -82,7 +82,7 @@
                   </div>
                 </div>
                 <div class="offset-top-30 offset-md-top-60">
-                  <h6 class="fw-bold">E-mail</h6>
+                  <h6 class="fw-bold">{% call_get_text "email" language True%}</h6>
                   <div>
                     <div class="hr bg-gray-light offset-top-10"></div>
                   </div>
@@ -93,7 +93,7 @@
                   </div>
                 </div>
                 <div class="offset-top-30 offset-md-top-60">
-                  <h6 class="fw-bold">Address</h6>
+                  <h6 class="fw-bold">{% call_get_text "Address" language True%}</h6>
                   <div>
                     <div class="hr bg-gray-light offset-top-10"></div>
                   </div>
@@ -107,7 +107,7 @@
                   </div>
                 </div>
                 <div class="offset-top-30 offset-md-top-65">
-                  <h6 class="fw-bold">Opening Hours</h6>
+                  <h6 class="fw-bold">{% call_get_text "Opening Hours" language True%}</h6>
                   <div>
                     <div class="hr bg-gray-light offset-top-10"></div>
                   </div>
@@ -116,10 +116,10 @@
                       <div class="unit-left"><span class="icon icon-xs mdi mdi-calendar-clock text-madison"></span></div>
                       <div class="unit-body">
                         <div>
-                          <p>Mon-: 9:00am-6:00pm</p>
+                          <p>{% call_get_text "Mon-: 9:00am-6:00pm" language True%}</p>
                         </div>
                         <div>
-                          <p>Sun-Sat: Closed</p>
+                          <p>{% call_get_text "Sun-Sat: Closed" language True%}</p>
                         </div>
                       </div>
                     </div>
