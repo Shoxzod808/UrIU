@@ -3,6 +3,9 @@
 from django.db import models
 from django.utils import timezone
 
+
+
+
 class SertificateForEmployee(models.Model):
     employee = models.ForeignKey('Employee', related_name='SertificateForEmployee', on_delete=models.CASCADE)
     image = models.ImageField(upload_to='sertificates/')

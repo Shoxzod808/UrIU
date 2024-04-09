@@ -5132,7 +5132,8 @@ a.thumbnail:hover {
 }
 
 .widget-flickrfeed .thumbnail-default {
-	width: 50%;
+	width: 49%;
+	box-sizing: border-box;
 }
 
 .thumbnail-modern {

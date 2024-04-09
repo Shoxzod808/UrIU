@@ -181,10 +181,16 @@ def meyoriy_hujjatlar(request, language='uz'):
     context['request'] = request
     context['language'] = language
     path = request.get_full_path()
+    array = [
+        1,
+
+    ]
     if path.split('/')[1] in ['ru', 'uz', 'en']:
         path = path[3:]
     path = path.rstrip('/')
     context['path'] = path
+    context['array'] = array
+
     if language in ['ru', 'en', 'uz']:
         return render(request, 'frontend/meyoriy_hujjatlar.html', context)
     else:
