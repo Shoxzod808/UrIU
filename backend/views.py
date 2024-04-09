@@ -171,13 +171,33 @@ def markazlar_va_bolimlar(request, language='uz'):
         context['language'] = 'uz'
         return render(request, '404.html', context)
 
+def meyoriy_hujjatlar(request, language='uz'):
+    categories = Category.objects.all()
+    context = {
+            'categories': categories,
+            'language': 'uz',
+        }
+    
+    context['request'] = request
+    context['language'] = language
+    path = request.get_full_path()
+    if path.split('/')[1] in ['ru', 'uz', 'en']:
+        path = path[3:]
+    path = path.rstrip('/')
+    context['path'] = path
+    if language in ['ru', 'en', 'uz']:
+        return render(request, 'frontend/meyoriy_hujjatlar.html', context)
+    else:
+        context['language'] = 'uz'
+        return render(request, '404.html', context)
+
 def rektorat(request, language='uz'):
     categories = Category.objects.all()
     context = {
             'categories': categories,
             'language': 'uz',
         }
-    employees = [Employee.objects.get(id=4)]
+    employees = [Employee.objects.get(id=6), Employee.objects.get(id=4)]
     context['employees'] = employees
     context['request'] = request
     context['language'] = language

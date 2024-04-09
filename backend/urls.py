@@ -21,6 +21,7 @@ urlpatterns = [
     path("<str:language>/", views.index, name="index"),
     path("<str:language>/news/<int:news_id>", views.news_detail, name="news_detail"),
     path("<str:language>/rektor_tabrigi/", views.rektor_tabrigi, name="rektor_tabrigi"),
+    path("<str:language>/meyoriy_hujjatlar/", views.meyoriy_hujjatlar, name="meyoriy_hujjatlar"),
     path("<str:language>/umumiy_malumot/", views.umumiy_malumot, name="umumiy_malumot"),
     path("<str:language>/universitet_tarixi/", views.universitet_tarixi, name="universitet_tarixi"),
     path("<str:language>/rektor_tabrigi/", views.rektor_tabrigi, name="rektor_tabrigi"),
