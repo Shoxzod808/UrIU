@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from .models import Gallery, Category, News, Tag, Quote, Employee, SertificateForEmployee
+from .models import Document, FileForDocuments
 from django.http import JsonResponse
 from django.core.paginator import Paginator
 
@@ -181,15 +182,16 @@ def meyoriy_hujjatlar(request, language='uz'):
     context['request'] = request
     context['language'] = language
     path = request.get_full_path()
-    array = [
-        1,
-
-    ]
+    datas = Document.objects.all()
+    documents = dict()
+    for i in datas:
+        documents[i.id] = FileForDocuments.objects.filter(document=i.id)
     if path.split('/')[1] in ['ru', 'uz', 'en']:
         path = path[3:]
     path = path.rstrip('/')
     context['path'] = path
-    context['array'] = array
+    context['documents'] = documents
+    context['datas'] = datas
 
     if language in ['ru', 'en', 'uz']:
         return render(request, 'frontend/meyoriy_hujjatlar.html', context)

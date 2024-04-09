@@ -1,5 +1,5 @@
 # myapp/utils.py
-from .models import Template, Template2Button
+from .models import Template, Template2Button, FileForDocuments
 
 
 def get_text(title, lang, button=False):
@@ -17,3 +17,8 @@ def get_text(title, lang, button=False):
     except Exception:
         text = f'Шаблон: {title} не найден!!! '
     return text
+
+
+def get_document(id):
+    result = FileForDocuments.objects.filter(document=id)
+    return result

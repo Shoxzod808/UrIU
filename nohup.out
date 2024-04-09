@@ -8787,3 +8787,739 @@ Starting development server at http://0.0.0.0:80/
 Quit the server with CONTROL-C.
 
 Watching for file changes with StatReloader
+/root/UrIU/backend/models.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+April 09, 2024 - 14:57:33
+Django version 5.0.3, using settings 'UrIU.settings'
+Starting development server at http://0.0.0.0:80/
+Quit the server with CONTROL-C.
+
+/usr/local/lib/python3.10/dist-packages/django/db/models/base.py:366: RuntimeWarning: Model 'backend.sertificateforemployee' was already registered. Reloading models is not advised as it can lead to inconsistencies, most notably with related models.
+  new_class._meta.apps.register_model(new_class._meta.app_label, new_class)
+/usr/local/lib/python3.10/dist-packages/django/db/models/base.py:366: RuntimeWarning: Model 'backend.employee' was already registered. Reloading models is not advised as it can lead to inconsistencies, most notably with related models.
+  new_class._meta.apps.register_model(new_class._meta.app_label, new_class)
+Watching for file changes with StatReloader
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.10/threading.py", line 953, in run
+    self._target(*self._args, **self._kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/utils/autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/management/commands/runserver.py", line 133, in inner_run
+    self.check(display_num_errors=True)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/management/base.py", line 563, in check
+    raise SystemCheckError(msg)
+django.core.management.base.SystemCheckError: SystemCheckError: System check identified some issues:
+
+ERRORS:
+<class 'backend.admin.SertificateForEmployeeInline'>: (admin.E202) 'backend.SertificateForEmployee' has no ForeignKey to 'backend.Employee'.
+backend.SertificateForEmployee.employee: (fields.E300) Field defines a relation with model 'Employee', which is either not installed, or is abstract.
+
+System check identified 2 issues (0 silenced).
+/root/UrIU/backend/models.py changed, reloading.
+Performing system checks...
+
+/usr/local/lib/python3.10/dist-packages/django/db/models/base.py:366: RuntimeWarning: Model 'backend.employee' was already registered. Reloading models is not advised as it can lead to inconsistencies, most notably with related models.
+  new_class._meta.apps.register_model(new_class._meta.app_label, new_class)
+Watching for file changes with StatReloader
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.10/threading.py", line 953, in run
+    self._target(*self._args, **self._kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/utils/autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/management/commands/runserver.py", line 133, in inner_run
+    self.check(display_num_errors=True)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/management/base.py", line 563, in check
+    raise SystemCheckError(msg)
+django.core.management.base.SystemCheckError: SystemCheckError: System check identified some issues:
+
+ERRORS:
+<class 'backend.admin.SertificateForEmployeeInline'>: (admin.E202) 'backend.SertificateForEmployee' has no ForeignKey to 'backend.Employee'.
+backend.File.employee: (fields.E300) Field defines a relation with model 'Employee', which is either not installed, or is abstract.
+backend.SertificateForEmployee.employee: (fields.E300) Field defines a relation with model 'Employee', which is either not installed, or is abstract.
+
+System check identified 3 issues (0 silenced).
+/root/UrIU/backend/models.py changed, reloading.
+Performing system checks...
+
+/usr/local/lib/python3.10/dist-packages/django/db/models/base.py:366: RuntimeWarning: Model 'backend.employee' was already registered. Reloading models is not advised as it can lead to inconsistencies, most notably with related models.
+  new_class._meta.apps.register_model(new_class._meta.app_label, new_class)
+Watching for file changes with StatReloader
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.10/threading.py", line 953, in run
+    self._target(*self._args, **self._kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/utils/autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/management/commands/runserver.py", line 133, in inner_run
+    self.check(display_num_errors=True)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/management/base.py", line 563, in check
+    raise SystemCheckError(msg)
+django.core.management.base.SystemCheckError: SystemCheckError: System check identified some issues:
+
+ERRORS:
+<class 'backend.admin.SertificateForEmployeeInline'>: (admin.E202) 'backend.SertificateForEmployee' has no ForeignKey to 'backend.Employee'.
+backend.FileForDocuments.employee: (fields.E300) Field defines a relation with model 'Employee', which is either not installed, or is abstract.
+backend.SertificateForEmployee.employee: (fields.E300) Field defines a relation with model 'Employee', which is either not installed, or is abstract.
+
+System check identified 3 issues (0 silenced).
+/root/UrIU/backend/models.py changed, reloading.
+Performing system checks...
+
+/usr/local/lib/python3.10/dist-packages/django/db/models/base.py:366: RuntimeWarning: Model 'backend.employee' was already registered. Reloading models is not advised as it can lead to inconsistencies, most notably with related models.
+  new_class._meta.apps.register_model(new_class._meta.app_label, new_class)
+Watching for file changes with StatReloader
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.10/threading.py", line 953, in run
+    self._target(*self._args, **self._kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/utils/autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/management/commands/runserver.py", line 133, in inner_run
+    self.check(display_num_errors=True)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/management/base.py", line 563, in check
+    raise SystemCheckError(msg)
+django.core.management.base.SystemCheckError: SystemCheckError: System check identified some issues:
+
+ERRORS:
+<class 'backend.admin.SertificateForEmployeeInline'>: (admin.E202) 'backend.SertificateForEmployee' has no ForeignKey to 'backend.Employee'.
+backend.FileForDocuments.employdocumentee: (fields.E300) Field defines a relation with model 'Employee', which is either not installed, or is abstract.
+backend.SertificateForEmployee.employee: (fields.E300) Field defines a relation with model 'Employee', which is either not installed, or is abstract.
+
+System check identified 3 issues (0 silenced).
+/root/UrIU/backend/models.py changed, reloading.
+Performing system checks...
+
+/usr/local/lib/python3.10/dist-packages/django/db/models/base.py:366: RuntimeWarning: Model 'backend.employee' was already registered. Reloading models is not advised as it can lead to inconsistencies, most notably with related models.
+  new_class._meta.apps.register_model(new_class._meta.app_label, new_class)
+Watching for file changes with StatReloader
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.10/threading.py", line 953, in run
+    self._target(*self._args, **self._kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/utils/autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/management/commands/runserver.py", line 133, in inner_run
+    self.check(display_num_errors=True)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/management/base.py", line 563, in check
+    raise SystemCheckError(msg)
+django.core.management.base.SystemCheckError: SystemCheckError: System check identified some issues:
+
+ERRORS:
+<class 'backend.admin.SertificateForEmployeeInline'>: (admin.E202) 'backend.SertificateForEmployee' has no ForeignKey to 'backend.Employee'.
+backend.FileForDocuments.documentee: (fields.E300) Field defines a relation with model 'Employee', which is either not installed, or is abstract.
+backend.SertificateForEmployee.employee: (fields.E300) Field defines a relation with model 'Employee', which is either not installed, or is abstract.
+
+System check identified 3 issues (0 silenced).
+/root/UrIU/backend/models.py changed, reloading.
+Performing system checks...
+
+/usr/local/lib/python3.10/dist-packages/django/db/models/base.py:366: RuntimeWarning: Model 'backend.employee' was already registered. Reloading models is not advised as it can lead to inconsistencies, most notably with related models.
+  new_class._meta.apps.register_model(new_class._meta.app_label, new_class)
+Watching for file changes with StatReloader
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.10/threading.py", line 953, in run
+    self._target(*self._args, **self._kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/utils/autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/management/commands/runserver.py", line 133, in inner_run
+    self.check(display_num_errors=True)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/management/base.py", line 563, in check
+    raise SystemCheckError(msg)
+django.core.management.base.SystemCheckError: SystemCheckError: System check identified some issues:
+
+ERRORS:
+<class 'backend.admin.SertificateForEmployeeInline'>: (admin.E202) 'backend.SertificateForEmployee' has no ForeignKey to 'backend.Employee'.
+backend.FileForDocuments.documentee: (fields.E300) Field defines a relation with model 'Document', which is either not installed, or is abstract.
+backend.FileForDocuments.documentee: (fields.E307) The field backend.FileForDocuments.documentee was declared with a lazy reference to 'backend.document', but app 'backend' doesn't provide model 'document'.
+backend.SertificateForEmployee.employee: (fields.E300) Field defines a relation with model 'Employee', which is either not installed, or is abstract.
+
+System check identified 4 issues (0 silenced).
+/root/UrIU/backend/models.py changed, reloading.
+Performing system checks...
+
+/usr/local/lib/python3.10/dist-packages/django/db/models/base.py:366: RuntimeWarning: Model 'backend.employee' was already registered. Reloading models is not advised as it can lead to inconsistencies, most notably with related models.
+  new_class._meta.apps.register_model(new_class._meta.app_label, new_class)
+Watching for file changes with StatReloader
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.10/threading.py", line 953, in run
+    self._target(*self._args, **self._kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/utils/autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/management/commands/runserver.py", line 133, in inner_run
+    self.check(display_num_errors=True)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/management/base.py", line 563, in check
+    raise SystemCheckError(msg)
+django.core.management.base.SystemCheckError: SystemCheckError: System check identified some issues:
+
+ERRORS:
+<class 'backend.admin.SertificateForEmployeeInline'>: (admin.E202) 'backend.SertificateForEmployee' has no ForeignKey to 'backend.Employee'.
+backend.FileForDocuments.documentee: (fields.E300) Field defines a relation with model 'Document', which is either not installed, or is abstract.
+backend.FileForDocuments.documentee: (fields.E307) The field backend.FileForDocuments.documentee was declared with a lazy reference to 'backend.document', but app 'backend' doesn't provide model 'document'.
+backend.SertificateForEmployee.employee: (fields.E300) Field defines a relation with model 'Employee', which is either not installed, or is abstract.
+
+System check identified 4 issues (0 silenced).
+/root/UrIU/backend/models.py changed, reloading.
+Performing system checks...
+
+Watching for file changes with StatReloader
+[09/Apr/2024 14:58:25] "GET /ru/meyoriy_hujjatlar/ HTTP/1.1" 200 24256
+[09/Apr/2024 14:58:26] "GET /static/css/style.css HTTP/1.1" 304 0
+Not Found: /ru/meyoriy_hujjatlar/images/academics-01-770x480.jpg
+[09/Apr/2024 14:58:26] "GET /ru/meyoriy_hujjatlar/images/academics-01-770x480.jpg HTTP/1.1" 404 6372
+Not Found: /ru/meyoriy_hujjatlar/images/academics-02-770x480.jpg
+[09/Apr/2024 14:58:26] "GET /ru/meyoriy_hujjatlar/images/academics-02-770x480.jpg HTTP/1.1" 404 6372
+Not Found: /ru/meyoriy_hujjatlar/images/academics-03-770x480.jpg
+[09/Apr/2024 14:58:26] "GET /ru/meyoriy_hujjatlar/images/academics-03-770x480.jpg HTTP/1.1" 404 6372
+Not Found: /ru/meyoriy_hujjatlar/images/academics-04-770x480.jpg
+[09/Apr/2024 14:58:26] "GET /ru/meyoriy_hujjatlar/images/academics-04-770x480.jpg HTTP/1.1" 404 6372
+Not Found: /ru/meyoriy_hujjatlar/images/academics-05-770x480.jpg
+[09/Apr/2024 14:58:26] "GET /ru/meyoriy_hujjatlar/images/academics-05-770x480.jpg HTTP/1.1" 404 6372
+Not Found: /ru/meyoriy_hujjatlar/images/academics-07-770x480.jpg
+Not Found: /ru/meyoriy_hujjatlar/images/academics-06-770x480.jpg
+[09/Apr/2024 14:58:26] "GET /ru/meyoriy_hujjatlar/images/academics-06-770x480.jpg HTTP/1.1" 404 6372
+[09/Apr/2024 14:58:26] "GET /ru/meyoriy_hujjatlar/images/academics-07-770x480.jpg HTTP/1.1" 404 6372
+/root/UrIU/backend/models.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+April 09, 2024 - 14:58:25
+Django version 5.0.3, using settings 'UrIU.settings'
+Starting development server at http://0.0.0.0:80/
+Quit the server with CONTROL-C.
+
+Watching for file changes with StatReloader
+/root/UrIU/backend/models.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+April 09, 2024 - 14:58:46
+Django version 5.0.3, using settings 'UrIU.settings'
+Starting development server at http://0.0.0.0:80/
+Quit the server with CONTROL-C.
+
+Watching for file changes with StatReloader
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.10/threading.py", line 953, in run
+    self._target(*self._args, **self._kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/utils/autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/management/commands/runserver.py", line 125, in inner_run
+    autoreload.raise_last_exception()
+  File "/usr/local/lib/python3.10/dist-packages/django/utils/autoreload.py", line 87, in raise_last_exception
+    raise _exception[1]
+  File "/usr/local/lib/python3.10/dist-packages/django/core/management/__init__.py", line 394, in execute
+    autoreload.check_errors(django.setup)()
+  File "/usr/local/lib/python3.10/dist-packages/django/utils/autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/usr/local/lib/python3.10/dist-packages/django/apps/registry.py", line 116, in populate
+    app_config.import_models()
+  File "/usr/local/lib/python3.10/dist-packages/django/apps/config.py", line 269, in import_models
+    self.models_module = import_module(models_module_name)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 879, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1017, in get_code
+  File "<frozen importlib._bootstrap_external>", line 947, in source_to_code
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/root/UrIU/backend/models.py", line 8
+    name = models.
+                  ^
+SyntaxError: invalid syntax
+/root/UrIU/backend/models.py changed, reloading.
+Watching for file changes with StatReloader
+/root/UrIU/backend/models.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+April 09, 2024 - 14:58:59
+Django version 5.0.3, using settings 'UrIU.settings'
+Starting development server at http://0.0.0.0:80/
+Quit the server with CONTROL-C.
+
+Watching for file changes with StatReloader
+/root/UrIU/backend/models.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+April 09, 2024 - 14:59:03
+Django version 5.0.3, using settings 'UrIU.settings'
+Starting development server at http://0.0.0.0:80/
+Quit the server with CONTROL-C.
+
+Watching for file changes with StatReloader
+/root/UrIU/backend/models.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+April 09, 2024 - 14:59:06
+Django version 5.0.3, using settings 'UrIU.settings'
+Starting development server at http://0.0.0.0:80/
+Quit the server with CONTROL-C.
+
+Watching for file changes with StatReloader
+/root/UrIU/backend/models.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+April 09, 2024 - 14:59:16
+Django version 5.0.3, using settings 'UrIU.settings'
+Starting development server at http://0.0.0.0:80/
+Quit the server with CONTROL-C.
+
+Watching for file changes with StatReloader
+/root/UrIU/backend/models.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+April 09, 2024 - 14:59:22
+Django version 5.0.3, using settings 'UrIU.settings'
+Starting development server at http://0.0.0.0:80/
+Quit the server with CONTROL-C.
+
+Watching for file changes with StatReloader
+[09/Apr/2024 15:00:23] "GET /ru/meyoriy_hujjatlar/ HTTP/1.1" 200 13423
+Not Found: /ru/meyoriy_hujjatlar/images/academics-01-770x480.jpg
+[09/Apr/2024 15:00:24] "GET /ru/meyoriy_hujjatlar/images/academics-01-770x480.jpg HTTP/1.1" 404 6372
+/root/UrIU/backend/models.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+April 09, 2024 - 14:59:29
+Django version 5.0.3, using settings 'UrIU.settings'
+Starting development server at http://0.0.0.0:80/
+Quit the server with CONTROL-C.
+
+Watching for file changes with StatReloader
+/root/UrIU/backend/models.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+April 09, 2024 - 15:00:25
+Django version 5.0.3, using settings 'UrIU.settings'
+Starting development server at http://0.0.0.0:80/
+Quit the server with CONTROL-C.
+
+Watching for file changes with StatReloader
+/root/UrIU/backend/models.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+April 09, 2024 - 15:00:27
+Django version 5.0.3, using settings 'UrIU.settings'
+Starting development server at http://0.0.0.0:80/
+Quit the server with CONTROL-C.
+
+Watching for file changes with StatReloader
+[09/Apr/2024 15:00:39] "GET /ru/meyoriy_hujjatlar/ HTTP/1.1" 200 13423
+Not Found: /ru/meyoriy_hujjatlar/images/academics-01-770x480.jpg
+[09/Apr/2024 15:00:39] "GET /ru/meyoriy_hujjatlar/images/academics-01-770x480.jpg HTTP/1.1" 404 6372
+/root/UrIU/backend/models.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+April 09, 2024 - 15:00:31
+Django version 5.0.3, using settings 'UrIU.settings'
+Starting development server at http://0.0.0.0:80/
+Quit the server with CONTROL-C.
+
+Watching for file changes with StatReloader
+/root/UrIU/backend/models.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+April 09, 2024 - 15:00:50
+Django version 5.0.3, using settings 'UrIU.settings'
+Starting development server at http://0.0.0.0:80/
+Quit the server with CONTROL-C.
+
+Watching for file changes with StatReloader
+/root/UrIU/backend/models.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+April 09, 2024 - 15:00:55
+Django version 5.0.3, using settings 'UrIU.settings'
+Starting development server at http://0.0.0.0:80/
+Quit the server with CONTROL-C.
+
+Watching for file changes with StatReloader
+/root/UrIU/backend/models.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+April 09, 2024 - 15:00:59
+Django version 5.0.3, using settings 'UrIU.settings'
+Starting development server at http://0.0.0.0:80/
+Quit the server with CONTROL-C.
+
+Watching for file changes with StatReloader
+/root/UrIU/backend/models.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+April 09, 2024 - 15:01:08
+Django version 5.0.3, using settings 'UrIU.settings'
+Starting development server at http://0.0.0.0:80/
+Quit the server with CONTROL-C.
+
+Watching for file changes with StatReloader
+/root/UrIU/backend/models.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+April 09, 2024 - 15:01:12
+Django version 5.0.3, using settings 'UrIU.settings'
+Starting development server at http://0.0.0.0:80/
+Quit the server with CONTROL-C.
+
+Watching for file changes with StatReloader
+[09/Apr/2024 15:01:14] "GET /ru/meyoriy_hujjatlar/ HTTP/1.1" 200 13582
+[09/Apr/2024 15:01:15] "GET /static/css/style.css HTTP/1.1" 304 0
+Not Found: /ru/meyoriy_hujjatlar/images/academics-01-770x480.jpg
+[09/Apr/2024 15:01:15] "GET /ru/meyoriy_hujjatlar/images/academics-01-770x480.jpg HTTP/1.1" 404 6372
+/root/UrIU/backend/models.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+April 09, 2024 - 15:01:14
+Django version 5.0.3, using settings 'UrIU.settings'
+Starting development server at http://0.0.0.0:80/
+Quit the server with CONTROL-C.
+
+Watching for file changes with StatReloader
+/root/UrIU/backend/models.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+April 09, 2024 - 15:01:16
+Django version 5.0.3, using settings 'UrIU.settings'
+Starting development server at http://0.0.0.0:80/
+Quit the server with CONTROL-C.
+
+Watching for file changes with StatReloader
+/root/UrIU/backend/models.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+April 09, 2024 - 15:01:19
+Django version 5.0.3, using settings 'UrIU.settings'
+Starting development server at http://0.0.0.0:80/
+Quit the server with CONTROL-C.
+
+Watching for file changes with StatReloader
+/root/UrIU/backend/models.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+April 09, 2024 - 15:01:23
+Django version 5.0.3, using settings 'UrIU.settings'
+Starting development server at http://0.0.0.0:80/
+Quit the server with CONTROL-C.
+
+Watching for file changes with StatReloader
+/root/UrIU/backend/models.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+April 09, 2024 - 15:01:29
+Django version 5.0.3, using settings 'UrIU.settings'
+Starting development server at http://0.0.0.0:80/
+Quit the server with CONTROL-C.
+
+Watching for file changes with StatReloader
+/root/UrIU/backend/models.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+April 09, 2024 - 15:01:37
+Django version 5.0.3, using settings 'UrIU.settings'
+Starting development server at http://0.0.0.0:80/
+Quit the server with CONTROL-C.
+
+Watching for file changes with StatReloader
+[09/Apr/2024 15:01:43] "GET /ru/meyoriy_hujjatlar/ HTTP/1.1" 200 13430
+/root/UrIU/backend/models.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+April 09, 2024 - 15:01:42
+Django version 5.0.3, using settings 'UrIU.settings'
+Starting development server at http://0.0.0.0:80/
+Quit the server with CONTROL-C.
+
+Watching for file changes with StatReloader
+Not Found: /ru/meyoriy_hujjatlar/images/academics-01-770x480.jpg
+[09/Apr/2024 15:01:44] "GET /ru/meyoriy_hujjatlar/images/academics-01-770x480.jpg HTTP/1.1" 404 6372
+/root/UrIU/backend/models.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+April 09, 2024 - 15:01:44
+Django version 5.0.3, using settings 'UrIU.settings'
+Starting development server at http://0.0.0.0:80/
+Quit the server with CONTROL-C.
+
+Watching for file changes with StatReloader
+/root/UrIU/backend/models.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+April 09, 2024 - 15:01:48
+Django version 5.0.3, using settings 'UrIU.settings'
+Starting development server at http://0.0.0.0:80/
+Quit the server with CONTROL-C.
+
+Watching for file changes with StatReloader
+[09/Apr/2024 15:01:54] "GET /ru/meyoriy_hujjatlar/ HTTP/1.1" 200 13430
+Not Found: /ru/meyoriy_hujjatlar/images/academics-01-770x480.jpg
+[09/Apr/2024 15:01:54] "GET /ru/meyoriy_hujjatlar/images/academics-01-770x480.jpg HTTP/1.1" 404 6372
+/root/UrIU/backend/admin.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+April 09, 2024 - 15:01:53
+Django version 5.0.3, using settings 'UrIU.settings'
+Starting development server at http://0.0.0.0:80/
+Quit the server with CONTROL-C.
+
+Watching for file changes with StatReloader
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.10/threading.py", line 953, in run
+    self._target(*self._args, **self._kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/utils/autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/management/commands/runserver.py", line 125, in inner_run
+    autoreload.raise_last_exception()
+  File "/usr/local/lib/python3.10/dist-packages/django/utils/autoreload.py", line 87, in raise_last_exception
+    raise _exception[1]
+  File "/usr/local/lib/python3.10/dist-packages/django/core/management/__init__.py", line 394, in execute
+    autoreload.check_errors(django.setup)()
+  File "/usr/local/lib/python3.10/dist-packages/django/utils/autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/usr/local/lib/python3.10/dist-packages/django/apps/registry.py", line 124, in populate
+    app_config.ready()
+  File "/usr/local/lib/python3.10/dist-packages/django/contrib/admin/apps.py", line 27, in ready
+    self.module.autodiscover()
+  File "/usr/local/lib/python3.10/dist-packages/django/contrib/admin/__init__.py", line 52, in autodiscover
+    autodiscover_modules("admin", register_to=site)
+  File "/usr/local/lib/python3.10/dist-packages/django/utils/module_loading.py", line 58, in autodiscover_modules
+    import_module("%s.%s" % (app_config.name, module_to_search))
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 879, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1017, in get_code
+  File "<frozen importlib._bootstrap_external>", line 947, in source_to_code
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/root/UrIU/backend/admin.py", line 5
+    from .models import Quote, Employee, SertificateForEmployee, 
+                                                                 ^
+SyntaxError: trailing comma not allowed without surrounding parentheses
+/root/UrIU/backend/admin.py changed, reloading.
+Watching for file changes with StatReloader
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.10/threading.py", line 953, in run
+    self._target(*self._args, **self._kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/utils/autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/management/commands/runserver.py", line 125, in inner_run
+    autoreload.raise_last_exception()
+  File "/usr/local/lib/python3.10/dist-packages/django/utils/autoreload.py", line 87, in raise_last_exception
+    raise _exception[1]
+  File "/usr/local/lib/python3.10/dist-packages/django/core/management/__init__.py", line 394, in execute
+    autoreload.check_errors(django.setup)()
+  File "/usr/local/lib/python3.10/dist-packages/django/utils/autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/usr/local/lib/python3.10/dist-packages/django/apps/registry.py", line 124, in populate
+    app_config.ready()
+  File "/usr/local/lib/python3.10/dist-packages/django/contrib/admin/apps.py", line 27, in ready
+    self.module.autodiscover()
+  File "/usr/local/lib/python3.10/dist-packages/django/contrib/admin/__init__.py", line 52, in autodiscover
+    autodiscover_modules("admin", register_to=site)
+  File "/usr/local/lib/python3.10/dist-packages/django/utils/module_loading.py", line 58, in autodiscover_modules
+    import_module("%s.%s" % (app_config.name, module_to_search))
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/root/UrIU/backend/admin.py", line 5, in <module>
+    from .models import Quote, Employee, SertificateForEmployee, Do
+ImportError: cannot import name 'Do' from 'backend.models' (/root/UrIU/backend/models.py)
+/root/UrIU/backend/admin.py changed, reloading.
+Watching for file changes with StatReloader
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.10/threading.py", line 953, in run
+    self._target(*self._args, **self._kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/utils/autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/management/commands/runserver.py", line 125, in inner_run
+    autoreload.raise_last_exception()
+  File "/usr/local/lib/python3.10/dist-packages/django/utils/autoreload.py", line 87, in raise_last_exception
+    raise _exception[1]
+  File "/usr/local/lib/python3.10/dist-packages/django/core/management/__init__.py", line 394, in execute
+    autoreload.check_errors(django.setup)()
+  File "/usr/local/lib/python3.10/dist-packages/django/utils/autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/usr/local/lib/python3.10/dist-packages/django/apps/registry.py", line 124, in populate
+    app_config.ready()
+  File "/usr/local/lib/python3.10/dist-packages/django/contrib/admin/apps.py", line 27, in ready
+    self.module.autodiscover()
+  File "/usr/local/lib/python3.10/dist-packages/django/contrib/admin/__init__.py", line 52, in autodiscover
+    autodiscover_modules("admin", register_to=site)
+  File "/usr/local/lib/python3.10/dist-packages/django/utils/module_loading.py", line 58, in autodiscover_modules
+    import_module("%s.%s" % (app_config.name, module_to_search))
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 879, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1017, in get_code
+  File "<frozen importlib._bootstrap_external>", line 947, in source_to_code
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/root/UrIU/backend/admin.py", line 5
+    from .models import Quote, Employee, SertificateForEmployee, Document, 
+                                                                           ^
+SyntaxError: trailing comma not allowed without surrounding parentheses
+/root/UrIU/backend/admin.py changed, reloading.
+Watching for file changes with StatReloader
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.10/threading.py", line 953, in run
+    self._target(*self._args, **self._kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/utils/autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/management/commands/runserver.py", line 125, in inner_run
+    autoreload.raise_last_exception()
+  File "/usr/local/lib/python3.10/dist-packages/django/utils/autoreload.py", line 87, in raise_last_exception
+    raise _exception[1]
+  File "/usr/local/lib/python3.10/dist-packages/django/core/management/__init__.py", line 394, in execute
+    autoreload.check_errors(django.setup)()
+  File "/usr/local/lib/python3.10/dist-packages/django/utils/autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/usr/local/lib/python3.10/dist-packages/django/apps/registry.py", line 124, in populate
+    app_config.ready()
+  File "/usr/local/lib/python3.10/dist-packages/django/contrib/admin/apps.py", line 27, in ready
+    self.module.autodiscover()
+  File "/usr/local/lib/python3.10/dist-packages/django/contrib/admin/__init__.py", line 52, in autodiscover
+    autodiscover_modules("admin", register_to=site)
+  File "/usr/local/lib/python3.10/dist-packages/django/utils/module_loading.py", line 58, in autodiscover_modules
+    import_module("%s.%s" % (app_config.name, module_to_search))
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/root/UrIU/backend/admin.py", line 5, in <module>
+    from .models import Quote, Employee, SertificateForEmployee, Document, F
+ImportError: cannot import name 'F' from 'backend.models' (/root/UrIU/backend/models.py)
+/root/UrIU/backend/admin.py changed, reloading.
+Watching for file changes with StatReloader
+/root/UrIU/backend/admin.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+April 09, 2024 - 15:02:12
+Django version 5.0.3, using settings 'UrIU.settings'
+Starting development server at http://0.0.0.0:80/
+Quit the server with CONTROL-C.
+
+Watching for file changes with StatReloader
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.10/threading.py", line 953, in run
+    self._target(*self._args, **self._kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/utils/autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/management/commands/runserver.py", line 125, in inner_run
+    autoreload.raise_last_exception()
+  File "/usr/local/lib/python3.10/dist-packages/django/utils/autoreload.py", line 87, in raise_last_exception
+    raise _exception[1]
+  File "/usr/local/lib/python3.10/dist-packages/django/core/management/__init__.py", line 394, in execute
+    autoreload.check_errors(django.setup)()
+  File "/usr/local/lib/python3.10/dist-packages/django/utils/autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/usr/local/lib/python3.10/dist-packages/django/apps/registry.py", line 124, in populate
+    app_config.ready()
+  File "/usr/local/lib/python3.10/dist-packages/django/contrib/admin/apps.py", line 27, in ready
+    self.module.autodiscover()
+  File "/usr/local/lib/python3.10/dist-packages/django/contrib/admin/__init__.py", line 52, in autodiscover
+    autodiscover_modules("admin", register_to=site)
+  File "/usr/local/lib/python3.10/dist-packages/django/utils/module_loading.py", line 58, in autodiscover_modules
+    import_module("%s.%s" % (app_config.name, module_to_search))
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/root/UrIU/backend/admin.py", line 75, in <module>
+    admin.site.register(Employee, PeopleAdmin)
+  File "/usr/local/lib/python3.10/dist-packages/django/contrib/admin/sites.py", line 124, in register
+    raise AlreadyRegistered(msg)
+django.contrib.admin.exceptions.AlreadyRegistered: The model Employee is already registered with 'backend.PeopleAdmin'.

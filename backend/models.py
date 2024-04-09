@@ -4,7 +4,30 @@ from django.db import models
 from django.utils import timezone
 
 
+class FileForDocuments(models.Model):
+    name = models.CharField(max_length=255, verbose_name='Названия')
+    document = models.ForeignKey('Document', related_name='Document', on_delete=models.CASCADE)
+    file = models.FileField(upload_to='documents/')
 
+    def __str__(self):
+        return f"File {self.pk}"
+
+class Document(models.Model):
+    title_uz = models.CharField(max_length=255, verbose_name='*Заголовка(uz)')
+    title_en = models.CharField(max_length=255, verbose_name='*Заголовка(en)')
+    title_ru = models.CharField(max_length=255, verbose_name='*Заголовка(ru)')
+
+    body_uz = models.TextField(max_length=255, verbose_name='Текст(uz)')
+    body_en = models.TextField(max_length=255, verbose_name='Текст(en)')
+    body_ru = models.TextField(max_length=255, verbose_name='Текст(ru)')
+
+    class Meta:
+        verbose_name = 'Документ'
+        verbose_name_plural = 'Документы'
+    
+    def __str__(self):
+        return self.title_uz
+    
 
 class SertificateForEmployee(models.Model):
     employee = models.ForeignKey('Employee', related_name='SertificateForEmployee', on_delete=models.CASCADE)
