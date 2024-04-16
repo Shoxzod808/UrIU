@@ -2,7 +2,7 @@
 
 from django.db import models
 from django.utils import timezone
-
+from ckeditor.fields import RichTextField
 
 class FileForDocuments(models.Model):
     name = models.CharField(max_length=255, verbose_name='Названия')
@@ -30,6 +30,7 @@ class Document(models.Model):
     
 
 class SertificateForEmployee(models.Model):
+    queue = models.IntegerField(default=-1, verbose_name='Очеред показа(Необязательно)')
     employee = models.ForeignKey('Employee', related_name='SertificateForEmployee', on_delete=models.CASCADE)
     image = models.ImageField(upload_to='sertificates/')
 
@@ -47,9 +48,9 @@ class Employee(models.Model):
     proffesion_en = models.CharField(max_length=255, verbose_name='*Профессия(en)')
     proffesion_ru = models.CharField(max_length=255, verbose_name='*Профессия(ru)')
 
-    about_uz = models.TextField(max_length=255, verbose_name='*Инфо(uz)')
-    about_en = models.TextField(max_length=255, verbose_name='*Инфо(en)')
-    about_ru = models.TextField(max_length=255, verbose_name='*Инфо(ru)')
+    about_uz = RichTextField(verbose_name='*Инфо(uz)')
+    about_en = RichTextField(verbose_name='*Инфо(en)')
+    about_ru = RichTextField(verbose_name='*Инфо(ru)')
 
     phone = models.CharField(max_length=20, null=True, blank=True, verbose_name='Телефон')
     email = models.CharField(max_length=255, null=True, blank=True, verbose_name='Почта')

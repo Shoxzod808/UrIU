@@ -66,11 +66,11 @@
           <div class="offset-top-20">
             <p>
               {% if language == 'en' %}
-                {{ employee.about_en }}
+                {{ employee.about_en|safe }}
             {% elif language == 'ru' %}
-              {{ employee.about_ru }}
+              {{ employee.about_ru|safe }}
             {% else %}
-              {{ employee.about_uz }}
+              {{ employee.about_uz|safe }}
             {% endif %}
             </p>
           </div>
