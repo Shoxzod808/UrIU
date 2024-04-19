@@ -30,7 +30,7 @@ class Document(models.Model):
     
 
 class SertificateForEmployee(models.Model):
-    queue = models.IntegerField(default=-1, verbose_name='Очеред показа(Необязательно)')
+    queue = models.IntegerField(default=10, verbose_name='Очеред показа(Необязательно)')
     employee = models.ForeignKey('Employee', related_name='SertificateForEmployee', on_delete=models.CASCADE)
     image = models.ImageField(upload_to='sertificates/')
 

@@ -14,7 +14,9 @@ def index(request, language='uz'):
             'language': 'uz',
         }
     gallery_photos = Gallery.objects.all()
-    news = News.objects.all()
+    news = News.objects.all().order_by('-id')  # Сортирует новости начиная с последних
+    if len(news) > 9:
+        news = news[:9]
     quotes = Quote.objects.all()
     path = request.get_full_path()
     if path.split('/')[1] in ['ru', 'uz', 'en']:
@@ -172,6 +174,26 @@ def markazlar_va_bolimlar(request, language='uz'):
         context['language'] = 'uz'
         return render(request, '404.html', context)
 
+def rtt(request, language='uz'):
+    categories = Category.objects.all()
+    context = {
+            'categories': categories,
+            'language': 'uz',
+        }
+    
+    context['request'] = request
+    context['language'] = language
+    path = request.get_full_path()
+    if path.split('/')[1] in ['ru', 'uz', 'en']:
+        path = path[3:]
+    path = path.rstrip('/')
+    context['path'] = path
+    if language in ['ru', 'en', 'uz']:
+        return render(request, 'frontend/markazlar_va_bolimlar.html', context)
+    else:
+        context['language'] = 'uz'
+        return render(request, '404.html', context)
+
 def meyoriy_hujjatlar(request, language='uz'):
     categories = Category.objects.all()
     context = {
@@ -262,7 +284,7 @@ def qabul(request, language='uz'):
 
 def news(request, language='uz', page=1):
     categories = Category.objects.all()
-    news = News.objects.all()
+    news = News.objects.all().order_by('-id')  # Сортирует новости начиная с последних
     context = {
             'categories': categories,
             'language': 'uz',
@@ -363,7 +385,7 @@ def employee_page(request, id, language='uz'):
         return render(request, '404.html', context)
     categories = Category.objects.all()
     employee = employee[0]
-    sert = SertificateForEmployee.objects.filter(employee=employee)
+    sert = SertificateForEmployee.objects.filter(employee=employee).order_by('queue')
 
     context['sert'] = sert
     context['employee'] = employee
