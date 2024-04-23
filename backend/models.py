@@ -38,7 +38,7 @@ class SertificateForEmployee(models.Model):
         return f"Image {self.pk}"
 
 class Employee(models.Model):
-    photo = models.ImageField(upload_to='*employee_photos/')
+    photo = models.ImageField(upload_to='employee_photos/')
 
     full_name_uz = models.CharField(max_length=255, verbose_name='*ФИО(uz)')
     full_name_en = models.CharField(max_length=255, verbose_name='*ФИО(en)')

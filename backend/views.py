@@ -375,6 +375,7 @@ def news_detail(request, news_id, language='uz'):
 
 def employee_page(request, id, language='uz'):
 
+
     context = {
             'language': 'uz',
         }
@@ -402,3 +403,7 @@ def employee_page(request, id, language='uz'):
     else:
         context['language'] = language
         return render(request, '404.html', context)
+
+
+
+
