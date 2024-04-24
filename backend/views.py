@@ -181,7 +181,7 @@ def rtt(request, language='uz'):
             'categories': categories,
             'language': 'uz',
         }
-    employees = [Employee.objects.get(id=10), Employee.objects.get(id=1), Employee.objects.get(id=3), Employee.objects.get(id=3)]
+    employees = [Employee.objects.get(id=10), Employee.objects.get(id=1), Employee.objects.get(id=3), Employee.objects.get(id=14)]
     context['employees'] = employees
     context['request'] = request
     context['language'] = language
