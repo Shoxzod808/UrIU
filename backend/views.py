@@ -160,7 +160,8 @@ def markazlar_va_bolimlar(request, language='uz'):
             'categories': categories,
             'language': 'uz',
         }
-    
+    tuzilma = Category.objects.get(name='Tuzilma')
+    context['tuzilma'] = tuzilma
     context['request'] = request
     context['language'] = language
     path = request.get_full_path()
@@ -180,7 +181,8 @@ def rtt(request, language='uz'):
             'categories': categories,
             'language': 'uz',
         }
-    
+    employees = [Employee.objects.get(id=10), Employee.objects.get(id=1), Employee.objects.get(id=3), Employee.objects.get(id=3)]
+    context['employees'] = employees
     context['request'] = request
     context['language'] = language
     path = request.get_full_path()
@@ -189,7 +191,7 @@ def rtt(request, language='uz'):
     path = path.rstrip('/')
     context['path'] = path
     if language in ['ru', 'en', 'uz']:
-        return render(request, 'frontend/markazlar_va_bolimlar.html', context)
+        return render(request, 'frontend/RTT.html', context)
     else:
         context['language'] = 'uz'
         return render(request, '404.html', context)

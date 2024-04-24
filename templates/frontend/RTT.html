@@ -1,0 +1,53 @@
+{% extends "./base.html" %}
+{% load static %}
+{% load my_tags %}
+
+{% block title %}{% call_get_text "Raqamli ta'lim texnologiyalar bo'limi" language True%}{% endblock %}
+
+{% block body %}
+
+{% include "./header.html" %}
+<section class="section section-xl bg-default">
+    <div class="container">
+      <h2 class="fw-bold">{% call_get_text "Raqamli ta'lim texnologiyalar bo'limi" language True%}</h2>
+      <hr class="divider bg-madison">
+      <h5>{% call_get_text "RTT INFO" language False%}</h5>
+      <div class="row row-30 text-lg-start offset-top-60">
+        {% for employee in employees %}
+          <div class="col-md-6 col-lg-3">
+              <a href="/{{language}}/employee-{{employee.id}}">
+                  <img class="img-responsive d-inline-block img-rounded" src="{{employee.photo.url}}" style="width:270px; height:270px;" alt="">
+                  <div class="offset-top-20">
+                      <h6 class="fw-bold text-primary">
+                        {% if language == 'en' %}
+                            {{ employee.full_name_en }}
+                        {% elif language == 'ru' %}
+                          {{ employee.full_name_ru }}
+                        {% else %}
+                          {{ employee.full_name_uz }}
+                        {% endif %}
+                      </h6>
+                  </div>
+                  <div class="offset-top-5">
+                      <p>
+                        {% if language == 'en' %}
+                            {{ employee.proffesion_en }}
+                        {% elif language == 'ru' %}
+                          {{ employee.proffesion_ru }}
+                        {% else %}
+                          {{ employee.proffesion_uz }}
+                        {% endif %}</p>
+                  </div>
+              </a>
+          </div>
+        {% endfor %}
+        
+      </div>
+    </div>
+  </section>
+{% include "./footer.html" %}
+
+<!-- Java script-->
+<script src="{% static 'js/core.min.js' %}"></script>
+<script src="{% static 'js/script.js' %}"></script>
+{% endblock %}

@@ -10,90 +10,46 @@
 <section class="section section-xl bg-catskill">
     <div class="container">
         <div class="row row-85 justify-content-sm-center">
-            <div class="col-lg-4 text-start col-sm-8">
+            {% comment %} <div class="col-lg-4 text-start col-sm-8">
                 <aside class="inset-lg-left-30">
-                    <h6 class="fw-bold">Categories</h6>
+                    <h6 class="fw-bold">{% call_get_text tuzilma.name language True%}</h6>
                     <div class="text-subline"></div>
                     <div class="offset-top-20">
                         <ul class="list list-marked list-marked-primary">
-                            <li><a href="news-post-page.html">News</a></li>
-                            <li><a href="news-post-page.html">University</a></li>
-                            <li><a href="news-post-page.html">Global Education</a></li>
-                            <li><a href="news-post-page.html">Law</a></li>
-                            <li><a href="news-post-page.html">Colleges</a></li>
+                            {% for button in tuzilma.button_set.all %}
+                                <li><a href="/{{language}}/{{ button.link }}">{% call_get_text button.name language True%}</a></li>
+                            {% endfor %}
+                            
                         </ul>
                     </div>
                 </aside>
-            </div>
+            </div> {% endcomment %}
             <div class="col-lg-8 row-30">
-                <h2>Markazlar</h2>
+                <h2>{% call_get_text "Markazlar" language True%}</h2>
+                <hr class="divider bg-madison">
+
+                    
+                </div>
+                <div class="mb-3">
+                    <div class="group group-xl">
+                        <a class="btn btn-icon btn-icon-right button-default w-100" href="#">
+                            <span class="icon fa fa-arrow-right"></span>
+                            <span>Learn More</span>
+                        </a>
+                    </div>
+                </div>
+
+                <h2>{% call_get_text "Bo'limlar" language True%}</h2>
                 <hr class="divider bg-madison">
                 <div class="mb-3">
                     <div class="group group-xl">
-                        <a class="btn btn-icon btn-icon-right button-default w-100" href="#">
+                        <a class="btn btn-icon btn-icon-right button-default w-100" href="/{{language}}/markazlar_va_bolimlar/rtt">
                             <span class="icon fa fa-arrow-right"></span>
-                            <span>Learn More</span>
+                            <span>{% call_get_text "Raqamli ta'lim texnologiyalar bo'limi" language True%}</span>
                         </a>
                     </div>
                 </div>
-                <div class="mb-3">
-                    <div class="group group-xl">
-                        <a class="btn btn-icon btn-icon-right button-default w-100" href="#">
-                            <span class="icon fa fa-arrow-right"></span>
-                            <span>Learn More</span>
-                        </a>
-                    </div>
-                </div>
-                <div class="mb-3">
-                    <div class="group group-xl">
-                        <a class="btn btn-icon btn-icon-right button-default w-100" href="#">
-                            <span class="icon fa fa-arrow-right"></span>
-                            <span>Learn More</span>
-                        </a>
-                    </div>
-                </div>
-                <div class="mb-3">
-                    <div class="group group-xl">
-                        <a class="btn btn-icon btn-icon-right button-default w-100" href="#">
-                            <span class="icon fa fa-arrow-right"></span>
-                            <span>Learn More</span>
-                        </a>
-                    </div>
-                </div>
-                <h2>Bolimlar</h2>
-                <hr class="divider bg-madison">
-                <div class="mb-3">
-                    <div class="group group-xl">
-                        <a class="btn btn-icon btn-icon-right button-default w-100" href="#">
-                            <span class="icon fa fa-arrow-right"></span>
-                            <span>Learn More</span>
-                        </a>
-                    </div>
-                </div>
-                <div class="mb-3">
-                    <div class="group group-xl">
-                        <a class="btn btn-icon btn-icon-right button-default w-100" href="#">
-                            <span class="icon fa fa-arrow-right"></span>
-                            <span>Learn More</span>
-                        </a>
-                    </div>
-                </div>
-                <div class="mb-3">
-                    <div class="group group-xl">
-                        <a class="btn btn-icon btn-icon-right button-default w-100" href="#">
-                            <span class="icon fa fa-arrow-right"></span>
-                            <span>Learn More</span>
-                        </a>
-                    </div>
-                </div>
-                <div class="mb-3">
-                    <div class="group group-xl">
-                        <a class="btn btn-icon btn-icon-right button-default w-100" href="#">
-                            <span class="icon fa fa-arrow-right"></span>
-                            <span>Learn More</span>
-                        </a>
-                    </div>
-                </div>
+                
             </div>
             
         </div>
@@ -101,7 +57,6 @@
 </section>
 
 
-<h2><a href="/{{language}}/markazlar_va_bolimlar/rtt">{% call_get_text "RTT" language True %}</a></h2>
 {% include "./footer.html" %}
 
 <!-- Java script-->
