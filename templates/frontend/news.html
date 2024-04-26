@@ -25,7 +25,7 @@
                         <h6><a href="/{{language}}/news/{{news_item.id}}">{{ news_item.title_uz }}</a></h6>
                     {% endif %}
                       <div class="offset-top-20">
-                          <p>{{ news_item.text }}</p>
+                          <p>{{ news_item.text|safe }}</p>
                       </div>
                       <div class="post-news-meta offset-top-20">
                           <span class="icon icon-xs mdi mdi-calendar-clock align-middle text-madison"></span>

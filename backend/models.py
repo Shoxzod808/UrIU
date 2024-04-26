@@ -8,7 +8,7 @@ class FileForDocuments(models.Model):
     name = models.CharField(max_length=255, verbose_name='Названия')
     document = models.ForeignKey('Document', related_name='Document', on_delete=models.CASCADE)
     file = models.FileField(upload_to='documents/')
-
+    
     def __str__(self):
         return f"File {self.pk}"
 
@@ -112,9 +112,9 @@ class News(models.Model):
     title_ru = models.CharField(max_length=200)
     title_en = models.CharField(max_length=200)
     photo = models.ImageField(upload_to='news_photos/')
-    text_uz = models.TextField()
-    text_en = models.TextField()
-    text_ru = models.TextField()
+    text_uz = RichTextField()
+    text_en = RichTextField()
+    text_ru = RichTextField()
     tags = models.ManyToManyField(Tag)
     date = models.DateTimeField(default=timezone.now)
     created_date = models.DateTimeField(auto_now_add=True)
