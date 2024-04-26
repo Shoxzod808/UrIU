@@ -18474,3 +18474,20 @@ html .rd-file-picker input[type="file"] {
 .buttons-z{
 	text-align: center !important;
 }
+.Tarix_YT{
+	width: 100%;
+	height: 720px;
+}
+@media (max-width: 992px){
+	.Tarix_YT{
+		height: 500px;
+	}
+}
+@media (max-width: 768px){
+	.container{
+		margin-top: 50px;
+	}
+	.Tarix_YT{
+		height: 300px;
+	}
+}
