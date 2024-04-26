@@ -30,7 +30,7 @@ class Document(models.Model):
     
 
 class SertificateForEmployee(models.Model):
-    queue = models.IntegerField(default=10, verbose_name='Очеред показа(Необязательно)')
+    queue = models.IntegerField(default=1, verbose_name='Очеред показа(Необязательно)')
     employee = models.ForeignKey('Employee', related_name='SertificateForEmployee', on_delete=models.CASCADE)
     image = models.ImageField(upload_to='sertificates/')
 
@@ -38,7 +38,7 @@ class SertificateForEmployee(models.Model):
         return f"Image {self.pk}"
 
 class Employee(models.Model):
-    photo = models.ImageField(upload_to='employee_photos/')
+    photo = models.ImageField(null=True, blank=True, upload_to='employee_photos/')
 
     full_name_uz = models.CharField(max_length=255, verbose_name='*ФИО(uz)')
     full_name_en = models.CharField(max_length=255, verbose_name='*ФИО(en)')
@@ -55,9 +55,9 @@ class Employee(models.Model):
     phone = models.CharField(max_length=20, null=True, blank=True, verbose_name='Телефон')
     email = models.CharField(max_length=255, null=True, blank=True, verbose_name='Почта')
 
-    telegram = models.URLField(max_length=200, blank=True, null=True, verbose_name='Телеграм')
-    facebook = models.URLField(max_length=200, blank=True, null=True, verbose_name='Facebook')
-    instagram = models.URLField(max_length=200, blank=True, null=True, verbose_name='Инстаграм')
+    telegram = models.URLField(max_length=200, blank=True, null=True, verbose_name='Телеграм(https://t.me/username)')
+    facebook = models.URLField(max_length=200, blank=True, null=True, verbose_name='Facebook(link)')
+    instagram = models.URLField(max_length=200, blank=True, null=True, verbose_name='Инстаграм(link)')
 
 
     class Meta:
