@@ -27,11 +27,11 @@
           <div class="offset-top-30">
             <p style="font-size:18px;">
               {% if language == 'en' %}
-              {{ news_item.text_en }}
+              {{ news_item.text_en|safe }}
               {% elif language == 'ru' %}
-              {{ news_item.text_ru }}
+              {{ news_item.text_ru|safe }}
               {% else %}
-              {{ news_item.text_uz }}
+              {{ news_item.text_uz|safe }}
               {% endif %}
             </p>
           </div>

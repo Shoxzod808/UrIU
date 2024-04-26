@@ -14,7 +14,7 @@ def index(request, language='uz'):
             'language': 'uz',
         }
     gallery_photos = Gallery.objects.all()
-    news = News.objects.all().order_by('created_at')  # Сортирует новости начиная с последних
+    news = News.objects.all().order_by('-date')  # Сортирует новости начиная с последних
     if len(news) > 9:
         news = news[:9]
     quotes = Quote.objects.all()
@@ -286,7 +286,7 @@ def qabul(request, language='uz'):
 
 def news(request, language='uz', page=1):
     categories = Category.objects.all()
-    news = News.objects.all().order_by('created_at')  # Сортирует новости начиная с последних
+    news = News.objects.all().order_by('-date')  # Сортирует новости начиная с последних
     context = {
             'categories': categories,
             'language': 'uz',
