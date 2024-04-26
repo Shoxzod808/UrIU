@@ -17,9 +17,9 @@ class Document(models.Model):
     title_en = models.CharField(max_length=255, verbose_name='*Заголовка(en)')
     title_ru = models.CharField(max_length=255, verbose_name='*Заголовка(ru)')
 
-    body_uz = models.TextField(max_length=255, verbose_name='Текст(uz)')
-    body_en = models.TextField(max_length=255, verbose_name='Текст(en)')
-    body_ru = models.TextField(max_length=255, verbose_name='Текст(ru)')
+    body_uz = RichTextField(max_length=255, verbose_name='Текст(uz)')
+    body_en = RichTextField(max_length=255, verbose_name='Текст(en)')
+    body_ru = RichTextField(max_length=255, verbose_name='Текст(ru)')
 
     class Meta:
         verbose_name = 'Документ'

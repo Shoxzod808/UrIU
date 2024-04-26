@@ -45,11 +45,11 @@
             <div class="hr divider bg-madison divider-md-0"></div>
             <div class="">
               {% if language == 'en' %}
-                {{ data.body_uz }}
+                {{ data.body_uz|safe }}
               {% elif language == 'ru' %}
-                {{ data.body_ru }}
+                {{ data.body_ru|safe }}
               {% else %}
-                {{ data.body_uz }}
+                {{ data.body_uz|safe }}
               {% endif %}
             </div>
             <div class="offset-lg-top-30">
