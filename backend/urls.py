@@ -33,6 +33,7 @@ urlpatterns = [
     path("<str:language>/rektorat/", views.rektorat, name="rektorat"),
     path("<str:language>/rekvizitlar/", views.rekvizitlar, name="rekvizitlar"),
     path("<str:language>/qabul/", views.qabul, name="qabul"),
+    path("info", views.info, name="info"),
 ]
 
 
