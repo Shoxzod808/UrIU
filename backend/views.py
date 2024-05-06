@@ -407,5 +407,5 @@ def employee_page(request, id, language='uz'):
         return render(request, '404.html', context)
 
 
-def info():
+def info(request):
     return render(request, 'frontend/info.html')
