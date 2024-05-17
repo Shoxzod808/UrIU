@@ -1,5 +1,5 @@
 from django.urls import path, include
-
+from django.contrib.auth import views as auth_views
 from . import views
 
 from django.conf import settings
@@ -14,6 +14,9 @@ def default_language_redirect(request):
 urlpatterns = [
     path('', default_language_redirect),
     path("info/", views.info, name="info"),
+    path("qabul_xodim/", views.qabul_xodim, name="qabul_xodim"),
+    path('success/', views.success, name='success'),
+    path('error/', views.error, name='error'),
     path("<str:language>/coming_soon", views.coming_soon, name="coming_soon"),
     path("<str:language>/news-<int:page>", views.news, name="news"),
     path("<str:language>/employee-<int:id>/", views.employee_page, name="employee"),

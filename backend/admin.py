@@ -2,7 +2,12 @@
 
 from django.contrib import admin
 from .models import News, Template, Template2Button, Gallery, Category, Button, Tag, GalleryForNews
-from .models import Quote, Employee, SertificateForEmployee, Document, FileForDocuments
+from .models import Quote, Employee, SertificateForEmployee, Document, FileForDocuments, Qabul
+
+
+@admin.register(Qabul)
+class QabulAdmin(admin.ModelAdmin):
+    list_display = ('user', 'full_name', 'passport', 'address', 'directions', 'phone_number', 'education_type', 'created')
 
 @admin.register(Quote)
 class QuoteAdmin(admin.ModelAdmin):

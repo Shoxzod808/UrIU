@@ -1,10 +1,11 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from .models import Gallery, Category, News, Tag, Quote, Employee, SertificateForEmployee
-from .models import Document, FileForDocuments
+from .models import Document, FileForDocuments, Qabul
 from django.http import JsonResponse
 from django.core.paginator import Paginator
-
+from .forms import QabulForm
+from django.contrib.auth.decorators import login_required
 
 
 def index(request, language='uz'):
@@ -409,3 +410,36 @@ def employee_page(request, id, language='uz'):
 
 def info(request):
     return render(request, 'frontend/info.html')
+
+
+@login_required
+def qabul_xodim(request):
+    if not request.user.groups.filter(name='Ходим').exists():
+        return redirect('index', language='uz')
+    
+    if request.method == 'POST':
+        form = QabulForm(request.POST)
+        if form.is_valid():
+            try:
+                Qabul.objects.create(
+                    user=request.user,
+                    full_name=form.cleaned_data['full_name'],
+                    passport=form.cleaned_data['passport'],
+                    address=form.cleaned_data['address'],
+                    phone_number=form.cleaned_data['phone_number'],
+                    directions=form.cleaned_data['directions'],
+                    education_type=form.cleaned_data['education_type']
+                )
+            except Exception:
+                return redirect('error')  # Перенаправление на страницу успеха
+            return redirect('success')  # Перенаправление на страницу успеха
+    else:
+        form = QabulForm()
+    
+    return render(request, 'qabul/qabul.html', {'form': form})
+
+def success(request):
+    return render(request, 'qabul/success.html')
+
+def error(request):
+    return render(request, 'qabul/error.html')

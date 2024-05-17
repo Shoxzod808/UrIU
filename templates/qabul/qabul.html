@@ -1,0 +1,54 @@
+{% extends "./base.html" %}
+{% load static %}
+{% load my_tags %}
+
+{% block title %}{% call_get_text "Qabul" language True%}{% endblock %}
+
+{% block body %}
+
+{% include "./header.html" %}
+<div class="containerr" >
+    <h2>Ma'lumotlarni kiriting</h2>
+    <form method="post">
+        {% csrf_token %}
+        <div>
+            <label for="id_full_name" >To'liq ismi:</label>
+            {{ form.full_name }}
+        </div>
+        <br>
+        <div>
+            <label for="id_passport">Passport seriya va raqami:</label>
+            {{ form.passport }}
+        </div>
+        <br>
+
+        <div>
+            <label for="id_address">Address:</label>
+            {{ form.address }}
+        </div>
+        <br>
+
+        <div>
+            <label for="id_phone_number">Telefon raqami:</label>
+            {{ form.phone_number }}
+        </div>
+        <br>
+
+        <div>
+            <label for="id_directions">Yo'nalish:</label>
+            {{ form.directions }}
+        </div>
+        <div>
+            <label for="id_education_type">Ta'lim shakli:</label>
+            {{ form.education_type }}
+        </div>
+        <br>
+        <button type="submit">Jo'natish</button>
+    </form>
+</div>
+{% include "./footer.html" %}
+
+<!-- Java script-->
+<script src="{% static 'js/core.min.js' %}"></script>
+<script src="{% static 'js/script.js' %}"></script>
+{% endblock %}
