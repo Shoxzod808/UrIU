@@ -9,51 +9,73 @@
   <section class="section">
     <!-- Swiper-->
     <div class="swiper-container swiper-slider swiper-slider-2" data-loop="true" data-autoplay="4000" data-slide-effect="slide" data-height="42.1875%" data-min-height="480px">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide" data-slide-bg="{% static 'images/bg-1.png'  %}" style="background-position: 80% center">
-          <div class="swiper-slide-caption">
-            <div class="container">
-              <div class="row justify-content-sm-center justify-content-xl-start">
-                <div class="col-lg-9 text-lg-start col-sm-10">
-                  <div data-caption-animate="fadeInUp" data-caption-delay="100">
-                    <h1 class="fw-bold">{% call_get_text "main-photo-1-1" language False%}</h1>
-                  </div>
-                  <div class="offset-top-20 offset-xs-top-40 offset-xl-top-60 inset-xl-right-100" data-caption-animate="fadeInUp" data-caption-delay="150">
-                    <h5>{% call_get_text "main-photo-1-2" language False%}</h5>
-                  </div>
-                  <div class="offset-top-20 offset-xl-top-40" data-caption-animate="fadeInUp" data-caption-delay="400"><a class="btn button-primary" href="/{{language}}/qabul">{% call_get_text "Qabul" language True%}</a>
-                    <div class="inset-sm-left-30 d-xl-inline-block"><a class="btn button-default d-none d-xl-inline-block" href="/{{language}}/umumiy_malumot">{% call_get_text "Batafsil" language True%}</a></div>
-                  </div>
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" id="slide-1" data-slide-bg="{% static 'images/bg-1.png' %}" style="background-position: 80% center">
+                <div class="swiper-slide-caption">
+                    <div class="container">
+                        <div class="row justify-content-sm-center justify-content-xl-start">
+                            <div class="col-lg-9 text-lg-start col-sm-10">
+                                <div data-caption-animate="fadeInUp" data-caption-delay="100">
+                                    <h1 class="fw-bold">{% call_get_text "main-photo-1-1" language False %}</h1>
+                                </div>
+                                <div class="offset-top-20 offset-xs-top-40 offset-xl-top-60 inset-xl-right-100" data-caption-animate="fadeInUp" data-caption-delay="150">
+                                    <h5>{% call_get_text "main-photo-1-2" language False %}</h5>
+                                </div>
+                                <div class="offset-top-20 offset-xl-top-40" data-caption-animate="fadeInUp" data-caption-delay="400">
+                                    <a class="btn button-primary" href="/{{ language }}/qabul">{% call_get_text "Qabul" language True %}</a>
+                                    <div class="inset-sm-left-30 d-xl-inline-block">
+                                        <a class="btn button-default d-none d-xl-inline-block" href="/{{ language }}/umumiy_malumot">{% call_get_text "Batafsil" language True %}</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
             </div>
-          </div>
-        </div>
-        <div class="swiper-slide" data-slide-bg="{% static 'images/photo_bg.png'  %}" style="background-position: 80% center">
-          <div class="swiper-slide-caption">
-            <div class="container">
-              <div class="row justify-content-sm-center justify-content-xl-start">
-                <div class="col-lg-9 text-lg-start col-sm-10">
-                  <div data-caption-animate="fadeInUp" data-caption-delay="100">
-                    <h1 class="fw-bold">{% call_get_text "main-photo-2-1" language False%}</h1>
-                  </div>
-                  <div class="offset-top-20 offset-xs-top-40 offset-xl-top-60 inset-xl-right-100" data-caption-animate="fadeInUp" data-caption-delay="150">
-                    <h5>{% call_get_text "main-photo-2-2" language False%}</h5>
-                  </div>
-                  <div class="offset-top-20 offset-xl-top-40" data-caption-animate="fadeInUp" data-caption-delay="400"><a class="btn button-primary" href="/{{language}}/qabul">{% call_get_text "Qabul" language True%}</a>
-                    <div class="inset-sm-left-30 d-xl-inline-block"><a class="btn button-default d-none d-xl-inline-block" href="/{{language}}/umumiy_malumot">{% call_get_text "Batafsil" language True%}</a></div>
-                  </div>
+            <div class="swiper-slide" id="slide-2" data-slide-bg="{% static 'images/photo_bg.png' %}" style="background-position: 80% center">
+                <div class="swiper-slide-caption">
+                    <div class="container">
+                        <div class="row justify-content-sm-center justify-content-xl-start">
+                            <div class="col-lg-9 text-lg-start col-sm-10">
+                                <div data-caption-animate="fadeInUp" data-caption-delay="100">
+                                    <h1 class="fw-bold">{% call_get_text "main-photo-2-1" language False %}</h1>
+                                </div>
+                                <div class="offset-top-20 offset-xs-top-40 offset-xl-top-60 inset-xl-right-100" data-caption-animate="fadeInUp" data-caption-delay="150">
+                                    <h5>{% call_get_text "main-photo-2-2" language False %}</h5>
+                                </div>
+                                <div class="offset-top-20 offset-xl-top-40" data-caption-animate="fadeInUp" data-caption-delay="400">
+                                    <a class="btn button-primary" href="/{{ language }}/qabul">{% call_get_text "Qabul" language True %}</a>
+                                    <div class="inset-sm-left-30 d-xl-inline-block">
+                                        <a class="btn button-default d-none d-xl-inline-block" href="/{{ language }}/umumiy_malumot">{% call_get_text "Batafsil" language True %}</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
             </div>
-          </div>
         </div>
-        
-      </div>
-      <!-- Swiper Pagination-->
-      <div class="swiper-pagination"></div>
+        <!-- Swiper Pagination-->
+        <div class="swiper-pagination"></div>
     </div>
-  </section>
+</section>
+<script>
+    function setResponsiveBackground() {
+        var slide1 = document.getElementById('slide-1');
+        var slide2 = document.getElementById('slide-2');
+
+        if (window.innerWidth <= 767) {
+            slide1.style.backgroundImage = "url('{% static 'images/mobile.JPG' %}')";
+            slide2.style.backgroundImage = "url('{% static 'images/mobile.JPG' %}')";
+        } else {
+            slide1.style.backgroundImage = "url('{% static 'images/bg-1.png' %}')";
+            slide2.style.backgroundImage = "url('{% static 'images/photo_bg.png' %}')";
+        }
+    }
+
+    window.addEventListener('resize', setResponsiveBackground);
+    window.addEventListener('load', setResponsiveBackground);
+</script>
   <!-- Setion About Us-->
   <!-- A Few Words About the University-->
   <section class="section section-xl bg-default">
@@ -69,11 +91,15 @@
           <div class="offset-top-30"><a class="btn btn-icon btn-icon-right button-default" href="/{{language}}/universitet_tarixi"><span class="icon fa fa-arrow-right"></span><span>{% call_get_text "Batafsil" language True%}</span></a></div>
         </div>
       </div>
-      <iframe class="Tarix_YT" src="https://www.youtube.com/embed/oqhtI53HcWI" title="Urganch innovatsion universiteti" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      
     </div>
   </section>
   <!--Our Featured Courses-->
-  
+  <section class="section section-xl bg-default offset-top-30">
+    <div class="container">
+      <iframe class="Tarix_YT" src="https://www.youtube.com/embed/oqhtI53HcWI" title="Urganch innovatsion universiteti" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+  </section>
   <!-- Counters-->
   <section class="section section-xl bg-default">
     <div class="container">

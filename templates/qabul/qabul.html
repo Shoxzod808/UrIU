@@ -10,37 +10,40 @@
 <div class="containerr" >
     <h2>Ma'lumotlarni kiriting</h2>
     <form method="post">
+        
         {% csrf_token %}
-        <div>
-            <label for="id_full_name" >To'liq ismi:</label>
-            {{ form.full_name }}
+        <div class="row align-items-center">
+            <div class="col-6"><label for="id_full_name" >To'liq ismi:</label></div>
+            <div class="col-6 text-start">{{ form.full_name }}</div>
         </div>
-        <br>
-        <div>
-            <label for="id_passport">Passport seriya va raqami:</label>
-            {{ form.passport }}
-        </div>
-        <br>
-
-        <div>
-            <label for="id_address">Address:</label>
-            {{ form.address }}
+        <div class="row align-items-center">
+            <div class="col-6"><label for="id_passport">Passport seriya va raqami:</label></div>
+            <div class="col-6 text-start">{{ form.passport }}</div>
         </div>
         <br>
 
-        <div>
-            <label for="id_phone_number">Telefon raqami:</label>
-            {{ form.phone_number }}
+        <div class="row align-items-center">
+            <div class="col-6"><label for="id_address">Address:</label></div>
+            <div class="col-6 text-start">{{ form.address }}</div>
         </div>
         <br>
 
-        <div>
-            <label for="id_directions">Yo'nalish:</label>
-            {{ form.directions }}
+        <div class="row align-items-center">
+            <div class="col-6"><label for="id_phone_number">Telefon raqami:</label></div>
+            <div class="col-6 text-start">{{ form.phone_number }}</div>
         </div>
-        <div>
-            <label for="id_education_type">Ta'lim shakli:</label>
-            {{ form.education_type }}
+        <br>
+
+        <div class="row align-items-center">
+            <div class="col-6"><label for="id_directions">Yo'nalish:</label></div>
+            <div class="col-6 text-start">{{ form.directions }}</div>
+        </div>
+        <br>
+        <div class="row align-items-center">
+            <div class="col-6"><label for="id_education_type">Ta'lim shakli:</label></div>
+            <div class="col-6 text-start">{{ form.education_type }}</div>
+            
+            
         </div>
         <br>
         <button type="submit">Jo'natish</button>
