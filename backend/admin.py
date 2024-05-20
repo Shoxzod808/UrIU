@@ -2,7 +2,11 @@
 
 from django.contrib import admin
 from .models import News, Template, Template2Button, Gallery, Category, Button, Tag, GalleryForNews
-from .models import Quote, Employee, SertificateForEmployee, Document, FileForDocuments, Qabul
+from .models import Quote, Employee, SertificateForEmployee, Document, FileForDocuments, Qabul, Contact
+
+@admin.register(Contact)
+class ContactAdmin(admin.ModelAdmin):
+    list_display = ('full_name', 'phone', 'created')
 
 
 @admin.register(Qabul)

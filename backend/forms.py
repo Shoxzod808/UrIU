@@ -1,4 +1,5 @@
 from django import forms
+from .models import Contact
 
 class QabulForm(forms.Form):
     full_name = forms.CharField(label="To'liq ismi", max_length=255)
@@ -13,3 +14,9 @@ class QabulForm(forms.Form):
             ('part_time', 'Sirtqi'),
         ]
     )
+
+
+class ContactForm(forms.ModelForm):
+    class Meta:
+        model = Contact
+        fields = ['full_name', 'phone']

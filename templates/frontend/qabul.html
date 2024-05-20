@@ -7,7 +7,64 @@
 {% block body %}
 
   {% include "./header.html" %}
-  {% include "./coming_soon.html" %}
+
+  <div class="containerr">
+    <h3>{% call_get_text "Qabul" language True%}</h3>
+    <br>
+    <form method="post">
+        {% csrf_token %}
+        <div class="row align-items-center">
+          <div class="col-6"><label for="id_full_name" >{% call_get_text "full_name" language True%}</label></div>
+          <div class="col-6 text-start">{{ form.full_name }}</div>
+      </div>
+      <div class="row align-items-center">
+          <div class="col-6"><label for="id_passport">{% call_get_text "telefon" language True%}</label></div>
+          <div class="col-6 text-start">{{ form.phone }}</div>
+      </div>
+        <button type="submit">Submit</button>
+    </form>
+  </div>
+  {% if form_errors %}
+      <div class="error-message">
+          <p>{% call_get_text form_errors language True%}</p>
+      </div>
+  {% endif %}
+  {% if form_success %}
+      <div class="success-message">
+          <p>{% call_get_text form_success language True%}</p>
+      </div>
+  {% endif %}
+  <style>
+      .error-message {
+          background-color: #f8d7da;
+          color: #721c24;
+          padding: 10px;
+          margin-bottom: 10px;
+          border: 1px solid #f5c6cb;
+          border-radius: 4px;
+      }
+      .success-message {
+        background-color: #00ba35;
+        color: #000000;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #00ba35;
+        border-radius: 4px;
+    }
+  </style>
+  <script>
+      // JavaScript для скрытия всплывающего окна через 5 секунд
+      setTimeout(function(){
+          document.querySelector('.error-message').style.display = 'none';
+      }, 5000);
+      // JavaScript для скрытия всплывающего окна через 5 секунд
+      setTimeout(function(){
+        document.querySelector('.success-message').style.display = 'none';
+    }, 5000);
+  </script>
+
+
+
   {% include "./footer.html" %}
 <!-- Java script-->
 <script src="{% static 'js/core.min.js' %}"></script>

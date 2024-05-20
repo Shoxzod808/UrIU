@@ -4,7 +4,7 @@ from .models import Gallery, Category, News, Tag, Quote, Employee, SertificateFo
 from .models import Document, FileForDocuments, Qabul
 from django.http import JsonResponse
 from django.core.paginator import Paginator
-from .forms import QabulForm
+from .forms import QabulForm, ContactForm
 from django.contrib.auth.decorators import login_required
 
 
@@ -279,6 +279,21 @@ def qabul(request, language='uz'):
         path = path[3:]
     path = path.rstrip('/')
     context['path'] = path
+
+    if request.method == 'POST':
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            form.save()
+            context['form_success'] = 'sent'
+
+        else:
+            # Если форма не валидна, передаем ошибки в контекст для отображения на странице
+            context['form_errors'] = 'already sent'
+    else:
+        form = ContactForm()
+
+    context['form'] = form
+
     if language in ['ru', 'en', 'uz']:
         return render(request, 'frontend/qabul.html', context)
     else:

@@ -6,6 +6,18 @@ from ckeditor.fields import RichTextField
 from django.contrib.auth.models import User
 from django.db import models
 
+class Contact(models.Model):
+    full_name = models.CharField(max_length=255)
+    phone = models.CharField(max_length=15, unique=True, verbose_name='Телефон')
+    created = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        verbose_name = 'заявка'
+        verbose_name_plural = 'заявки'
+
+    def __str__(self):
+        return self.full_name
+
 class Qabul(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     full_name = models.CharField(max_length=100)
@@ -18,6 +30,11 @@ class Qabul(models.Model):
         ('part_time', 'Заочное'),
     ])
     created = models.DateTimeField(auto_now_add=True, null=True, blank=True)
+
+    class Meta:
+        verbose_name = 'приём'
+        verbose_name_plural = 'приём'
+
     def __str__(self):
         return self.full_name
 
