@@ -161,6 +161,7 @@ class News(models.Model):
     title_ru = models.CharField(max_length=200)
     title_en = models.CharField(max_length=200)
     photo = models.ImageField(upload_to='news_photos/')
+    you_tube_video_link = models.URLField(max_length=255, blank=True, null=True)
     text_uz = RichTextField()
     text_en = RichTextField()
     text_ru = RichTextField()
