@@ -9,6 +9,20 @@ from django.db import models
 class Contact(models.Model):
     full_name = models.CharField(max_length=255)
     phone = models.CharField(max_length=15, unique=True, verbose_name='Телефон')
+    directions = models.CharField(max_length=255, choices=[
+        ("Boshlang'ich ta'lim", "Boshlang'ich ta'lim"),
+        ("Tarix", "Tarix"),
+        ("Filoligiya va tillarni o'qitish(O'zbek tili)", "Filoligiya va tillarni o'qitish(O'zbek tili)"),
+        ("Filoligiya va tillarni o'qitish(Ingliz tili)", "Filoligiya va tillarni o'qitish(Ingliz tili)"),
+        ],
+        default="Boshlangich ta'lim"
+    )
+    education_type = models.CharField(max_length=20, choices=[
+        ('full_time', 'Очное'),
+        ('part_time', 'Заочное'),
+        ],
+        default='part_time'
+    )
     created = models.DateTimeField(auto_now_add=True)
 
     class Meta:
