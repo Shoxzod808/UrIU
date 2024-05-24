@@ -6,7 +6,15 @@ class QabulForm(forms.Form):
     passport = forms.CharField(label='Passport seriyasi', max_length=20)
     address = forms.CharField(label='Address', max_length=255)
     phone_number = forms.CharField(label='Telefon raqami', max_length=15)
-    directions = forms.CharField(label="Yo'nalish", max_length=100)
+    directions = forms.ChoiceField(
+        label="Yo'nalish", 
+        choices=[
+        ("Boshlang'ich ta'lim", "Boshlang'ich ta'lim"),
+        ("Tarix", "Tarix"),
+        ("Filoligiya va tillarni o'qitish(O'zbek tili)", "Filoligiya va tillarni o'qitish(O'zbek tili)"),
+        ("Filoligiya va tillarni o'qitish(Ingliz tili)", "Filoligiya va tillarni o'qitish(Ingliz tili)"),
+        ],
+    )
     education_type = forms.ChoiceField(
         label="Ta'lim shakli",
         choices=[

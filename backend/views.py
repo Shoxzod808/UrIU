@@ -436,7 +436,7 @@ def qabul_xodim(request):
         form = QabulForm(request.POST)
         if form.is_valid():
             try:
-                Qabul.objects.create(
+                qabul = Qabul.objects.create(
                     user=request.user,
                     full_name=form.cleaned_data['full_name'],
                     passport=form.cleaned_data['passport'],
@@ -446,8 +446,8 @@ def qabul_xodim(request):
                     education_type=form.cleaned_data['education_type']
                 )
             except Exception:
-                return redirect('error')  # Перенаправление на страницу успеха
-            return redirect('success')  # Перенаправление на страницу успеха
+                return redirect('error')  # Перенаправление на страницу Error
+            return render(request, 'qabul/document.html', {'qabul': qabul})  # Перенаправление на страницу успеха
     else:
         form = QabulForm()
     
