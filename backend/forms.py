@@ -19,4 +19,4 @@ class QabulForm(forms.Form):
 class ContactForm(forms.ModelForm):
     class Meta:
         model = Contact
-        fields = ['full_name', 'phone']
+        fields = ['full_name', 'phone', 'directions', 'education_type']

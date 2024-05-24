@@ -6,7 +6,7 @@ from .models import Quote, Employee, SertificateForEmployee, Document, FileForDo
 
 @admin.register(Contact)
 class ContactAdmin(admin.ModelAdmin):
-    list_display = ('full_name', 'phone', 'created')
+    list_display = ('full_name', 'phone', 'directions', 'education_type', 'created')
 
 
 @admin.register(Qabul)

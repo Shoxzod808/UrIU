@@ -12,16 +12,28 @@
     <h3>{% call_get_text "Qabul" language True%}</h3>
     <br>
     <form method="post">
-        {% csrf_token %}
+            {% csrf_token %}
+            <div class="row align-items-center">
+            <div class="col-6"><label for="id_full_name" >{% call_get_text "full_name" language True%}</label></div>
+            <div class="col-6 text-start">{{ form.full_name }}</div>
+        </div>
         <div class="row align-items-center">
-          <div class="col-6"><label for="id_full_name" >{% call_get_text "full_name" language True%}</label></div>
-          <div class="col-6 text-start">{{ form.full_name }}</div>
-      </div>
-      <div class="row align-items-center">
-          <div class="col-6"><label for="id_passport">{% call_get_text "telefon" language True%}</label></div>
-          <div class="col-6 text-start">{{ form.phone }}</div>
-      </div>
-        <button type="submit">Submit</button>
+            <div class="col-6"><label for="id_passport">{% call_get_text "telefon" language True%}</label></div>
+            <div class="col-6 text-start">{{ form.phone }}</div>
+        </div>
+        <div class="row align-items-center">
+            <div class="col-6"><label for="id_directions">{% call_get_text "Yo'nalish:" language True%}</label></div>
+            <div class="col-6 text-start">{{ form.directions }}</div>
+        </div>
+        <div class="row align-items-center">
+            <div class="col-6"><label for="id_education_type">{% call_get_text "Ta'lim shakli:" language True%}</label></div>
+            <div class="col-6 text-start">{{ form.education_type }}</div>
+            
+        <br>
+        </div>
+        <div class="row align-items-center">
+            <button type="submit">{% call_get_text "Submit" language True%}</button>
+        </div>
     </form>
   </div>
   {% if form_errors %}

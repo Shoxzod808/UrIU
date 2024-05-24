@@ -18,8 +18,8 @@ class Contact(models.Model):
         default="Boshlangich ta'lim"
     )
     education_type = models.CharField(max_length=20, choices=[
-        ('full_time', 'Очное'),
-        ('part_time', 'Заочное'),
+        ('full_time', 'Kunduzgi'),
+        ('part_time', 'Sirtqi'),
         ],
         default='part_time'
     )
