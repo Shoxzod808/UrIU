@@ -15,6 +15,7 @@ urlpatterns = [
     path('', default_language_redirect),
     path("info/", views.info, name="info"),
     path("qabul_xodim/", views.qabul_xodim, name="qabul_xodim"),
+    path("qabul/document-<int:id>", views.qabul_document, name="qabul_document"),
     path("login/", auth_views.LoginView.as_view(template_name='users/login.html'), name='login'),
     path("logout/", auth_views.LogoutView.as_view(template_name='users/logout.html'), name='logout'),
     path('success/', views.success, name='success'),

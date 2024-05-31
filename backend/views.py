@@ -6,7 +6,7 @@ from django.http import JsonResponse
 from django.core.paginator import Paginator
 from .forms import QabulForm, ContactForm
 from django.contrib.auth.decorators import login_required
-
+from .replace_tiems_in_word import replace_text_in_docx
 
 def index(request, language='uz'):
     categories = Category.objects.all()
@@ -440,18 +440,56 @@ def qabul_xodim(request):
                     user=request.user,
                     full_name=form.cleaned_data['full_name'],
                     passport=form.cleaned_data['passport'],
-                    address=form.cleaned_data['address'],
+                    viloyat=form.cleaned_data['viloyat'],
+                    tuman=form.cleaned_data['tuman'],
+                    mfy=form.cleaned_data['mfy'],
+                    kucha=form.cleaned_data['kucha'],
+                    uy=form.cleaned_data['uy'],
                     phone_number=form.cleaned_data['phone_number'],
                     directions=form.cleaned_data['directions'],
                     education_type=form.cleaned_data['education_type']
                 )
             except Exception:
                 return redirect('error')  # Перенаправление на страницу Error
-            return render(request, 'qabul/document.html', {'qabul': qabul})  # Перенаправление на страницу успеха
+            # Путь к шаблону Word
+            template_path = 'media/contract/template.docx'
+            output_path = f"media/contract/{form.cleaned_data['passport']}.docx"
+
+            # Замены, которые нужно выполнить
+            replacements = [
+                ('CONTRACT', str(qabul.id)),
+                ('NAME', form.cleaned_data['full_name']),
+                ('TYPE', form.cleaned_data['education_type']),
+                ('YEAR', '4'),
+                ('DIRECTION', form.cleaned_data['directions']),
+                ('SUMMA', '13000000'),
+                ('VILOYAT', form.cleaned_data['viloyat']),
+                ('TUMAN', form.cleaned_data['tuman']),
+                ('MFY', form.cleaned_data['mfy']),
+                ('KUCHA', form.cleaned_data['kucha']),
+                ('UY', form.cleaned_data['uy']),
+                ('PASSPORT', form.cleaned_data['passport']),
+                ('PHONE', form.cleaned_data['phone_number']),
+            ]
+
+            # URL для QR-кода
+            qr_url = f"https://uriu/media/contract/{form.cleaned_data['passport']}"
+
+            # Выполняем замену текста и добавляем QR-код
+            replace_text_in_docx(template_path, output_path, replacements, qr_url)
+            
+            return redirect(f'/qabul/document-{qabul.id}')
+            #return render(request, 'qabul/document.html', {'qabul': qabul})  # Перенаправление на страницу успеха
+
     else:
         form = QabulForm()
     
     return render(request, 'qabul/qabul.html', {'form': form})
+
+@login_required
+def qabul_document(request, id):
+    qabul = Qabul.objects.get(id=id)
+    return render(request, 'qabul/document.html', {'qabul': qabul})
 
 def success(request):
     return render(request, 'qabul/success.html')

@@ -8,10 +8,25 @@
 
 {% include "./header.html" %}
 <h2>{{ qabul.phone }}</h2>
-
+<section class="section icon-list section-lg bg-default">
+    <div class="container">
+        <div class="col-md-4 col-lg-3 col-sm-6" href="/media/contract/{{qabul.passport}}.docx" >
+            <div class="unit unit-spacing-xsm flex-row align-items-center">
+                <div class="unit-left"><span class="icon icon-madison mdi mdi-file-document"></span></div>
+                <div class="unit-body">
+                    <p><a href="/media/contract/{{qabul.passport}}.docx">Shartnoma</a></p>
+                </div>
+            </div>
+            <div class="unit unit-spacing-xsm flex-row align-items-center">
+                <div class="unit-left"><span class="icon icon-madison mdi mdi-file-document"></span></div>
+                <div class="unit-body">
+                    <p><a href="/media/application/{{qabul.passport}}.docx">Ariza</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 {% include "./footer.html" %}
-
-<!-- Java script-->
 <script src="{% static 'js/core.min.js' %}"></script>
 <script src="{% static 'js/script.js' %}"></script>
 {% endblock %}

@@ -36,7 +36,11 @@ class Qabul(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     full_name = models.CharField(max_length=100)
     passport = models.CharField(max_length=20, unique=True)
-    address = models.CharField(max_length=255)
+    viloyat = models.CharField(max_length=255)
+    tuman = models.CharField(max_length=255)
+    mfy = models.CharField(max_length=255)
+    kucha = models.CharField(max_length=255)
+    uy = models.CharField(max_length=255)
     phone_number = models.CharField(max_length=15)
     directions = models.CharField(max_length=255, choices=[
         ("Boshlang'ich ta'lim", "Boshlang'ich ta'lim"),
@@ -52,6 +56,9 @@ class Qabul(models.Model):
     ])
     created = models.DateTimeField(auto_now_add=True, null=True, blank=True)
 
+    def address(self):
+        return f'{self.viloyat}, {self.tuman}, {self.kucha}, uy-{self.uy}'
+        
     class Meta:
         verbose_name = 'приём'
         verbose_name_plural = 'приём'
