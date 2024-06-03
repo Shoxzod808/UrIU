@@ -6,7 +6,8 @@ from django.http import JsonResponse
 from django.core.paginator import Paginator
 from .forms import QabulForm, ContactForm
 from django.contrib.auth.decorators import login_required
-from .replace_tiems_in_word import replace_text_in_docx
+#from .replace_tiems_in_word import replace_text_in_docx
+from .replace_tiems_in_word import replace_text_in_docx_ariza
 
 def index(request, language='uz'):
     categories = Category.objects.all()
@@ -437,18 +438,31 @@ def qabul_xodim(request):
         if form.is_valid():
             try:
                 qabul = Qabul.objects.create(
-                    user=request.user,
-                    full_name=form.cleaned_data['full_name'],
-                    passport=form.cleaned_data['passport'],
-                    viloyat=form.cleaned_data['viloyat'],
-                    tuman=form.cleaned_data['tuman'],
-                    mfy=form.cleaned_data['mfy'],
-                    kucha=form.cleaned_data['kucha'],
-                    uy=form.cleaned_data['uy'],
-                    phone_number=form.cleaned_data['phone_number'],
-                    directions=form.cleaned_data['directions'],
-                    education_type=form.cleaned_data['education_type']
-                )
+                user=request.user,
+                full_name=form.cleaned_data['full_name'],
+                passport=form.cleaned_data['passport'],
+                viloyat=form.cleaned_data['viloyat'],
+                tuman=form.cleaned_data['tuman'],
+                mfy=form.cleaned_data['mfy'],
+                kucha=form.cleaned_data['kucha'],
+                uy=form.cleaned_data['uy'],
+                phone_number=form.cleaned_data['phone_number'],
+                birthday=form.cleaned_data['birthday'],
+                school=form.cleaned_data['school'],
+                attestat=form.cleaned_data['attestat'],
+                languages=form.cleaned_data['languages'],
+                father=form.cleaned_data['father'],
+                father_address=form.cleaned_data['father_address'],
+                father_job=form.cleaned_data['father_job'],
+                father_phone_number=form.cleaned_data['father_phone_number'],
+                mother=form.cleaned_data['mother'],
+                mother_address=form.cleaned_data['mother_address'],
+                mother_job=form.cleaned_data['mother_job'],
+                mother_phone_number=form.cleaned_data['mother_phone_number'],
+                directions=form.cleaned_data['directions'],
+                education_type=form.cleaned_data['education_type']
+            )
+
             except Exception:
                 return redirect('error')  # Перенаправление на страницу Error
             # Путь к шаблону Word
@@ -476,8 +490,40 @@ def qabul_xodim(request):
             qr_url = f"https://uriu/media/contract/{form.cleaned_data['passport']}"
 
             # Выполняем замену текста и добавляем QR-код
-            replace_text_in_docx(template_path, output_path, replacements, qr_url)
-            
+            #replace_text_in_docx(template_path, output_path, replacements, qr_url)
+            template_path = 'media/application/template.docx'
+            output_path = f"media/application/{form.cleaned_data['passport']}.docx"
+
+            # Замены, которые нужно выполнить
+            replacements = [
+                ('CONTRACT', str(qabul.id)),
+                ('NAME', form.cleaned_data['full_name']),
+                ('TYPE', form.cleaned_data['education_type']),
+                ('YEAR', '4'),
+                ('DIRECTION', form.cleaned_data['directions']),
+                ('SUMMA', '13000000'),
+                ('VILOYAT', form.cleaned_data['viloyat']),
+                ('TUMAN', form.cleaned_data['tuman']),
+                ('MFY', form.cleaned_data['mfy']),
+                ('KUCHA', form.cleaned_data['kucha']),
+                ('UY', form.cleaned_data['uy']),
+                ('PASSPORT', form.cleaned_data['passport']),
+                ('PHONE', form.cleaned_data['phone_number']),
+                ('BIRTHDAY', form.cleaned_data['birthday'].strftime('%Y-%m-%d') if form.cleaned_data['birthday'] else ''),
+                ('SCHOOL', form.cleaned_data['school']),
+                ('ATTESTAT', form.cleaned_data['attestat']),
+                ('LANGUAGES', form.cleaned_data['languages']),
+                ('FATHER', form.cleaned_data['father']),
+                ('FATHER_ADDRESS', form.cleaned_data['father_address']),
+                ('FATHER_JOB', form.cleaned_data['father_job']),
+                ('FATHER_PHONE', form.cleaned_data['father_phone_number']),
+                ('MOTHER', form.cleaned_data['mother']),
+                ('MOTHER_ADDRESS', form.cleaned_data['mother_address']),
+                ('MOTHER_JOB', form.cleaned_data['mother_job']),
+                ('MOTHER_PHONE', form.cleaned_data['mother_phone_number']),
+            ]
+
+            replace_text_in_docx_ariza(template_path, output_path, replacements)
             return redirect(f'/qabul/document-{qabul.id}')
             #return render(request, 'qabul/document.html', {'qabul': qabul})  # Перенаправление на страницу успеха
 

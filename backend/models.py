@@ -23,6 +23,7 @@ class Contact(models.Model):
         ],
         default='part_time'
     )
+    status = models.BooleanField(default=False, verbose_name='Статус')
     created = models.DateTimeField(auto_now_add=True)
 
     class Meta:
@@ -42,6 +43,19 @@ class Qabul(models.Model):
     kucha = models.CharField(max_length=255)
     uy = models.CharField(max_length=255)
     phone_number = models.CharField(max_length=15)
+    birthday = models.DateField(null=True, blank=True)
+    school = models.CharField(max_length=255)
+    attestat = models.CharField(max_length=255)
+    languages = models.CharField(max_length=255)
+    father = models.CharField(max_length=255)
+    father_address = models.CharField(max_length=255)
+    father_job = models.CharField(max_length=255)
+    father_phone_number = models.CharField(max_length=15)
+    
+    mother = models.CharField(max_length=255)
+    mother_address = models.CharField(max_length=255)
+    mother_job = models.CharField(max_length=255)
+    mother_phone_number = models.CharField(max_length=15)
     directions = models.CharField(max_length=255, choices=[
         ("Boshlang'ich ta'lim", "Boshlang'ich ta'lim"),
         ("Tarix", "Tarix"),

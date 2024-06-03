@@ -70,3 +70,49 @@ def replace_text_in_docx(input_path, output_path, replacements, qr_url):
     # Сохраняем измененный документ
     doc.save(output_path)
 
+def replace_text_in_docx_ariza(input_path, output_path, replacements):
+    # Открываем исходный документ
+    doc = Document(input_path)
+
+    # Проходим по всем параграфам документа
+    for paragraph in doc.paragraphs:
+        for old_text, new_text in replacements:
+            if old_text in paragraph.text:
+                new_paragraph_text = paragraph.text.replace(old_text, new_text)
+                paragraph.clear()
+
+                # Создаем новый пробег для всего текста
+                run = paragraph.add_run(new_paragraph_text)
+
+                # Проходим по каждому замененному тексту и настраиваем его шрифт и размер
+                for old_text, new_text in replacements:
+                    if new_text in run.text:
+                        start_index = run.text.find(new_text)
+                        end_index = start_index + len(new_text)
+
+                        # Разделяем текст на части
+                        run_before = run.text[:start_index]
+                        run_middle = new_text
+                        run_after = run.text[end_index:]
+
+                        # Удаляем исходный пробег
+                        paragraph.clear()
+
+                        # Добавляем новый пробег до замененного текста
+                        if run_before:
+                            paragraph.add_run(run_before)
+
+                        # Добавляем новый пробег с замененным текстом
+                        middle_run = paragraph.add_run(run_middle)
+                        middle_run.font.name = 'Arial'
+                        middle_run._element.rPr.rFonts.set(qn('w:eastAsia'), 'Arial')
+                        middle_run.font.size = Pt(10.5)
+                        if old_text in ['NAME']:
+                            middle_run.bold = True
+
+                        # Добавляем новый пробег после замененного текста
+                        if run_after:
+                            paragraph.add_run(run_after)
+
+    # Сохраняем измененный документ
+    doc.save(output_path)

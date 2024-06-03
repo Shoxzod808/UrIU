@@ -7,49 +7,93 @@
 {% block body %}
 
 {% include "./header.html" %}
-<div class="containerr" >
+<div class="containerr">
     <h2>Ma'lumotlarni kiriting</h2>
     <form method="post">
-        
         {% csrf_token %}
         <div class="row align-items-center">
-            <div class="col-6"><label for="id_full_name" >To'liq ismi:</label></div>
+            <div class="col-6"><label for="id_full_name">To'liq ismi:</label></div>
             <div class="col-6 text-start">{{ form.full_name }}</div>
         </div>
         <div class="row align-items-center">
-            <div class="col-6"><label for="id_passport">Passport seriya va raqami:</label></div>
+            <div class="col-6"><label for="id_passport">Passport seriyasi:</label></div>
             <div class="col-6 text-start">{{ form.passport }}</div>
         </div>
         <br>
-
         <div class="row align-items-center">
-            <div class="col-6"><label for="id_address">Viloyat:</label></div>
+            <div class="col-6"><label for="id_viloyat">Viloyat:</label></div>
             <div class="col-6 text-start">{{ form.viloyat }}</div>
         </div>
         <div class="row align-items-center">
-            <div class="col-6"><label for="id_address">Tuman:</label></div>
+            <div class="col-6"><label for="id_tuman">Tuman:</label></div>
             <div class="col-6 text-start">{{ form.tuman }}</div>
         </div>
         <div class="row align-items-center">
-            <div class="col-6"><label for="id_address">MFY:</label></div>
+            <div class="col-6"><label for="id_mfy">MFY:</label></div>
             <div class="col-6 text-start">{{ form.mfy }}</div>
         </div>
         <div class="row align-items-center">
-            <div class="col-6"><label for="id_address">Kucha:</label></div>
+            <div class="col-6"><label for="id_kucha">Kucha:</label></div>
             <div class="col-6 text-start">{{ form.kucha }}</div>
         </div>
         <div class="row align-items-center">
-            <div class="col-6"><label for="id_address">Uy:</label></div>
+            <div class="col-6"><label for="id_uy">Uy:</label></div>
             <div class="col-6 text-start">{{ form.uy }}</div>
         </div>
         <br>
-
         <div class="row align-items-center">
             <div class="col-6"><label for="id_phone_number">Telefon raqami:</label></div>
             <div class="col-6 text-start">{{ form.phone_number }}</div>
         </div>
+        <div class="row align-items-center">
+            <div class="col-6"><label for="id_birthday">Tug'gilgan kuni:</label></div>
+            <div class="col-6 text-start">{{ form.birthday }}</div>
+        </div>
+        <div class="row align-items-center">
+            <div class="col-6"><label for="id_school">Tugatgan ta’lim muassasasi:</label></div>
+            <div class="col-6 text-start">{{ form.school }}</div>
+        </div>
+        <div class="row align-items-center">
+            <div class="col-6"><label for="id_attestat">Diplom yoki attestat raqami:</label></div>
+            <div class="col-6 text-start">{{ form.attestat }}</div>
+        </div>
+        <div class="row align-items-center">
+            <div class="col-6"><label for="id_languages">Qaysi chet til(lar)ini o‘qigan:</label></div>
+            <div class="col-6 text-start">{{ form.languages }}</div>
+        </div>
+        <div class="row align-items-center">
+            <div class="col-6"><label for="id_father">Otasi:</label></div>
+            <div class="col-6 text-start">{{ form.father }}</div>
+        </div>
+        <div class="row align-items-center">
+            <div class="col-6"><label for="id_father_address">Doimiy yashash manzili:</label></div>
+            <div class="col-6 text-start">{{ form.father_address }}</div>
+        </div>
+        <div class="row align-items-center">
+            <div class="col-6"><label for="id_father_job">Doimiy ish joyi:</label></div>
+            <div class="col-6 text-start">{{ form.father_job }}</div>
+        </div>
+        <div class="row align-items-center">
+            <div class="col-6"><label for="id_father_phone_number">Telefon raqami:</label></div>
+            <div class="col-6 text-start">{{ form.father_phone_number }}</div>
+        </div>
+        <div class="row align-items-center">
+            <div class="col-6"><label for="id_mother">Onasi:</label></div>
+            <div class="col-6 text-start">{{ form.mother }}</div>
+        </div>
+        <div class="row align-items-center">
+            <div class="col-6"><label for="id_mother_address">Doimiy yashash manzili:</label></div>
+            <div class="col-6 text-start">{{ form.mother_address }}</div>
+        </div>
+        <div class="row align-items-center">
+            <div class="col-6"><label for="id_mother_job">Doimiy ish joyi:</label></div>
+            <div class="col-6 text-start">{{ form.mother_job }}</div>
+        </div>
+        <div class="row align-items-center">
+            <div class="col-6"><label for="id_mother_phone_number">Telefon raqami:</label></div>
+            <div class="col-6 text-start">{{ form.mother_phone_number }}</div>
+        </div>
         <br>
-
         <div class="row align-items-center">
             <div class="col-6"><label for="id_directions">Yo'nalish:</label></div>
             <div class="col-6 text-start">{{ form.directions }}</div>
@@ -58,13 +102,12 @@
         <div class="row align-items-center">
             <div class="col-6"><label for="id_education_type">Ta'lim shakli:</label></div>
             <div class="col-6 text-start">{{ form.education_type }}</div>
-            
-            
         </div>
         <br>
         <button type="submit">Jo'natish</button>
     </form>
 </div>
+
 {% include "./footer.html" %}
 
 <!-- Java script-->

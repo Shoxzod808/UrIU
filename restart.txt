@@ -1,0 +1,2 @@
+sudo systemctl restart gunicorn
+root@uriu:/var/www/UrIU# sudo systemctl restart nginx
