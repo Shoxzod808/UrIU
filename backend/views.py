@@ -513,14 +513,14 @@ def qabul_xodim(request):
                 ('SCHOOL', form.cleaned_data['school']),
                 ('ATTESTAT', form.cleaned_data['attestat']),
                 ('LANGUAGES', form.cleaned_data['languages']),
-                ('FATHER', form.cleaned_data['father']),
                 ('FATHER_ADDRESS', form.cleaned_data['father_address']),
                 ('FATHER_JOB', form.cleaned_data['father_job']),
                 ('FATHER_PHONE', form.cleaned_data['father_phone_number']),
-                ('MOTHER', form.cleaned_data['mother']),
+                ('FATHER', form.cleaned_data['father']),
                 ('MOTHER_ADDRESS', form.cleaned_data['mother_address']),
                 ('MOTHER_JOB', form.cleaned_data['mother_job']),
                 ('MOTHER_PHONE', form.cleaned_data['mother_phone_number']),
+                ('MOTHER', form.cleaned_data['mother']),
             ]
 
             replace_text_in_docx_ariza(template_path, output_path, replacements)
